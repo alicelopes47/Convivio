@@ -1,0 +1,5 @@
+@use 'styles/_colors.scss';
+
+.App {
+  background-color: colors.$primary-color;
+}
