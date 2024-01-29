@@ -1,0 +1,31 @@
+@use './../../scss/colors' as *; 
+
+.section-container {
+    margin: 40px 0;
+    .section-content {
+        display: flex;
+        gap: 20px;
+        .text-content {
+            display: flex;
+            flex-direction: column;
+            h1 {
+                font-weight: bold;
+                color: $primary-color;
+                font-size: 40px;
+            }
+            p {
+                color: #7c7d7e;
+                padding-top: 10px;
+                font-weight: 300 !important;
+                line-height: 24px;
+                font-size: 18px;
+            }
+        }
+        .image-content {
+            display: flex;
+        }
+        &.image-first {
+            flex-direction: row-reverse;
+        }
+    }
+}

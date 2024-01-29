@@ -1,16 +1,29 @@
 .navbar-container {
-    color: #ffffff;
-    background: #f19a0eb3 !important;
-    height: 70px;
-    width: 100%;
+    height: 250px;
+    color: white;
+    background-image: url(../../assets/retangle.png);
+    width: 100vw;
+    background-size:contain;
+    position: fixed;
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
     .navbar-content {
         display: flex;
+        position: relative;
+        width: 100%;
         justify-content: space-between;
         align-items: center;
         .navbar-logo {
             display: flex;
             gap: 15px;
+            position: absolute;
+            left: 40px;
+            top: 40px;
             align-items: center;
+            .logo {
+                width: 150px;
+            }
             h1 {
                 font-size: 24px;
                 font-weight: normal;
@@ -18,13 +31,24 @@
         }
         .navbar-links {
             ul {
+                color: white;
+                position: absolute;
+                right: 400px;
+                z-index: 1001;
+                height: 100px;
+                width: 400px;
+                border-radius: 0px 0px 0px 25px;
+                top: -20px;
+                align-items: center;
+                justify-content: start;
                 display: flex;
+                gap: 21px;
                 li {
                     cursor: pointer;
                     list-style: none;
                     margin-left: 1rem;
                     transition: color 0.5s ease-in-out;
-                    font-size: 18px;
+                    font-size: 23px;
                     &:hover {
                         color: #7c7d7e;
                     }

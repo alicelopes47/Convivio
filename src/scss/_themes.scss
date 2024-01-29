@@ -1,0 +1,6 @@
+@use 'colors' as *;
+
+html[data-theme="main"] {
+    --primary-color: #{$primary-color};
+    --white: #{$white};
+}

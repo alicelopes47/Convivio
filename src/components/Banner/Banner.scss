@@ -1,0 +1,26 @@
+@use './../../scss/colors' as *;
+
+.banner-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 700px;
+    color: $light;
+    background-image: linear-gradient(to bottom, #ffffff6c, #1c1c1bd2), url(../../assets/banner-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    .banner-content {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        gap: 0px;
+        h1 {
+            font-size: 70px;
+            font-weight: 900;
+        }
+        p {
+            width: 60%;
+            font-weight: 700;
+        }
+    }
+}

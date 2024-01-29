@@ -1,0 +1,19 @@
+@use './../../scss/colors' as *; 
+
+.regular-button-container {
+    background-color: $primary-color;
+    color: $light;
+    transition: background-color 0.5s ease-in-out;
+    font-size: 18px;
+    padding: 8px;
+    width: 277px;
+    height: 48px;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    &:hover {
+        background-color: $primary-color;
+    }
+}
