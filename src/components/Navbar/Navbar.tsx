@@ -1,8 +1,7 @@
 import "./Navbar.scss";
-import NavbarLayout from "../../assets/rectangle_large.png";
 import Logo from '../../assets/convivio_logo.png';
-import Image from 'react-bootstrap/Image'
 import "bootstrap/dist/css/bootstrap.css"; 
+import { DropDownNavbar } from "../DropDownNavbar/DropDownNavbar";
 
 
 export const Navbar = () => {
@@ -19,6 +18,7 @@ export const Navbar = () => {
               <li>Orçamento</li>
             </ul>
         </div>
+        <DropDownNavbar extraClass="dropdown-navbar" />
       </div>
     </div>
   );

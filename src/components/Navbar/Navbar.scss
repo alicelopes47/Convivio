@@ -16,23 +16,56 @@
         left: 1.4%;
         top: 6%;
       }
-      .navbar-links {
-        ul {
-          color: $light;
-          position: absolute;
-          right: 2%;
-          top: 10%;
-          align-items: center;
-          justify-content: start;
-          display: flex;
-          gap: 30px;
-          li {
-            cursor: pointer;
-            font-weight: 300;
-            font-size: 1.3vw;
-            list-style: none;
-          }
+    .navbar-links {
+      .bars-icon {
+        display: none;
+      }
+      ul {
+        color: $light;
+        position: absolute;
+        right: 2%;
+        top: 10%;
+        align-items: center;
+        justify-content: start;
+        display: flex;
+        gap: 30px;
+        li {
+          cursor: pointer;
+          font-weight: 300;
+          font-size: 1.3vw;
+          list-style: none;
         }
       }
+    }
+    .dropdown-navbar {
+      display: none;
+    }
+  }
+}
+
+//mobile breakpoint
+@media (max-width: 900px) {
+  .navbar-container {
+    .navbar-content {
+      background-image: url("../../assets/rectangle_mobile.png");
+      background-repeat: no-repeat;
+      .navbar-logo {
+        width: 15%;
+        position: absolute;
+        left: 2%;
+        top: 5%;
+      }
+      .dropdown-navbar {
+        display: block;
+        right: 0;
+        position: absolute;
+        top: 2%;
+      }
+      .navbar-links {
+        ul {
+          display: none;
+        }
+      }
+    }
   }
 }
