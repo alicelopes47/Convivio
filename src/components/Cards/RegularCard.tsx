@@ -15,7 +15,7 @@ export const RegularCard = ({
     <div className="regular-card" style={{height}}>
         <FontAwesomeIcon className='icon' icon={faSkullCrossbones} size='2x'/>
         <h1>Cards</h1>
-        <p>Descrição do card </p>
+        <p>Descrição do card</p>
     </div>
   );
 }

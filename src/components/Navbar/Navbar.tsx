@@ -1,26 +1,25 @@
 import "./Navbar.scss";
-import Logo from '../../assets/convivio_logo.svg';
+import NavbarLayout from "../../assets/rectangle_large.png";
+import Logo from '../../assets/convivio_logo.png';
+import Image from 'react-bootstrap/Image'
+import "bootstrap/dist/css/bootstrap.css"; 
 
 
 export const Navbar = () => {
   return (
     <div className="navbar-container">
-        <div className="navbar-content">
-          <div className="navbar-logo">
-            <img src={Logo} className="logo" width={500} />
-          </div>
-          <div className="navbar-links">
+      <div className="navbar-content">
+      <img src={Logo} className="navbar-logo" alt="logo" />
+        <div className="navbar-links">
             <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>Contact</li>
-              <li>FAQ</li>
-              <li>Home</li>
-              <li>About</li>
-              <li>About</li>
+              <li>Início</li>
+              <li>Projetos</li>
+              <li>Como funciona?</li>
+              <li>Sobre nós</li>
+              <li>Orçamento</li>
             </ul>
-          </div>
         </div>
+      </div>
     </div>
   );
 };
