@@ -1,31 +1,61 @@
-@use './../../scss/colors' as *; 
+@use "./../../scss/colors" as *;
 
 .section-container {
-    margin: 40px 0;
-    .section-content {
-        display: flex;
-        gap: 20px;
-        .text-content {
-            display: flex;
-            flex-direction: column;
-            h1 {
-                font-weight: bold;
-                color: $primary-color;
-                font-size: 40px;
-            }
-            p {
-                color: #7c7d7e;
-                padding-top: 10px;
-                font-weight: 300 !important;
-                line-height: 24px;
-                font-size: 18px;
-            }
+  width: 100%;
+  padding-left: 12%;
+  height: 100vh;
+  padding-bottom: 80vh;
+  .section-data {
+    display: flex;
+    width: 80%;
+    height: 70vh;
+    padding-top: 2%;
+    justify-content: space-between;
+    align-items: self-start;
+    gap: 120px;
+    .data-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      height:70vh;
+      justify-content: space-around;
+      .section-title {
+        font-weight: 300;
+        color: $primary-color;
+        font-size: 35px;
+      }
+      h1 {
+        font-family: "Lexend Deca";
+        text-align: start;
+        font-size: 26px;
+        font-weight: 300;
+        span {
+          font-weight: 300;
+          font-size: 20px;
         }
-        .image-content {
-            display: flex;
-        }
-        &.image-first {
-            flex-direction: row-reverse;
-        }
+      }
     }
+    .image-section-container {
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr; 
+        gap: 7px 9px; 
+        height: 70vh;
+        width: 40vw;
+        grid-template-areas: 
+          "image1 image3"
+          "image2 image3"
+          "image4 image4"; 
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .image1 { grid-area: image1;}
+          .image2 { grid-area: image2;}
+          .image3 { grid-area: image3;}
+          .image4 { grid-area: image4;}
+        }
+  }
 }

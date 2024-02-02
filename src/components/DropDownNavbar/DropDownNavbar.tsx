@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useState } from "react";
 import Logo from '../../assets/convivio_logo.png';
 import './DropDownNavbar.scss';
+import { Link } from "react-scroll";
 
 interface Props {
     extraClass?: string;
@@ -10,6 +11,10 @@ interface Props {
 
 export const DropDownNavbar = ({extraClass}: Props) => {
     const [openDropDown, setOpenDropDown] = useState(false);
+    const handleClick = () => {
+        setOpenDropDown(!openDropDown);
+    }
+
     return (
         <div className={`dropdown ${extraClass}`}>
             <FontAwesomeIcon icon={faBars} onClick={() => setOpenDropDown(!openDropDown)} className={`bars-icon ${openDropDown ? 'bars-icon-open': ''}`} style={{color: "#ffffff",}} />
@@ -17,11 +22,11 @@ export const DropDownNavbar = ({extraClass}: Props) => {
                 <div className={`dropdown-content ${openDropDown ? 'open-dropdown': ''}`}>
                 <img src={Logo} className="dropdown-logo" alt="logo" />
                 <ul>
-                <li>Início</li>
-                <li>Projetos</li>
-                <li>Como funciona?</li>
-                <li>Sobre nós</li>
-                <li>Orçamento</li>
+                <Link onClick={() => handleClick()} to="inicio"><li>Início</li></Link>
+                <Link onClick={() => handleClick()} to="projetos"><li>Projetos</li></Link>
+                <Link to=""><li>Como funciona?</li></Link>
+                <Link to=""><li>Sobre nós</li></Link>
+                <Link to=""><li>Orçamento</li></Link>
                 </ul>
               </div>
             )}

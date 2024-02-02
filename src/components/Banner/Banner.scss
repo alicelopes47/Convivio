@@ -1,39 +1,157 @@
 @use './../../scss/colors' as *;
 
+
+@keyframes slidein {
+    0% {
+      background-image: url('../../assets/banner-image.jpg');
+    }
+    33% {
+      background-image: url('../../assets/banner-image2.png');
+    }
+    66% {
+      background-image: url('../../assets/banner-image3.png');
+    }
+    100% {
+      background-image: url('../../assets/banner-image.jpg');
+    }
+}
+
+
+
 .banner-container {
+    height: 100vh;
     display: flex;
-    align-items: start;
-    height: 80vh;
-    color: $light;
-    padding-top: 20vh;
-    background-image: linear-gradient(to bottom, #ffffff6c, #020100d3), url(../../assets/banner-image.jpg);
+    background-image: url('../../assets/banner-image.jpg');
+    animation: slidein 15s cubic-bezier(0.645, 0.045, 0.355, 1.000) infinite;
+    align-items: center;
     background-size: cover;
-    background-position:50%;
     background-repeat: no-repeat;
     width: 100%;
+    background-position: 50%;
     justify-content: center;
+
+    &:before {
+        content: "";
+        z-index: 20;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to bottom, #ffffff6c, #020100d3);
+    }
+
     .banner-content {                    
         display: flex;
+        position: relative;
+        z-index: 30;
         flex-direction: column;
-        width: 100%;
-        gap: 0px;
+        width:100%;
+        height: 60%;
+        justify-content: space-between;
         h1 {
-            font-size: 4vw;
-            padding-left: 10vw;
+            font-family: 'Lexend Deca';
+            font-size: 3.7vw;
             width: 50%;
-            font-weight: 600;
+            padding-left: 10%;
+            font-weight: 300;
             .diferent-color-title {        
                 color:  $green;
-                font-size: 3.5vw;
-                padding-left: 10vw;
+                font-weight: 400;
+                font-family: 'Lexend Deca';
+                font-size: 3.7vw;
             }
+        }
+        .subtitle-container {
+            font-size: 2.3vw;
+            width: 100%;
+            display: flex;
+            padding-right: 49px;
+            justify-content: end;
+            p {
+                color: $light;
+                padding: 10px;
+                border-radius: 10px;
+                font-family: 'Lexend Deca';
+                font-weight: 200;
+                background-color: rgba(75, 70, 64, 0.4);
+            }
+        }
+    }
+}
+
+.banner-footer {
+    padding-top: 135px;
+    padding-bottom: 131px;
+    background-color: $background-color;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    .description-container {
+        flex: 2;
+        .quote {
+            text-align: end;
+            padding-right: 20px;
+            padding-top: 5vh;
         }
         p {
             width: 100%;
-            padding-left: 45vw;
-            padding-top: 7vw;
-            font-size: 3vw;
-            font-weight: 600;
+            font-weight: 200;
+            color: $primary-color;
+            font-size: 1.7vw;
+            font-family: 'Lexend Deca';
+        }
+    }
+    .image-container {
+        flex: 1;
+        padding-bottom: 10vw;
+        .banner-footer-image { 
+            width: 40vw;
+            height: 50vh;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-container {
+        height: 100vh;
+        background-size: cover;
+        width: 100vw;
+        .banner-content {
+            h1 {
+                font-size: 7vh;
+                padding-left: 20%;
+                width: 80%;
+                .diferent-color-title {        
+                    color:  $green;
+                    font-weight: 400;
+                    font-family: 'Lexend Deca';
+                    font-size: 50px;
+                }
+            }
+            .subtitle-container {
+                p {
+                    padding: 5px;
+                    font-size: 4.5vw;
+                }
+            }
+        }
+    }
+    .banner-footer {
+        gap: 20px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        flex-direction: column;
+        .description-container {
+            p {
+                font-size: 3vw;
+            }
+        }
+        .image-container {
+            .banner-footer-image { 
+                width: 60vw;
+                height: auto;
+            }
         }
     }
 }

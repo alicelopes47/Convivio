@@ -2,8 +2,14 @@
 
 body {
   font-family: 'Lexend Deca', sans-serif;
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
+  a {
+    text-decoration: none;
+    color: $light;
+  
+  }
    h1 {
     margin: 0;
     color: $primary-color;
