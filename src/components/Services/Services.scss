@@ -1,0 +1,51 @@
+@use "./../../scss/colors" as *;
+.services-container {
+  height: 100%;
+  width: 100%;
+  background-image: url("../../assets/bg-services.png");
+  .services-content {
+    width: 50%;
+    background-color: rgba(99, 90, 79, 0.7);
+    .title-services {
+      font-family: "Lexend Deca", sans-serif !important;
+      font-size: 4vw;
+      padding-top: 70px;
+      padding-left: 20%;
+      color: $light;
+      padding-bottom: 40px;
+      font-weight: 300;
+    }
+    .services-data-content {
+      color: $light;
+      padding-left: 20%;
+      .title-container {
+        display: flex;
+        width: 27.5vw;
+        justify-content: space-between;
+        align-items: center;
+        h1 {
+          color: $light;
+
+          font-size: 1.7vw;
+          padding-left: 25px;
+          width: 100%;
+          font-family: "Lexend Deca";
+          font-weight: 300;
+        }
+      }
+      .data-container {
+        display: flex;
+        justify-content: start;
+        p {
+          color: $light;
+
+          padding-left: 50px;
+          padding-bottom: 50px;
+          font-size: 1.5vw;
+          font-family: "Lexend Deca";
+          font-weight: 100;
+        }
+      }
+    }
+  }
+}

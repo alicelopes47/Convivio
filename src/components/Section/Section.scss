@@ -2,60 +2,68 @@
 
 .section-container {
   width: 100%;
-  padding-left: 12%;
+  padding-left: 10%;
+  padding-right: 90px;
   height: 100vh;
-  padding-bottom: 80vh;
+  padding-top: 38px;
+  padding-bottom: 110px;
+  .section-title {
+    font-family: "Lexend Deca";
+    font-weight: 300;
+    color: $primary-color;
+    font-size: 2.5vw;
+    text-align: center;
+    margin-bottom: 30px;
+  }
   .section-data {
     display: flex;
-    width: 80%;
-    height: 70vh;
-    padding-top: 2%;
+    width: 100%;
     justify-content: space-between;
-    align-items: self-start;
-    gap: 120px;
     .data-container {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      height:70vh;
-      justify-content: space-around;
-      .section-title {
-        font-weight: 300;
-        color: $primary-color;
-        font-size: 35px;
-      }
+        width: 40vw;
+        display: flex;
+        gap: 4vh;
+        flex-direction: column;
+        justify-content: space-between;
       h1 {
         font-family: "Lexend Deca";
         text-align: start;
-        font-size: 26px;
-        font-weight: 300;
+        font-size: 1.5vw;
+        font-weight: 500;
         span {
-          font-weight: 300;
-          font-size: 20px;
+          font-weight: 200;
         }
       }
     }
     .image-section-container {
-        display: grid; 
-        grid-auto-columns: 1fr; 
-        grid-template-columns: 1fr 1fr; 
-        grid-template-rows: 1fr 1fr 1fr; 
-        gap: 7px 9px; 
-        height: 70vh;
-        width: 40vw;
-        grid-template-areas: 
-          "image1 image3"
-          "image2 image3"
-          "image4 image4"; 
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-          .image1 { grid-area: image1;}
-          .image2 { grid-area: image2;}
-          .image3 { grid-area: image3;}
-          .image4 { grid-area: image4;}
-        }
+      display: grid;
+      grid-auto-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
+      height: 2vh;
+      width: 30vw;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "image1 image3"
+        "image2 image3"
+        "image4 image4";
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .image1 {
+        grid-area: image1;
+      }
+      .image2 {
+        grid-area: image2;
+      }
+      .image3 {
+        grid-area: image3;
+      }
+      .image4 {
+        grid-area: image4;
+      }
+    }
   }
 }

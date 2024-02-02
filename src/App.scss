@@ -1,3 +1,5 @@
+@use "./scss/colors" as *;
+
 .layout {
     padding-left: 10%;
     padding-right: 49px;
@@ -7,10 +9,15 @@
     padding-right: 0px;
 .title-section {
     font-family: "Lexend Deca", sans-serif !important;
-    padding-top: 40px;
-    padding-left: 12%;
-    padding-bottom: 30px;
+    font-size: 4vw;
+    padding-top: 70px;
+    padding-left: 10%;
+    color: $primary-color;
+    padding-bottom: 25px;
     font-weight: 300;
+    &.white {
+        color: $light;
+    }
 }
 }
 
