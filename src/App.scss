@@ -5,8 +5,6 @@
     padding-right: 49px;
 }
 
-.App {
-    padding-right: 0px;
 .title-section {
     font-family: "Lexend Deca", sans-serif !important;
     font-size: 4vw;
@@ -19,7 +17,28 @@
         color: $light;
     }
 }
+
+.divider-container {
+    display: flex;
+    justify-content: center;
+    hr.solid {
+        width: 50%;
+        border-top: 1.5px solid #000000;
+      }
 }
+
+.App {
+    padding-right: 0px;
+}
+
+img {
+    transition: transform 0.1s ease-in-out;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
 
 @media (max-width: 768px) {
     .layout {

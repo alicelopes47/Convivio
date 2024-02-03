@@ -3,16 +3,17 @@
   height: 100%;
   width: 100%;
   background-image: url("../../assets/bg-services.png");
+  background-size: cover;
   .services-content {
     width: 50%;
-    background-color: rgba(99, 90, 79, 0.7);
+    background-color: rgba(29, 29, 27, 0.6);
     .title-services {
       font-family: "Lexend Deca", sans-serif !important;
-      font-size: 4vw;
+      font-size: 3vw;
       padding-top: 70px;
       padding-left: 20%;
       color: $light;
-      padding-bottom: 40px;
+      padding-bottom: 25px;
       font-weight: 300;
     }
     .services-data-content {
@@ -20,14 +21,14 @@
       padding-left: 20%;
       .title-container {
         display: flex;
-        width: 27.5vw;
+        width: 27.2vw;
         justify-content: space-between;
         align-items: center;
         h1 {
           color: $light;
 
           font-size: 1.7vw;
-          padding-left: 25px;
+          padding-left: 19px;
           width: 100%;
           font-family: "Lexend Deca";
           font-weight: 300;
@@ -38,9 +39,8 @@
         justify-content: start;
         p {
           color: $light;
-
-          padding-left: 50px;
-          padding-bottom: 50px;
+          padding-left: 39px;
+          padding-bottom: 20px;
           font-size: 1.5vw;
           font-family: "Lexend Deca";
           font-weight: 100;

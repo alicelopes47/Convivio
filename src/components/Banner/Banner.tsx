@@ -1,17 +1,19 @@
+
+//@ts-nocheck
 import "./Banner.scss";
+import { useState } from "react";
 import BannerFooter from '../../assets/banner-footer-image.png';
-import { useEffect, useState } from "react";
-import image1 from '../../assets/banner-image.jpg';
-import image2 from '../../assets/banner-image2.png';
-import image3 from '../../assets/banner-image3.png';
+import Lightbox from "react-awesome-lightbox";
+
 
 
 export const Banner = () => {
-
+  const [openImage, setOpenImage] = useState(false);
 
   return (
     <>
     <div className="banner-container" id="inicio">
+    {openImage && <Lightbox image={BannerFooter} title='Croqui de arquitetura' onClose={() => setOpenImage(false)} />}
       <div className="banner-content">
         <h1>
           Seja bem vindo,{" "}
@@ -34,8 +36,8 @@ export const Banner = () => {
             Thiago Lopes
           </p>
         </div>
-        <div className="image-container"> 
-        <img src={BannerFooter} className='banner-footer-image' alt="arquiteto" />
+        <div onClick={() => setOpenImage(true)} className="image-container"> 
+            <img src={BannerFooter} className='banner-footer-image' alt="arquiteto" />
         </div>
       </div>
       

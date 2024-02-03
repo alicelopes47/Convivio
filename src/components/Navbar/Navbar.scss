@@ -3,14 +3,15 @@
 .navbar-container {
   position: fixed;
   width: 100%;
-  z-index: 100;
   height: 100%;
+  z-index: 100;
+  pointer-events: none;
+  height: 20vh;
   .navbar-content {
     background-image: url("../../assets/rectangle_large.png");
     background-size: 100% auto;
     background-repeat: no-repeat;
     position: relative;
-    height: 20%;
     .navbar-logo {
         width: 6.9%;
         position: absolute;
@@ -31,6 +32,7 @@
         display: flex;
         gap: 30px;
         li {
+          pointer-events: all;
           cursor: pointer;
           font-weight: 300;
           font-size: 1.3vw;
@@ -40,6 +42,25 @@
     }
     .dropdown-navbar {
       display: none;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .navbar-container {
+    height: 100vh;
+    .navbar-content {
+      height: 100vh;
+      .navbar-logo {
+        width: 6.2%;
+        left: 1.4%;
+        top: 2%;
+      }
+      .navbar-links {
+        ul {
+          top: 2%;
+        }
+      }
     }
   }
 }
@@ -54,13 +75,14 @@
         width: 15%;
         position: absolute;
         left: 2%;
-        top: 5%;
+        top: 2%;
       }
       .dropdown-navbar {
         display: block;
         right: 0;
         position: absolute;
         top: 2%;
+        pointer-events: all;
       }
       .navbar-links {
         ul {

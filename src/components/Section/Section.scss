@@ -3,32 +3,31 @@
 .section-container {
   width: 100%;
   padding-left: 10%;
-  padding-right: 90px;
   height: 100vh;
   padding-top: 38px;
   padding-bottom: 110px;
-  .section-title {
-    font-family: "Lexend Deca";
-    font-weight: 300;
-    color: $primary-color;
-    font-size: 2.5vw;
-    text-align: center;
-    margin-bottom: 30px;
-  }
   .section-data {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    height: 100%;
     .data-container {
-        width: 40vw;
-        display: flex;
-        gap: 4vh;
-        flex-direction: column;
-        justify-content: space-between;
+      height: 70%;
+      display: flex;
+      gap: 7.5vh;
+      flex-direction: column;
+      justify-content: space-between;
+      .section-title {
+        font-family: "Lexend Deca";
+        font-weight: 300;
+        color: $primary-color;
+        font-size: 2.5vw;
+        text-align: start;
+      }
       h1 {
         font-family: "Lexend Deca";
         text-align: start;
         font-size: 1.5vw;
+        width: 82%;
         font-weight: 500;
         span {
           font-weight: 200;
@@ -36,33 +35,15 @@
       }
     }
     .image-section-container {
-      display: grid;
-      grid-auto-columns: 1fr;
-      grid-template-columns: 1fr 1fr;
-      height: 2vh;
-      width: 30vw;
-      grid-template-rows: 1fr 1fr 1fr;
-      gap: 0px 0px;
-      grid-template-areas:
-        "image1 image3"
-        "image2 image3"
-        "image4 image4";
+      display: flex;
+      padding-top: 60px;
+      flex-direction: column;
+      gap: 10px;
+      padding-left: 60px;
       img {
-        width: 100%;
-        height: 100%;
+        width: 18vw;
+        height: auto;
         object-fit: cover;
-      }
-      .image1 {
-        grid-area: image1;
-      }
-      .image2 {
-        grid-area: image2;
-      }
-      .image3 {
-        grid-area: image3;
-      }
-      .image4 {
-        grid-area: image4;
       }
     }
   }
