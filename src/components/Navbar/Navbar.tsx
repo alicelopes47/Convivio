@@ -13,6 +13,7 @@ export const Navbar = () => {
         <div className="navbar-links">
             <ul>
               <Link to={'inicio'}><li>Início</li></Link>
+              <Link to={'servicos'}><li>Serviços</li></Link>
               <Link to={'projetos'}><li>Projetos</li></Link>
               <Link to={'a'}><li>Como funciona?</li></Link>
               <Link to={'a'}><li>Sobre nós</li></Link>

@@ -1,24 +1,24 @@
 @use "./../../scss/colors" as *;
 .services-container {
-  height: 100%;
-  width: 100%;
-  background-image: url("../../assets/bg-services.png");
-  background-size: cover;
+  padding-top: 80px;
   .services-content {
-    width: 50%;
-    background-color: rgba(29, 29, 27, 0.6);
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    height: 100vh;
     .title-services {
       font-family: "Lexend Deca", sans-serif !important;
       font-size: 3vw;
-      padding-top: 70px;
-      padding-left: 20%;
+      padding-top: 50px;
       color: $light;
       padding-bottom: 25px;
       font-weight: 300;
     }
-    .services-data-content {
-      color: $light;
-      padding-left: 20%;
+    .wraper {
+      display: flex;
+      flex-direction: column;
       .title-container {
         display: flex;
         width: 27.2vw;
@@ -26,7 +26,6 @@
         align-items: center;
         h1 {
           color: $light;
-
           font-size: 1.7vw;
           padding-left: 19px;
           width: 100%;
@@ -40,10 +39,10 @@
         p {
           color: $light;
           padding-left: 39px;
-          padding-bottom: 20px;
           font-size: 1.5vw;
           font-family: "Lexend Deca";
           font-weight: 100;
+          margin-bottom: 10px;
         }
       }
     }

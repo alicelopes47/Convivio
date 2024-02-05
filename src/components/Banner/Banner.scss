@@ -58,13 +58,13 @@
             background-color: rgba(75, 70, 64, 0.4);
             width: 34.2%;
             color: $light;
-            font-weight: 300;
+            font-weight: 200;
             border-radius: 10px;
             text-align: start;
             padding: 12px;
             .diferent-color-title {        
                 color:  $green;
-                font-weight: 400;
+                font-weight: 200;
                 font-family: 'Lexend Deca';
                 font-size: 3.7vw;
             }
@@ -83,38 +83,6 @@
                 font-weight: 200;
                 background-color: rgba(75, 70, 64, 0.4);
             }
-        }
-    }
-}
-
-.banner-footer {
-    padding-top: 135px;
-    padding-bottom: 131px;
-    background-color: $background-color;
-    display: flex;
-    align-items: center;
-    gap: 80px;
-    .description-container {
-        flex: 2;
-        .quote {
-            text-align: end;
-            padding-right: 20px;
-            padding-top: 5vh;
-        }
-        p {
-            width: 100%;
-            font-weight: 200;
-            color: $primary-color;
-            font-size: 1.7vw;
-            font-family: 'Lexend Deca';
-        }
-    }
-    .image-container {
-        flex: 1;
-        padding-bottom: 10vw;
-        .banner-footer-image { 
-            width: 40vw;
-            height: 50vh;
         }
     }
 }

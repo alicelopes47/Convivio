@@ -1,0 +1,30 @@
+@use './../../scss/colors' as *;
+
+.banner-footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    .description-container {
+        width: 60%;
+        margin-right: 5%;
+        .quote {
+            text-align: end;
+            padding-right: 20px;
+            padding-top: 5vh;
+        }
+        p {
+            width: 100%;
+            font-weight: 200;
+            color: $primary-color;
+            font-size: 1.7vw;
+            font-family: 'Lexend Deca';
+        }
+    }
+    .image-container {
+        width: 30%;
+        padding-bottom: 10vw;
+        .banner-footer-image { 
+            width: 35vw;
+        }
+    }
+}

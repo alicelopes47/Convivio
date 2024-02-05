@@ -3,13 +3,12 @@ import image1 from "../../assets/casa-terrea/image1.jpg";
 import image2 from "../../assets/casa-terrea/image2.jpg";
 import image3 from "../../assets/casa-terrea/image3.jpg";
 import image4 from "../../assets/casa-terrea/image4.jpg";
-import { Carousel } from "react-bootstrap";
-import { motion, useAnimation } from "framer-motion";
+import { useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Carousel } from "react-responsive-carousel";
 //@ts-ignore
 import Lightbox from "react-awesome-lightbox";
 import { useInView } from "react-intersection-observer";
-import { comeFromLeft, ComeToFront } from "../../App";
 
 interface Props {
   image: string;
@@ -21,7 +20,6 @@ interface Props {
 }
 
 export const Section = ({
-  image,
   title,
   Area,
   Localizacao,
@@ -51,7 +49,9 @@ export const Section = ({
   };
 
   return (
-    <div className="section-container">
+    <div
+      className="section-container"
+    >
       {openImage && (
         <Lightbox
           images={imagesArray}
@@ -60,13 +60,7 @@ export const Section = ({
         />
       )}
       <div className="section-data">
-        <motion.div
-          ref={ref}
-          initial="hidden"
-          animate={control}
-          variants={comeFromLeft}
-          className="data-container"
-        >
+        <div className="data-container">
           <h1 className="section-title">{title}</h1>
           <h1>
             Área: <span>{Area}</span>
@@ -80,15 +74,9 @@ export const Section = ({
           <h1>
             Detalhes: <span> {Detalhes}</span>
           </h1>
-        </motion.div>
+        </div>
 
-        <motion.div
-          ref={ref}
-          variants={ComeToFront}
-          initial="hidden"
-          className="image-section-container"
-          animate={control}
-        >
+        <div className="image-section-container">
           <img
             className="image1"
             onClick={() => handleClickImage(0)}
@@ -107,7 +95,7 @@ export const Section = ({
             src={image4}
             alt=""
           />
-        </motion.div>
+        </div>
       </div>
     </div>
   );

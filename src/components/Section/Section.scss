@@ -1,50 +1,45 @@
 @use "./../../scss/colors" as *;
 
-.section-container {
+.section-data {
+  display: flex;
   width: 100%;
-  padding-left: 10%;
-  height: 100vh;
-  padding-top: 38px;
-  padding-bottom: 110px;
-  .section-data {
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  .data-container {
+    height: 100vh;
+    width: 70%;
     display: flex;
-    width: 100%;
-    height: 100%;
-    .data-container {
-      height: 70%;
-      display: flex;
-      gap: 7.5vh;
-      flex-direction: column;
-      justify-content: space-between;
-      .section-title {
-        font-family: "Lexend Deca";
-        font-weight: 300;
-        color: $primary-color;
-        font-size: 2.5vw;
-        text-align: start;
-      }
-      h1 {
-        font-family: "Lexend Deca";
-        text-align: start;
-        font-size: 1.5vw;
-        width: 82%;
-        font-weight: 500;
-        span {
-          font-weight: 200;
-        }
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+    .section-title {
+      font-family: "Lexend Deca";
+      font-weight: 300;
+      color: $primary-color;
+      font-size: 2.5vw;
+      text-align: start;
+    }
+    h1 {
+      font-family: "Lexend Deca";
+      text-align: start;
+      font-size: 1.3vw;
+      width: 70%;
+      font-weight: 500;
+      span {
+        font-weight: 200;
       }
     }
-    .image-section-container {
-      display: flex;
-      padding-top: 60px;
-      flex-direction: column;
-      gap: 10px;
-      padding-left: 60px;
-      img {
-        width: 18vw;
-        height: auto;
-        object-fit: cover;
-      }
+  }
+  .image-section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+    height: 100%;
+    img {
+      width: 18vw;
+      object-fit: cover;
     }
   }
 }

@@ -1,0 +1,29 @@
+@use "./../../scss/colors" as *;
+
+.layout-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  .children {
+    .layout-title {
+      font-family: "Lexend Deca", sans-serif !important;
+      font-size: 4vw;
+      color: $primary-color;
+      position: absolute;
+      left: 0%;
+      top: 5%;
+      font-weight: 300;
+      &.white {
+        color: $light;
+        left: 0%;
+        top: 10%;
+      }
+    }
+    width: 80%;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+}

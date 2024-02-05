@@ -8,27 +8,14 @@
 .title-section {
     font-family: "Lexend Deca", sans-serif !important;
     font-size: 4vw;
-    padding-top: 70px;
+    padding-top: 8vh;
     padding-left: 10%;
     color: $primary-color;
-    padding-bottom: 25px;
+    padding-bottom: 0vh;
     font-weight: 300;
     &.white {
         color: $light;
     }
-}
-
-.divider-container {
-    display: flex;
-    justify-content: center;
-    hr.solid {
-        width: 50%;
-        border-top: 1.5px solid #000000;
-      }
-}
-
-.App {
-    padding-right: 0px;
 }
 
 img {
