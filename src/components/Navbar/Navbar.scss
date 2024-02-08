@@ -60,6 +60,26 @@
       .navbar-links {
         ul {
           top: 2%;
+          gap: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar-container {
+    height: 100vh;
+    .navbar-content {
+      height: 100vh;
+      .navbar-logo {
+        width: 6.2%;
+        left: 1.4%;
+        top: 1%;
+      }
+      .navbar-links {
+        ul {
+          top: 2%;
         }
       }
     }
@@ -80,9 +100,9 @@
       }
       .dropdown-navbar {
         display: block;
-        right: 0;
+        right: 0%;
         position: absolute;
-        top: 2%;
+        top: 0%;
         pointer-events: all;
       }
       .navbar-links {

@@ -7,12 +7,9 @@ import Lightbox from "react-awesome-lightbox";
 
 
 export const Banner = () => {
-  const [openImage, setOpenImage] = useState(false);
-
   return (
     <>
     <div className="banner-container" id="inicio">
-    {openImage && <Lightbox image={BannerFooter} title='Croqui de arquitetura' onClose={() => setOpenImage(false)} />}
       <div className="banner-content">
         <h1>
           Seja bem vindo,{" "}

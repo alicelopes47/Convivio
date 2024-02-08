@@ -1,13 +1,15 @@
 @use "../../scss/_colors" as *;
 
 .dropdown {
+    width: 100vw;
+    height: 100vh;
     .bars-icon {
         display: block;
         z-index: 1;
         padding: 10px;
-        right: 2%;
+        right: 0%;
         position: absolute;
-        top: 15%;
+        top: 0%;
         cursor: pointer;
         font-size: 5vw;
         transition: transform 0.1s ease-in-out;
@@ -16,7 +18,7 @@
         }
       }
     .dropdown-content {
-        right: 1%;
+        right: 2%;
         padding: 20px;
         z-index: 0;
         display: flex;
@@ -24,10 +26,11 @@
         position: absolute;
         gap: 20px;
         border-radius: 20px;
-        top: 5%;
+        top: 0%;
         background-color: $primary-color;
         color: $light;
-        width: 220px;
+        width: 100vw;
+        height: 100vh;
         .dropdown-logo {
             width: 52px;
         }

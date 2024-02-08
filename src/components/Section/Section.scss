@@ -31,15 +31,4 @@
       }
     }
   }
-  .image-section-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 30%;
-    height: 100%;
-    img {
-      width: 18vw;
-      object-fit: cover;
-    }
-  }
 }

@@ -4,7 +4,11 @@ import "bootstrap/dist/css/bootstrap.css";
 import { DropDownNavbar } from "../DropDownNavbar/DropDownNavbar";
 import { Link, animateScroll } from "react-scroll";
 
-export const Navbar = () => {
+interface Props {
+  onClickProjetos: () => void;
+}
+
+export const Navbar = ({onClickProjetos}: Props) => {
 
   return (
     <div className="navbar-container">
@@ -14,7 +18,7 @@ export const Navbar = () => {
             <ul>
               <Link to={'inicio'}><li>Início</li></Link>
               <Link to={'servicos'}><li>Serviços</li></Link>
-              <Link to={'projetos'}><li>Projetos</li></Link>
+              <Link onClick={onClickProjetos} to={'projetos'}><li>Projetos</li></Link>
               <Link to={'a'}><li>Como funciona?</li></Link>
               <Link to={'a'}><li>Sobre nós</li></Link>
               <Link to={'a'}><li>Orçamento</li></Link>
