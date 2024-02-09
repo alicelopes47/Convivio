@@ -19,8 +19,8 @@ export const Navbar = ({onClickProjetos}: Props) => {
               <Link to={'inicio'}><li>Início</li></Link>
               <Link to={'servicos'}><li>Serviços</li></Link>
               <Link onClick={onClickProjetos} to={'projetos'}><li>Projetos</li></Link>
-              <Link to={'a'}><li>Como funciona?</li></Link>
-              <Link to={'a'}><li>Sobre nós</li></Link>
+              <Link to={'about-us'}><li>Como funciona?</li></Link>
+              <Link to={'who-we-are'}><li>Sobre nós</li></Link>
               <Link to={'a'}><li>Orçamento</li></Link>
             </ul>
         </div>

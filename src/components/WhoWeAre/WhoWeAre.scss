@@ -1,0 +1,75 @@
+@use "./../../scss/colors" as *;
+
+.who-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding-left: 10vw;
+  .who-content {
+    display: flex;
+    width: 100vw;
+    align-items: start;
+    justify-content: space-between;
+    .who-informations {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 39vw;
+      text-align: start !important;
+      .who-us-title {
+        font-family: "Lexend Deca", sans-serif !important;
+        font-size: 4vw;
+        padding-top: 3vh;
+        color: $light;
+        font-weight: 300;
+      }
+      .information {
+        h1 {
+          padding-top: 3vh;
+          font-family: "Lexend Deca";
+          color: $light;
+          font-weight: 500;
+        }
+        p {
+          font-family: "Lexend Deca";
+          color: $light;
+          font-weight: 200;
+          font-size: 3.5vh;
+        }
+      }
+    }
+    .who-assets {
+      width: 40vw;
+      display: grid;
+      grid-auto-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        ". big"
+        ". big";
+      .big {
+        grid-area: big;
+        height: 100vh;
+        width: 25vw;
+        object-fit: cover;
+        &:hover {
+            transform: none;
+            cursor: default;
+          }
+      }
+      .small {
+        height: 50vh;
+        width: 15vw;
+        object-fit: cover;
+        &:hover {
+            transform: none;
+            cursor: default;
+          }
+      }
+
+    }
+  }
+}

@@ -8,7 +8,7 @@ import { Carousel } from "react-responsive-carousel";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Section } from "./components/Section/Section";
 //@ts-ignore
-import ProjetoVideo from "./assets/projetos_video.mp4";
+import ComoFazemosVideo from "./assets/comofazemos/comofazemosvideo.mp4";
 import casaPaulistaFoto1 from "./assets/casa-paulista/casa-paulista1.jpg";
 import casaPaulistaFoto2 from "./assets/casa-paulista/casa-paulista2.jpg";
 import casaPaulistaFoto3 from "./assets/casa-paulista/casa-paulista3.jpg";
@@ -16,7 +16,9 @@ import casaPaulistaFoto4 from "./assets/casa-paulista/casa-paulista4.jpg";
 import casaPaulistaFoto5 from "./assets/casa-paulista/casa-paulista5.jpg";
 import casaPaulistaFoto6 from "./assets/casa-paulista/casa-paulista6.jpg";
 //@ts-ignore
-import casaPaulistaVideo1 from "./assets/casa-paulista/casa-paulista-video1.mp4";
+
+import ComoFazemos2 from "./assets/comofazemos/comofazemos2.jpg";
+import ComoFazemos3 from "./assets/comofazemos/comofazemos3.jpg";
 import image3 from "./assets/casa-terrea/image3.jpg";
 import image4 from "./assets/casa-terrea/image4.jpg";
 import image1 from "./assets/casa-terrea/image1.jpg";
@@ -30,6 +32,8 @@ import PanoramaFishEyeIcon from "@mui/icons-material/PanoramaFishEye";
 import { useEffect, useState } from "react";
 //@ts-ignore
 import Lightbox from "react-awesome-lightbox";
+import { AboutUs } from "./components/AboutUs/AboutUs";
+import { WhoWeAre } from "./components/WhoWeAre/WhoWeAre";
 export const ComeToFront = {
   visible: { opacity: 1, scale: 1 },
   hidden: { opacity: 0, scale: 0 },
@@ -349,6 +353,61 @@ function App() {
           </Section>
         </Layout>
       </Carousel>
+      <Carousel
+        showArrows={false}
+        renderIndicator={(clickHandler, selectedItem) => {
+          return (
+            <>
+              {selectedItem ? (
+                <CircleIcon
+                  fontSize="medium"
+                  className="carousel-icon"
+                  onClick={clickHandler}
+                />
+              ) : (
+                <PanoramaFishEyeIcon
+                  fontSize="medium"
+                  className="carousel-icon"
+                  onClick={clickHandler}
+                />
+              )}
+            </>
+          );
+        }}
+      >
+        <Layout noSpacement id="about-us">
+          <AboutUs
+            hasTitle
+            StageTitle="1ª Etapa"
+            subtitle="Levantamento de Dados e Informações"
+            paragraph="Aqui, após o preenchimento do questionário, que nós enviaremos ao cliente, elaboramos o plano de necessidades, desenvolvendo fluxos e croquis a fim de capturar as ideias iniciais do projeto. Alem disso, serão feitas medições no local, documentadas através de fotografias. Ao londo desta fase, apresentamos imagens e projetos de referência para contribuir na tomada de decisões e na melhor compreensão dos gostos e necessidades do cliente."
+          >
+            <video src={ComoFazemosVideo} controls></video>
+          </AboutUs>
+        </Layout>
+
+        <Layout noSpacement id="a">
+          <AboutUs
+            StageTitle="2ª Etapa"
+            subtitle="Estudo Preliminar"
+            paragraph="Nesta fase, após o briefing inicial e a análise das referências, elaboramos uma proposta que inclui uma planta de layout, na qual detalhamos as locações das paredes e mobiliários, exibindo a disposição dos móveis, medidas e imagens de referência. Além disso, apresentamos imagens e vídeos 3D que simulam digitalmente o projeto finalizado de acordo com as ideias e informações apresentadas até aqui. Realizamos também, reuniões para ajustar a proposta de acordo com suas preferências. "
+          >
+            <img src={ComoFazemos2} alt="about-us" />
+          </AboutUs>
+        </Layout>
+        <Layout noSpacement id="a">
+          <AboutUs
+            StageTitle="3ª Etapa"
+            subtitle="Projeto Executivo"
+            paragraph="Depois da aprovação do projeto em 3D e alinhamento de todos os pontos, avançamos para os detalhamentos e o caderno executivo. Nesta etapa, elaboramos um documento abrangente com todos os detalhes essenciais para a execução bem-sucedida do projeto. A flexibilidade continua, permitindo ajustes para garantir a plena satisfação dos clientes. Iniciamos a seleção de orçamentos e opções para revestimentos, mobiliários, texturas e adornos, proporcionando escolhas alinhadas às preferências individuais."
+          >
+            <img src={ComoFazemos3} alt="about-us" />
+          </AboutUs>
+        </Layout>
+      </Carousel>
+      <Layout noSpacement id="who-we-are" backgroundColor="#86AB85">
+          <WhoWeAre />
+      </Layout>
     </div>
   );
 }
