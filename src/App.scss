@@ -36,29 +36,34 @@
     cursor: pointer;
     padding-top: 10px;
     padding-bottom: 10px;
-    transition: transform 0.1s ease-in-out;
-    cursor: pointer;
-    &:hover {
-        transform: scale(1.1);
-    }
     align-items: center;
     justify-content: center;
     .grid-section-buttons-inner {
-        background-color: $primary-color;
+        border: solid 2px $primary-color;
+        transition: background-color 0.1s ease-in-out;
+        cursor: pointer;
+        &:hover {
+            background-color: $primary-color;
+            .icon-grid-section-prev {
+                color: $light;
+            }
+            .icon-grid-section-next {
+                color: $light;
+            }
+        }
         align-self: center;
         display: flex;
         width: 18vw;
         height: 3.9vh;
         justify-content: center;
         .icon-grid-section-prev {
-            color: white;
+            color: $primary-color;
             margin-top: 2px; 
             font-size: 1.5vw;
         }
         .icon-grid-section-next {
-            color: white;
+            color: $primary-color;
             transform: rotate(180deg);
-            color: white;
             font-size: 1.5vw;
             margin-top: 2px;
         }

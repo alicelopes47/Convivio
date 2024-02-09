@@ -1,0 +1,109 @@
+@use "../scss/colors" as *;
+
+.form-container {
+  display: flex;
+  gap: 2vw;
+  justify-content: center;
+  align-items: start;
+  height: 100vh;
+  padding-top: 9vh;
+  padding-left: 10vw;
+  .form-content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 50vw;
+    text-align: start !important;
+    .title-content {
+      font-size: 3vw;
+      font-family: "Lexend Deca";
+      font-weight: 300;
+      padding-bottom: 3vh;
+    }
+    .form-fields-container {
+      display: flex;
+      padding-top: 25px;
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-bottom: 25px;
+      flex-direction: column;
+      border: solid 3px $primary-color;
+      border-radius: 10px;
+      width: 30vw;
+      gap: 2vh;
+      .form-field {
+        border: solid 3px $primary-color;
+        height: 5vh;
+        border-radius: 5px;
+        color: $primary-color;
+        font-size: 2vh;
+        font-family: "Lexend Deca";
+        font-weight: 400;
+        padding-left: 1vw;
+        &::placeholder {
+          color: $primary-color;
+          font-size: 2.5vh;
+          font-family: "Lexend Deca";
+          font-weight: 500;
+        }
+      }
+      .form-button {
+        background-color: $primary-color;
+        color: $light;
+        font-size: 2.5vh;
+        font-family: "Lexend Deca";
+        font-weight: 400;
+        border: none;
+        margin-top: 3vh;
+        border-radius: 5px;
+        height: 5vh;
+        width: 25%;
+        cursor: pointer;
+        align-self: center;
+      }
+    }
+  }
+  .vr {
+    border: 1.5px solid #4B4640;
+    opacity: 1;
+    height: 80vh;
+  }
+  .socials-content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 70vw;
+    text-align: start !important;
+    padding-left: 3vw;
+    .title-socials {
+      font-size: 3vw;
+      padding-bottom: 9vh;
+      font-family: "Lexend Deca";
+      font-weight: 300;
+      color: $primary-color;
+    }
+    .socials-icons {
+      display: flex;
+      flex-direction: column;
+      gap: 4vh;
+      .buceta {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 1vw;
+        width: 43vw;
+        .social-icon {
+          font-size: 7vh;
+          color: $primary-color;
+          cursor: pointer;
+        }
+        p {
+          font-size: 3.8vh;
+          font-family: "Lexend Deca";
+          font-weight: 300;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}

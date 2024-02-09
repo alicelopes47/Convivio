@@ -1,13 +1,15 @@
 import "./WhoWeAre.scss";
-import WhoWeAreImage1 from '../../assets/whoweare/whoweare1.jpg'
-import WhoWeAreImage2 from '../../assets/whoweare/whoweare2.jpg'
-import WhoWeAreImage3 from '../../assets/whoweare/whoweare3.jpg'
+import WhoWeAreImage from "../../assets/whoweare/whoweare.png";
+import ConvivioImage from "../../assets/whoweare/a-convivio.png";
 
-interface Props {}
+interface Props {
+  type: number;
+}
 
-export const WhoWeAre = () => {
+export const WhoWeAre = ({type}: Props) => {
   return (
-    <div className="who-container" id="who-us">
+    type === 1 ? (
+      <div className="who-container" id="who-us">
       <div className="who-content">
         <div className="who-informations">
         <div className="who-us-title">Quem somos?</div>
@@ -30,11 +32,32 @@ export const WhoWeAre = () => {
           </div>
         </div>
         <div className="who-assets">
-          <img src={WhoWeAreImage1} className="small" alt="Luana Morais" />
-          <img src={WhoWeAreImage2} className="small" alt="Thiago Lopes" />
-          <img src={WhoWeAreImage3} className="big" alt="Luana Morais e Thiago Lopes" />
+          <img src={WhoWeAreImage} />
         </div>
       </div>
     </div>
+     )
+      : (
+        <div className="who-container" id="who-us">
+        <div className="who-content">
+          <div className="who-informations">
+          <div className="who-us-title">A Convívio</div>
+            <div className="information">
+              <p>
+              A Convívio é fruto do nosso conviver. Somos um casal de arquitetos apaixonados pelo nosso ofício, e um pelo outro. Então decidimos agregar isso tudo para proporcionar o que temos de melhor a oferecer aos nossos clientes, juntos!
+              </p>
+            </div>
+            <div className="information">
+              <p>
+              A Luana é o lado racional, mais técnica e focada na execução dos projetos. O Thiago mais criativo, se concentra na concepção e em captar às ideias dos clientes. Juntos formamos o melhor time para concretizar os seus sonhos!
+              </p>
+            </div>
+          </div>
+          <div className="who-assets">
+            <img src={ConvivioImage} />
+          </div>
+        </div>
+      </div>
+      )
   );
 };

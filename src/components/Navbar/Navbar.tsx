@@ -21,7 +21,7 @@ export const Navbar = ({onClickProjetos}: Props) => {
               <Link onClick={onClickProjetos} to={'projetos'}><li>Projetos</li></Link>
               <Link to={'about-us'}><li>Como funciona?</li></Link>
               <Link to={'who-we-are'}><li>Sobre nós</li></Link>
-              <Link to={'a'}><li>Orçamento</li></Link>
+              <Link to={'orcamento'}><li>Orçamento</li></Link>
             </ul>
         </div>
         <DropDownNavbar extraClass="dropdown-navbar" />

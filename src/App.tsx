@@ -34,6 +34,7 @@ import { useEffect, useState } from "react";
 import Lightbox from "react-awesome-lightbox";
 import { AboutUs } from "./components/AboutUs/AboutUs";
 import { WhoWeAre } from "./components/WhoWeAre/WhoWeAre";
+import { FormSection } from "./FormSection/FormSection";
 export const ComeToFront = {
   visible: { opacity: 1, scale: 1 },
   hidden: { opacity: 0, scale: 0 },
@@ -120,7 +121,7 @@ function App() {
             title="Casa Paulista"
             Area="Aprox. 450m²"
             Localizacao="Jardim Botânico - DF"
-            Descricao="AGUARDANDO"
+            Descricao="Casa feita do zero, projetada para ser um espaço de convivência e lazer para família, com ambientes integrados, espaçosos e bem iluminados."
             Detalhes="Sala de estar integrada com jantar; Cozinha; Espaço Gourmet; Escritório; Sala íntima no andar superior; Fireplace; Piscina; Garagem p/ 2 carros."
             image={SectionImage}
           >
@@ -202,8 +203,8 @@ function App() {
           <Section
             Area="Reforma de aprox. 100m²"
             Localizacao="Guará II"
-            Detalhes="AGUARDANDO"
-            Descricao="Reforma da cozinha, sala de TV, quarto do casal e quarto do filho.Reforma da cozinha, sala de TV, quarto do casal e quarto do filhoReforma da cozinha, sala de TV, quarto do casal e quarto do filho"
+            Detalhes="Reforma da cozinha, sala de TV, quarto do casal e quarto do filho. Reforma da cozinha, sala de TV, quarto do casal e quarto do filho."
+            Descricao="Reforma de alguns cômodos da casa, com o objetivo de modernizar e trazer mais conforto."
             image={SectionImage}
             title="Casa Vivência"
           >
@@ -406,7 +407,13 @@ function App() {
         </Layout>
       </Carousel>
       <Layout noSpacement id="who-we-are" backgroundColor="#86AB85">
-          <WhoWeAre />
+          <WhoWeAre type={1} />
+      </Layout>
+      <Layout noSpacement id="who-we-are" backgroundColor="#597C59">
+          <WhoWeAre type={2} />
+      </Layout>
+      <Layout noSpacement id="orcamento">
+          <FormSection />
       </Layout>
     </div>
   );
