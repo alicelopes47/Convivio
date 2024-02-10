@@ -40,3 +40,38 @@
     }
   }
 }
+
+@media (max-width: 680px) { 
+  .layout-container {
+    .children {
+      .layout-title {
+        font-size: 3.5vh;
+      }
+    }
+    &.banner-footer-responsive {
+      height: 50vh;
+    }
+    &.services-section {
+      background-image: url('../../assets/bg-services-mobile.png') !important;
+      .children {
+        flex-direction: column;
+        padding-top: 4vh;
+        .layout-title {
+          font-size: 4.9vh;
+          padding-bottom: 5vh;
+          text-align: center;
+          left: 2%;
+          &.white {
+            position:unset;
+            color: $light;
+            left: 0%;
+            top: 0%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+

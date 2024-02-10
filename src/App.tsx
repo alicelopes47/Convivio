@@ -89,7 +89,7 @@ function App() {
     <div className="App">
       <Navbar onClickProjetos={() => setSection(0)} />
       <Banner />
-      <Layout>
+      <Layout isBannerFooter backgroundColor="#EDE8E1">
         <BannerFooter />
       </Layout>
       {openImage && (
@@ -100,7 +100,6 @@ function App() {
         backgroundImage={ServicesBackground}
         title="Nossos serviços"
         whiteTitle
-        darkerBgChildren
       >
         <Services />
       </Layout>

@@ -1,3 +1,4 @@
+import { BannerFooter } from "../BannerFooter/BannerFooter";
 import "./Layout.scss";
 
 interface Props {
@@ -6,9 +7,9 @@ interface Props {
   title?: string;
   whiteTitle?: boolean;
   id?: string;
-  darkerBgChildren?: boolean;
   noSpacement?: boolean;
   backgroundColor?: string;
+  isBannerFooter?: boolean;
 }
 
 export const Layout = ({
@@ -19,10 +20,11 @@ export const Layout = ({
   whiteTitle,
   id,
   noSpacement,
+  isBannerFooter
 }: Props) => {
   return (
     <div
-      className={`layout-container ${noSpacement ? "no-spacement" : ""}`}
+      className={`layout-container ${noSpacement ? "no-spacement" : ""} ${whiteTitle ? "services-section" : ""} ${isBannerFooter ? "banner-footer-responsive" : ""}`}
       id={id}
       style={{
         backgroundImage: `url(${backgroundImage})`,

@@ -32,3 +32,18 @@
     }
   }
 }
+
+@media (max-width: 680px) {
+  .section-data {
+    .data-container {
+      width: 100%;
+      .section-title {
+        font-size: 4.9vh;
+      }
+      h1 {
+        font-size: 2.3vh;
+        width: 100%;
+      }
+    }
+  }
+}

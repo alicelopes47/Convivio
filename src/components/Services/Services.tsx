@@ -27,7 +27,7 @@ export const Services = () => {
             <FontAwesomeIcon
               icon={faPenRuler}
               color="white"
-              fontSize={"19px"}
+              className="icon-fa-penruler"
             />
             <h1>Projetos complementares</h1>
           </div>

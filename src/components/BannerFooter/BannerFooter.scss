@@ -28,3 +28,33 @@
         }
     }
 }
+
+@media (max-width: 680px) { 
+    .banner-footer {
+        flex-direction: column;
+        padding-top: 10vh;
+        padding-left: 5vw;
+        .description-container {
+            width: 100%;
+            .quote {
+                text-align: start;
+                padding-right: 20px;
+                padding-top: 3vh;
+            }
+            p {
+                width: 100%;
+                font-weight: 300;
+                color: $primary-color;
+                font-size: 1.8vh;
+                font-family: 'Lexend Deca';
+            }
+        }
+        .image-container {
+            width: 40%;
+            padding-bottom: -10vw;
+            .banner-footer-image { 
+                width: 32vh;
+            }
+        }
+    }
+ }
