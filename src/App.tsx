@@ -8,12 +8,14 @@ import { Navbar } from "./components/Navbar/Navbar";
 import { Section } from "./components/Section/Section";
 //@ts-ignore
 import ComoFazemosVideo from "./assets/comofazemos/comofazemosvideo.mp4";
-import casaPaulistaFoto1 from "./assets/casa-paulista/casa-paulista1.jpg";
-import casaPaulistaFoto2 from "./assets/casa-paulista/casa-paulista2.jpg";
-import casaPaulistaFoto3 from "./assets/casa-paulista/casa-paulista3.jpg";
-import casaPaulistaFoto4 from "./assets/casa-paulista/casa-paulista4.jpg";
-import casaPaulistaFoto5 from "./assets/casa-paulista/casa-paulista5.jpg";
-import casaPaulistaFoto6 from "./assets/casa-paulista/casa-paulista6.jpg";
+import {
+  casaPaulistaFoto1,
+  casaPaulistaFoto2,
+  casaPaulistaFoto3,
+  casaPaulistaFoto4,
+  casaPaulistaFoto5,
+  casaPaulistaFoto6,
+} from "./assets/index";
 //@ts-ignore
 
 import ComoFazemos2 from "./assets/comofazemos/comofazemos2.jpg";
@@ -47,30 +49,31 @@ function App() {
   });
 
   let isScrolling = false;
-  window.onwheel = e => {
+  window.onwheel = (e) => {
     // Previne o evento de rolagem padrão
-    e.preventDefault()
-  
+    e.preventDefault();
+
     // Se uma rolagem já está em andamento, ignora este evento
-    if (isScrolling) return
-  
+    if (isScrolling) return;
+
     // Define a flag para indicar que uma rolagem está em andamento
-    isScrolling = true
-  
-    const scrollAmount = window.innerHeight
-    const currentScrollPosition = window.pageYOffset
-    const nextSectionPosition = e.deltaY >= 0 
-      ? Math.ceil((currentScrollPosition + 1) / scrollAmount) * scrollAmount
-      : Math.floor((currentScrollPosition - 1) / scrollAmount) * scrollAmount
-  
+    isScrolling = true;
+
+    const scrollAmount = window.innerHeight;
+    const currentScrollPosition = window.pageYOffset;
+    const nextSectionPosition =
+      e.deltaY >= 0
+        ? Math.ceil((currentScrollPosition + 1) / scrollAmount) * scrollAmount
+        : Math.floor((currentScrollPosition - 1) / scrollAmount) * scrollAmount;
+
     // Rola para a próxima seção ou para a seção anterior
-    window.scrollTo({ top: nextSectionPosition, behavior: "smooth" })
-  
+    window.scrollTo({ top: nextSectionPosition, behavior: "smooth" });
+
     // Redefine a flag quando a rolagem termina
     setTimeout(() => {
-      isScrolling = false
-    }, 1000) // Ajuste este tempo para corresponder ao tempo que leva para rolar
-  }
+      isScrolling = false;
+    }, 1000); // Ajuste este tempo para corresponder ao tempo que leva para rolar
+  };
 
   return (
     <div className="App">
@@ -166,32 +169,14 @@ function App() {
               className="image-section-carousel-container"
             >
               <div className="image-carousel-section">
-                <img
-                  src={casaPaulistaFoto1}
-                  alt="casa-terrea"
-                />
-                <img
-                  src={casaPaulistaFoto2}
-                  alt="casa-terrea"
-                />
-                <img
-                  src={casaPaulistaFoto3}
-                  alt="casa-terrea"
-                />
+                <img src={casaPaulistaFoto1} alt="casa-terrea" />
+                <img src={casaPaulistaFoto2} alt="casa-terrea" />
+                <img src={casaPaulistaFoto3} alt="casa-terrea" />
               </div>
               <div className="image-carousel-section">
-                <img
-                  src={casaPaulistaFoto4}
-                  alt="casa-terrea"
-                />
-                <img
-                  src={casaPaulistaFoto5}
-                  alt="casa-terrea"
-                />
-                <img
-                  src={casaPaulistaFoto6}
-                  alt="casa-terrea"
-                />
+                <img src={casaPaulistaFoto4} alt="casa-terrea" />
+                <img src={casaPaulistaFoto5} alt="casa-terrea" />
+                <img src={casaPaulistaFoto6} alt="casa-terrea" />
               </div>
             </Carousel>
           </Section>
@@ -242,32 +227,14 @@ function App() {
               className="image-section-carousel-container"
             >
               <div className="image-carousel-section">
-                <img
-                  src={casaPaulistaFoto1}
-                  alt="casa-terrea"
-                />
-                <img
-                  src={casaPaulistaFoto2}
-                  alt="casa-terrea"
-                />
-                <img
-                  src={casaPaulistaFoto3}
-                  alt="casa-terrea"
-                />
+                <img src={casaPaulistaFoto1} alt="casa-terrea" />
+                <img src={casaPaulistaFoto2} alt="casa-terrea" />
+                <img src={casaPaulistaFoto3} alt="casa-terrea" />
               </div>
               <div className="image-carousel-section">
-                <img
-                  src={casaPaulistaFoto4}
-                  alt="casa-terrea"
-                />
-                <img
-                  src={casaPaulistaFoto5}
-                  alt="casa-terrea"
-                />
-                <img
-                  src={casaPaulistaFoto6}
-                  alt="casa-terrea"
-                />
+                <img src={casaPaulistaFoto4} alt="casa-terrea" />
+                <img src={casaPaulistaFoto5} alt="casa-terrea" />
+                <img src={casaPaulistaFoto6} alt="casa-terrea" />
               </div>
             </Carousel>
           </Section>
@@ -275,18 +242,11 @@ function App() {
         <Layout backgroundImage={bgImage3}>
           {" "}
           <Section
-            Area="Aprox. 350m²"
-            Localizacao="Park Way"
-            Detalhes="Casa térrea + Casa anexo para os pais; 3 ou 4 Suítes; Escritório;
-            Cozinha com ilha; Academia; Garagem p/ 3 carros; Jardim de
-            Inverno; Closets p/ todos os quartos; Piscina;Fire Place; Lavabo
-            interno/esterno e Depósito. Academia; Garagem p/ 3 carros; Jardim de
-            Inverno; Closets p/ todos os quartos; Piscina;Fire Place; Lavabo
-            interno/esterno e Depósito.Academia; Garagem p/ 3 carros; Jardim de
-            Inverno; Closets p/ todos os quartos; Piscina;Fire Place; Lavabo
-            interno/esterno e Depósito."
+            title="Casa Vicente Pires"
+            Area="Aprox. 240m²"
+            Localizacao="Vicente Pires"
+            Detalhes="contempla 3 suítes, piscina, gourmet integrado, sala de estar e jantar com pé direito duplo, escritório para home office, 2 lavabos sendo um interno e externo, paredes em cobogo, bancadas no cinza castelo escovado, jabuticabeira na ilha da bancada."
             Descricao=" Este projeto se desenvolve a partir de um conceito aberto, que valoriza a iluminação natural e preza pela boa ventilação de todos os ambientes. Além disso, possibilita a vista para paisagem, integrando a casa ao ambiente natural. integrando a casa ao ambiente natural"
-            title="Casa guará"
           >
             <Carousel
               renderArrowNext={(clickHandler, selectedItem) => {
@@ -373,7 +333,11 @@ function App() {
             paragraph="Aqui, após o preenchimento do questionário, que nós enviaremos ao cliente, elaboramos o plano de necessidades, desenvolvendo fluxos e croquis a fim de capturar as ideias iniciais do projeto. Alem disso, serão feitas medições no local, documentadas através de fotografias. Ao londo desta fase, apresentamos imagens e projetos de referência para contribuir na tomada de decisões e na melhor compreensão dos gostos e necessidades do cliente."
           >
             <video controls>
-              <source className="source-video"  src={ComoFazemosVideo} type="video/mp4" />
+              <source
+                className="source-video"
+                src={ComoFazemosVideo}
+                type="video/mp4"
+              />
             </video>
           </AboutUs>
         </Layout>

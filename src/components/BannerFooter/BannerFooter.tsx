@@ -1,4 +1,5 @@
 import BannerFooterImage from "../../assets/banner-footer-image.png";
+import './BannerFooter.scss';
 
 export const BannerFooter = () => {
 
