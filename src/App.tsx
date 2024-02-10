@@ -2,7 +2,6 @@ import "./App.scss";
 import bgImage1 from "./assets/image-14.png";
 import bgImage2 from "./assets/image-16.png";
 import bgImage3 from "./assets/image-15.png";
-import { useRef } from 'react';
 import { Banner } from "./components/Banner/Banner";
 import { Carousel } from "react-responsive-carousel";
 import { Navbar } from "./components/Navbar/Navbar";
@@ -28,7 +27,6 @@ import CircleIcon from "@mui/icons-material/Circle";
 import PanoramaFishEyeIcon from "@mui/icons-material/PanoramaFishEye";
 import { useEffect, useState } from "react";
 //@ts-ignore
-import Lightbox from "react-awesome-lightbox";
 import { AboutUs } from "./components/AboutUs/AboutUs";
 import { WhoWeAre } from "./components/WhoWeAre/WhoWeAre";
 import { FormSection } from "./FormSection/FormSection";
@@ -39,13 +37,6 @@ export const ComeToFront = {
 
 function App() {
   const [section, setSection] = useState(0);
-  const [openImage, setOpenImage] = useState(false);
-  const [imageToOpen, setImageToOpen] = useState("");
-
-  const handleClickImage = (image: string) => {
-    setOpenImage(true);
-    setImageToOpen(image);
-  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -88,9 +79,6 @@ function App() {
       <Layout isBannerFooter backgroundColor="#EDE8E1">
         <BannerFooter />
       </Layout>
-      {openImage && (
-        <Lightbox image={imageToOpen} onClose={() => setOpenImage(false)} />
-      )}
       <Layout
         id="servicos"
         backgroundImage={ServicesBackground}
@@ -181,34 +169,28 @@ function App() {
                 <img
                   src={casaPaulistaFoto1}
                   alt="casa-terrea"
-                  onClick={() => handleClickImage(casaPaulistaFoto1)}
                 />
                 <img
                   src={casaPaulistaFoto2}
                   alt="casa-terrea"
-                  onClick={() => handleClickImage(casaPaulistaFoto2)}
                 />
                 <img
                   src={casaPaulistaFoto3}
                   alt="casa-terrea"
-                  onClick={() => handleClickImage(casaPaulistaFoto3)}
                 />
               </div>
               <div className="image-carousel-section">
                 <img
                   src={casaPaulistaFoto4}
                   alt="casa-terrea"
-                  onClick={() => handleClickImage(casaPaulistaFoto4)}
                 />
                 <img
                   src={casaPaulistaFoto5}
                   alt="casa-terrea"
-                  onClick={() => handleClickImage(casaPaulistaFoto5)}
                 />
                 <img
                   src={casaPaulistaFoto6}
                   alt="casa-terrea"
-                  onClick={() => handleClickImage(casaPaulistaFoto6)}
                 />
               </div>
             </Carousel>
@@ -263,34 +245,28 @@ function App() {
                 <img
                   src={casaPaulistaFoto1}
                   alt="casa-terrea"
-                  onClick={() => handleClickImage(casaPaulistaFoto1)}
                 />
                 <img
                   src={casaPaulistaFoto2}
                   alt="casa-terrea"
-                  onClick={() => handleClickImage(casaPaulistaFoto2)}
                 />
                 <img
                   src={casaPaulistaFoto3}
                   alt="casa-terrea"
-                  onClick={() => handleClickImage(casaPaulistaFoto3)}
                 />
               </div>
               <div className="image-carousel-section">
                 <img
                   src={casaPaulistaFoto4}
                   alt="casa-terrea"
-                  onClick={() => handleClickImage(casaPaulistaFoto4)}
                 />
                 <img
                   src={casaPaulistaFoto5}
                   alt="casa-terrea"
-                  onClick={() => handleClickImage(casaPaulistaFoto5)}
                 />
                 <img
                   src={casaPaulistaFoto6}
                   alt="casa-terrea"
-                  onClick={() => handleClickImage(casaPaulistaFoto6)}
                 />
               </div>
             </Carousel>

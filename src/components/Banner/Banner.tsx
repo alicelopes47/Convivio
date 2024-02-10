@@ -1,10 +1,4 @@
-
-//@ts-nocheck
 import "./Banner.scss";
-import { useState } from "react";
-import Lightbox from "react-awesome-lightbox";
-
-
 
 export const Banner = () => {
   return (

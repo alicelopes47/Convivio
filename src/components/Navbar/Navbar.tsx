@@ -2,7 +2,7 @@ import "./Navbar.scss";
 import Logo from '../../assets/convivio_logo.png';
 import "bootstrap/dist/css/bootstrap.css"; 
 import { DropDownNavbar } from "../DropDownNavbar/DropDownNavbar";
-import { Link, animateScroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 interface Props {
   onClickProjetos: () => void;

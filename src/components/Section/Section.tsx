@@ -1,22 +1,5 @@
 import "./Section.scss";
-//@ts-nocheck
 
-import image2 from "../../assets/casa-terrea/image2.jpg";
-import image3 from "../../assets/casa-terrea/image3.jpg";
-import image4 from "../../assets/casa-terrea/image4.jpg";
-import { useAnimation } from "framer-motion";
-import { useEffect, useState } from "react";
-import { Carousel } from "react-responsive-carousel";
-//@ts-ignore
-import Lightbox from "react-awesome-lightbox";
-import { useInView } from "react-intersection-observer";
-import { on } from "events";
-
-interface CarouselProps {
-  // other props...
-  children?: React.ReactChild[] | null;
-  // other props...
-}
 interface Props {
   title: string;
   Area: string;
@@ -39,9 +22,6 @@ export const Section = ({
     <div
       className="section-container"
     >     
-      <Lightbox
-      image={image4}
-      />
       <div className="section-data">
         <div className="data-container">
           <h1 className="section-title">{title}</h1>

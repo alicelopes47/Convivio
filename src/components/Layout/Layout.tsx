@@ -1,4 +1,3 @@
-import { BannerFooter } from "../BannerFooter/BannerFooter";
 import "./Layout.scss";
 
 interface Props {

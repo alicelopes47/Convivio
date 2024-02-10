@@ -32,7 +32,7 @@ export const WhoWeAre = ({type}: Props) => {
           </div>
         </div>
         <div className="who-assets">
-          <img src={WhoWeAreImage} />
+          <img alt="imagem convivio" src={WhoWeAreImage} />
         </div>
       </div>
     </div>
@@ -54,7 +54,7 @@ export const WhoWeAre = ({type}: Props) => {
             </div>
           </div>
           <div className="who-assets">
-            <img src={ConvivioImage} />
+            <img alt="imagem convivio" src={ConvivioImage} />
           </div>
         </div>
       </div>
