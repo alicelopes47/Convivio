@@ -18,7 +18,6 @@ interface CarouselProps {
   // other props...
 }
 interface Props {
-  image: string;
   title: string;
   Area: string;
   Localizacao: string;

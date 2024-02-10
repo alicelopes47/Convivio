@@ -1,5 +1,4 @@
 import "./App.scss";
-import SectionImage from "./assets/project-1.png";
 import bgImage1 from "./assets/image-14.png";
 import bgImage2 from "./assets/image-16.png";
 import bgImage3 from "./assets/image-15.png";
@@ -20,9 +19,6 @@ import casaPaulistaFoto6 from "./assets/casa-paulista/casa-paulista6.jpg";
 
 import ComoFazemos2 from "./assets/comofazemos/comofazemos2.jpg";
 import ComoFazemos3 from "./assets/comofazemos/comofazemos3.jpg";
-import image3 from "./assets/casa-terrea/image3.jpg";
-import image4 from "./assets/casa-terrea/image4.jpg";
-import image1 from "./assets/casa-terrea/image1.jpg";
 import { Services } from "./components/Services/Services";
 import { Layout } from "./components/Layout/Layout";
 import { BannerFooter } from "./components/BannerFooter/BannerFooter";
@@ -143,7 +139,6 @@ function App() {
             Localizacao="Jardim Botânico - DF"
             Descricao="Casa feita do zero, projetada para ser um espaço de convivência e lazer para família, com ambientes integrados, espaçosos e bem iluminados."
             Detalhes="Sala de estar integrada com jantar; Cozinha; Espaço Gourmet; Escritório; Sala íntima no andar superior; Fireplace; Piscina; Garagem p/ 2 carros."
-            image={SectionImage}
           >
             <Carousel
               axis="vertical"
@@ -225,7 +220,6 @@ function App() {
             Localizacao="Guará II"
             Detalhes="Reforma da cozinha, sala de TV, quarto do casal e quarto do filho. Reforma da cozinha, sala de TV, quarto do casal e quarto do filho."
             Descricao="Reforma de alguns cômodos da casa, com o objetivo de modernizar e trazer mais conforto."
-            image={SectionImage}
             title="Casa Vivência"
           >
             <Carousel
@@ -316,7 +310,6 @@ function App() {
             Inverno; Closets p/ todos os quartos; Piscina;Fire Place; Lavabo
             interno/esterno e Depósito."
             Descricao=" Este projeto se desenvolve a partir de um conceito aberto, que valoriza a iluminação natural e preza pela boa ventilação de todos os ambientes. Além disso, possibilita a vista para paisagem, integrando a casa ao ambiente natural. integrando a casa ao ambiente natural"
-            image={SectionImage}
             title="Casa guará"
           >
             <Carousel
@@ -356,19 +349,19 @@ function App() {
               showStatus={false}
             >
               <div className="image-carousel-section">
-                <img src={image1} alt="casa-terrea" />
-                <img src={image3} alt="casa-terrea" />
-                <img src={image4} alt="casa-terrea" />
+                <img src={casaPaulistaFoto1} alt="casa-terrea" />
+                <img src={casaPaulistaFoto2} alt="casa-terrea" />
+                <img src={casaPaulistaFoto3} alt="casa-terrea" />
               </div>
               <div className="image-carousel-section">
-                <img src={image1} alt="casa-terrea" />
-                <img src={image3} alt="casa-terrea" />
-                <img src={image4} alt="casa-terrea" />
+                <img src={casaPaulistaFoto1} alt="casa-terrea" />
+                <img src={casaPaulistaFoto2} alt="casa-terrea" />
+                <img src={casaPaulistaFoto3} alt="casa-terrea" />
               </div>
               <div className="image-carousel-section">
-                <img src={image1} alt="casa-terrea" />
-                <img src={image3} alt="casa-terrea" />
-                <img src={image4} alt="casa-terrea" />
+                <img src={casaPaulistaFoto1} alt="casa-terrea" />
+                <img src={casaPaulistaFoto2} alt="casa-terrea" />
+                <img src={casaPaulistaFoto3} alt="casa-terrea" />
               </div>
             </Carousel>
           </Section>
