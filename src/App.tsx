@@ -3,6 +3,7 @@ import SectionImage from "./assets/project-1.png";
 import bgImage1 from "./assets/image-14.png";
 import bgImage2 from "./assets/image-16.png";
 import bgImage3 from "./assets/image-15.png";
+import { useRef } from 'react';
 import { Banner } from "./components/Banner/Banner";
 import { Carousel } from "react-responsive-carousel";
 import { Navbar } from "./components/Navbar/Navbar";
@@ -40,11 +41,6 @@ export const ComeToFront = {
   hidden: { opacity: 0, scale: 0 },
 };
 
-export const comeFromLeft = {
-  visible: { width: "60%", x: 0 },
-  hidden: { width: "0vw", x: "-30vw" },
-};
-
 function App() {
   const [section, setSection] = useState(0);
   const [openImage, setOpenImage] = useState(false);
@@ -62,6 +58,32 @@ function App() {
       }
     }, 8000);
   });
+
+  let isScrolling = false;
+  window.onwheel = e => {
+    // Previne o evento de rolagem padrão
+    e.preventDefault()
+  
+    // Se uma rolagem já está em andamento, ignora este evento
+    if (isScrolling) return
+  
+    // Define a flag para indicar que uma rolagem está em andamento
+    isScrolling = true
+  
+    const scrollAmount = window.innerHeight
+    const currentScrollPosition = window.pageYOffset
+    const nextSectionPosition = e.deltaY >= 0 
+      ? Math.ceil((currentScrollPosition + 1) / scrollAmount) * scrollAmount
+      : Math.floor((currentScrollPosition - 1) / scrollAmount) * scrollAmount
+  
+    // Rola para a próxima seção ou para a seção anterior
+    window.scrollTo({ top: nextSectionPosition, behavior: "smooth" })
+  
+    // Redefine a flag quando a rolagem termina
+    setTimeout(() => {
+      isScrolling = false
+    }, 1000) // Ajuste este tempo para corresponder ao tempo que leva para rolar
+  }
 
   return (
     <div className="App">
@@ -82,7 +104,6 @@ function App() {
       >
         <Services />
       </Layout>
-
       <Carousel
         useKeyboardArrows
         showArrows={false}
@@ -407,13 +428,13 @@ function App() {
         </Layout>
       </Carousel>
       <Layout noSpacement id="who-we-are" backgroundColor="#86AB85">
-          <WhoWeAre type={1} />
+        <WhoWeAre type={1} />
       </Layout>
       <Layout noSpacement id="who-we-are" backgroundColor="#597C59">
-          <WhoWeAre type={2} />
+        <WhoWeAre type={2} />
       </Layout>
       <Layout noSpacement id="orcamento">
-          <FormSection />
+        <FormSection />
       </Layout>
     </div>
   );
