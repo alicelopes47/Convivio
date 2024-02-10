@@ -62,13 +62,10 @@
         }
       }
       video {
-        height: 100vh;
-        width: 38vw;
-        source {
-            width: 38vw;
-            padding-left: 50px;
-            object-fit: cover;
-        }
+        height:100vh;
+        width: 40vw;
+        object-fit: cover;
+        padding-left: 50px;
       }
     }
   }

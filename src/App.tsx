@@ -404,7 +404,9 @@ function App() {
             subtitle="Levantamento de Dados e Informações"
             paragraph="Aqui, após o preenchimento do questionário, que nós enviaremos ao cliente, elaboramos o plano de necessidades, desenvolvendo fluxos e croquis a fim de capturar as ideias iniciais do projeto. Alem disso, serão feitas medições no local, documentadas através de fotografias. Ao londo desta fase, apresentamos imagens e projetos de referência para contribuir na tomada de decisões e na melhor compreensão dos gostos e necessidades do cliente."
           >
-            <video src={ComoFazemosVideo} controls></video>
+            <video controls>
+              <source className="source-video"  src={ComoFazemosVideo} type="video/mp4" />
+            </video>
           </AboutUs>
         </Layout>
 

@@ -25,11 +25,12 @@
         padding-right: 60px;
     }
 }
+    .carousel-icon {
+        color: $primary-color;	
+        cursor: pointer;
+    }
 
-.carousel-icon {
-    color: $primary-color;	
-    cursor: pointer;
-}
+
 
 .grid-section-buttons-container {
     display: flex;
