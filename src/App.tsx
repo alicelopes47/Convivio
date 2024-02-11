@@ -119,189 +119,86 @@ function App() {
           );
         }}
       >
-        <Layout
-          backgroundImage={bgImage1}
-          noSpacement
-          title="Projetos"
-          id="projetos"
-        >
-          {" "}
-          <Section
-            title="Casa Paulista"
+        <Layout projectSection backgroundImage={bgImage1}>
+          <ProjectSection
+            hasTitle
+            name="Casa Paulista"
             Area="Aprox. 450m²"
             Localizacao="Jardim Botânico - DF"
             Descricao="Casa feita do zero, projetada para ser um espaço de convivência e lazer para família, com ambientes integrados, espaçosos e bem iluminados."
             Detalhes="Sala de estar integrada com jantar; Cozinha; Espaço Gourmet; Escritório; Sala íntima no andar superior; Fireplace; Piscina; Garagem p/ 2 carros."
-          >
-            <Carousel
-              axis="vertical"
-              showThumbs={false}
-              transitionTime={1000}
-              infiniteLoop
-              showIndicators={false}
-              showStatus={false}
-              className="image-section-carousel-container"
-            >
-              <div className="image-carousel-section">
-                <img src={casaPaulistaFoto1} alt="casa-terrea" />
-                <img src={casaPaulistaFoto2} alt="casa-terrea" />
-                <img src={casaPaulistaFoto3} alt="casa-terrea" />
-              </div>
-              <div className="image-carousel-section">
-                <img src={casaPaulistaFoto4} alt="casa-terrea" />
-                <img src={casaPaulistaFoto5} alt="casa-terrea" />
-                <img src={casaPaulistaFoto6} alt="casa-terrea" />
-              </div>
-            </Carousel>
-          </Section>
+          />
+          <CarouselProject>
+            <div>
+              <img src={casaPaulistaFoto1} alt="casa-terrea" />
+              <img src={casaPaulistaFoto2} alt="casa-terrea" />
+              <img src={casaPaulistaFoto3} alt="casa-terrea" />
+            </div>
+            <div>
+              <img src={casaPaulistaFoto1} alt="casa-terrea" />
+              <img src={casaPaulistaFoto2} alt="casa-terrea" />
+              <img src={casaPaulistaFoto3} alt="casa-terrea" />
+            </div>
+            <div>
+              <img src={casaPaulistaFoto1} alt="casa-terrea" />
+              <img src={casaPaulistaFoto2} alt="casa-terrea" />
+              <img src={casaPaulistaFoto3} alt="casa-terrea" />
+            </div>
+          </CarouselProject>
         </Layout>
-        <Layout backgroundImage={bgImage2}>
-          <Section
+        <Layout projectSection backgroundImage={bgImage1}>
+          <ProjectSection
             Area="Reforma de aprox. 100m²"
             Localizacao="Guará II"
             Detalhes="Reforma da cozinha, sala de TV, quarto do casal e quarto do filho. Reforma da cozinha, sala de TV, quarto do casal e quarto do filho."
             Descricao="Reforma de alguns cômodos da casa, com o objetivo de modernizar e trazer mais conforto."
-            title="Casa Vivência"
-          >
-            <Carousel
-              axis="vertical"
-              transitionTime={1000}
-              showThumbs={false}
-              infiniteLoop
-              showArrows
-              renderArrowNext={(clickHandler, selectedItem) => {
-                return (
-                  <>
-                    <div
-                      className="grid-section-buttons-container"
-                      onClick={clickHandler}
-                    >
-                      <div className="grid-section-buttons-inner">
-                        <ChangeHistoryIcon className="icon-grid-section-next" />
-                      </div>
-                    </div>
-                  </>
-                );
-              }}
-              renderArrowPrev={(clickHandler) => {
-                return (
-                  <>
-                    <div
-                      className="grid-section-buttons-container"
-                      onClick={clickHandler}
-                    >
-                      <div className="grid-section-buttons-inner">
-                        <ChangeHistoryIcon className="icon-grid-section-prev" />
-                      </div>
-                    </div>
-                  </>
-                );
-              }}
-              className="image-section-carousel-container"
-            >
-              <div className="image-carousel-section">
-                <img src={casaPaulistaFoto1} alt="casa-terrea" />
-                <img src={casaPaulistaFoto2} alt="casa-terrea" />
-                <img src={casaPaulistaFoto3} alt="casa-terrea" />
-              </div>
-              <div className="image-carousel-section">
-                <img src={casaPaulistaFoto4} alt="casa-terrea" />
-                <img src={casaPaulistaFoto5} alt="casa-terrea" />
-                <img src={casaPaulistaFoto6} alt="casa-terrea" />
-              </div>
-            </Carousel>
-          </Section>
+            name="Casa Vivência"
+          />
+          <CarouselProject>
+            <div>
+              <img src={casaPaulistaFoto1} alt="casa-terrea" />
+              <img src={casaPaulistaFoto2} alt="casa-terrea" />
+              <img src={casaPaulistaFoto3} alt="casa-terrea" />
+            </div>
+            <div>
+              <img src={casaPaulistaFoto1} alt="casa-terrea" />
+              <img src={casaPaulistaFoto2} alt="casa-terrea" />
+              <img src={casaPaulistaFoto3} alt="casa-terrea" />
+            </div>
+            <div>
+              <img src={casaPaulistaFoto1} alt="casa-terrea" />
+              <img src={casaPaulistaFoto2} alt="casa-terrea" />
+              <img src={casaPaulistaFoto3} alt="casa-terrea" />
+            </div>
+          </CarouselProject>
         </Layout>
-        <Layout backgroundImage={bgImage3}>
-          {" "}
-          <Section
-            title="Casa Vicente Pires"
-            Area="Aprox. 240m²"
-            Localizacao="Vicente Pires"
-            Detalhes="contempla 3 suítes, piscina, gourmet integrado, sala de estar e jantar com pé direito duplo, escritório para home office, 2 lavabos sendo um interno e externo, paredes em cobogo, bancadas no cinza castelo escovado, jabuticabeira na ilha da bancada."
-            Descricao=" Este projeto se desenvolve a partir de um conceito aberto, que valoriza a iluminação natural e preza pela boa ventilação de todos os ambientes. Além disso, possibilita a vista para paisagem, integrando a casa ao ambiente natural. integrando a casa ao ambiente natural"
-          >
-            <Carousel
-              renderArrowNext={(clickHandler, selectedItem) => {
-                return (
-                  <>
-                    <div
-                      className="grid-section-buttons-container"
-                      onClick={clickHandler}
-                    >
-                      <div className="grid-section-buttons-inner">
-                        <ChangeHistoryIcon className="icon-grid-section-next" />
-                      </div>
-                    </div>
-                  </>
-                );
-              }}
-              renderArrowPrev={(clickHandler) => {
-                return (
-                  <>
-                    <div
-                      className="grid-section-buttons-container"
-                      onClick={clickHandler}
-                    >
-                      <div className="grid-section-buttons-inner">
-                        <ChangeHistoryIcon className="icon-grid-section-prev" />
-                      </div>
-                    </div>
-                  </>
-                );
-              }}
-              axis="vertical"
-              transitionTime={1000}
-              className="image-section-carousel-container"
-              showThumbs={false}
-              showIndicators={false}
-              showStatus={false}
-            >
-              <div className="image-carousel-section">
-                <img src={casaPaulistaFoto1} alt="casa-terrea" />
-                <img src={casaPaulistaFoto2} alt="casa-terrea" />
-                <img src={casaPaulistaFoto3} alt="casa-terrea" />
-              </div>
-              <div className="image-carousel-section">
-                <img src={casaPaulistaFoto1} alt="casa-terrea" />
-                <img src={casaPaulistaFoto2} alt="casa-terrea" />
-                <img src={casaPaulistaFoto3} alt="casa-terrea" />
-              </div>
-              <div className="image-carousel-section">
-                <img src={casaPaulistaFoto1} alt="casa-terrea" />
-                <img src={casaPaulistaFoto2} alt="casa-terrea" />
-                <img src={casaPaulistaFoto3} alt="casa-terrea" />
-              </div>
-            </Carousel>
-          </Section>
+        <Layout projectSection backgroundImage={bgImage1}>
+          <ProjectSection
+           name="Casa Vicente Pires"
+           Area="Aprox. 240m²"
+           Localizacao="Vicente Pires"
+           Detalhes="contempla 3 suítes, piscina, gourmet integrado, sala de estar e jantar com pé direito duplo, escritório para home office, 2 lavabos sendo um interno e externo, paredes em cobogo, bancadas no cinza castelo escovado, jabuticabeira na ilha da bancada."
+           Descricao=" Este projeto se desenvolve a partir de um conceito aberto, que valoriza a iluminação natural e preza pela boa ventilação de todos os ambientes. Além disso, possibilita a vista para paisagem, integrando a casa ao ambiente natural. integrando a casa ao ambiente natural"
+          />
+          <CarouselProject>
+            <div>
+              <img src={casaPaulistaFoto1} alt="casa-terrea" />
+              <img src={casaPaulistaFoto2} alt="casa-terrea" />
+              <img src={casaPaulistaFoto3} alt="casa-terrea" />
+            </div>
+            <div>
+              <img src={casaPaulistaFoto1} alt="casa-terrea" />
+              <img src={casaPaulistaFoto2} alt="casa-terrea" />
+              <img src={casaPaulistaFoto3} alt="casa-terrea" />
+            </div>
+            <div>
+              <img src={casaPaulistaFoto1} alt="casa-terrea" />
+              <img src={casaPaulistaFoto2} alt="casa-terrea" />
+              <img src={casaPaulistaFoto3} alt="casa-terrea" />
+            </div>
+          </CarouselProject>
         </Layout>
       </Carousel>
-      <Layout projectSection backgroundImage={bgImage1}>
-        <ProjectSection
-          name="Casa Vicente Pires"
-          Area="Aprox. 240m²"
-          Localizacao="Vicente Pires"
-          Detalhes="contempla 3 suítes, piscina, gourmet integrado, sala de estar e jantar com pé direito duplo, escritório para home office, 2 lavabos sendo um interno e externo, paredes em cobogo, bancadas no cinza castelo escovado, jabuticabeira na ilha da bancada."
-          Descricao=" Este projeto se desenvolve a partir de um conceito aberto, que valoriza a iluminação natural e preza pela boa ventilação de todos os ambientes. Além disso, possibilita a vista para paisagem, integrando a casa ao ambiente natural. integrando a casa ao ambiente natural"
-        />
-        <CarouselProject>
-          <div>
-            <img src={casaPaulistaFoto1} alt="casa-terrea" />
-            <img src={casaPaulistaFoto2} alt="casa-terrea" />
-            <img src={casaPaulistaFoto3} alt="casa-terrea" />
-          </div>
-          <div>
-            <img src={casaPaulistaFoto1} alt="casa-terrea" />
-            <img src={casaPaulistaFoto2} alt="casa-terrea" />
-            <img src={casaPaulistaFoto3} alt="casa-terrea" />
-          </div>
-          <div>
-            <img src={casaPaulistaFoto1} alt="casa-terrea" />
-            <img src={casaPaulistaFoto2} alt="casa-terrea" />
-            <img src={casaPaulistaFoto3} alt="casa-terrea" />
-          </div>
-        </CarouselProject>
-      </Layout>
       <Carousel
         showArrows={false}
         renderIndicator={(clickHandler, selectedItem) => {

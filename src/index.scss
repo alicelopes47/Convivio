@@ -20,17 +20,26 @@ body {
     margin: 0;
     font-weight: 400;
   }
-  img {
-    transition: transform 0.1s ease-in-out;
-    cursor: pointer;
-    &:hover {
-      transform: scale(1.1);
-    }
+
+  
+  .title {
+    font-family: "Lexend Deca", sans-serif !important;
+    font-size: 3.5vw;
+    color: $primary-color;
+    font-weight: 300;
+    margin-bottom: 3vh;
+  }
+
+  .layout-padding {
+    padding-top: 8vh;
   }
 
   .carousel {
     .thumbs-wrapper {
       display: none;
+    }
+    .slide {
+      text-align: start;
     }
   }
 }

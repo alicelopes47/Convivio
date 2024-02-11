@@ -2,20 +2,16 @@
 
 .project-data {
   width: 40vw;
-  .project-title {
-    font-family: "Lexend Deca", sans-serif !important;
-      font-size: 3.5vw;
-      color: $primary-color;
-      padding-top: 8vh;
-      font-weight: 300;
-      margin-bottom: 3vh;
-  }
   .data-container {
     height: 100vh;
     display: flex;
     gap: 2vh;
     flex-direction: column;
+    &.data-padding {
+      padding-top: 10vh;
+    }
     .project-name {
+      text-align: start !important;
       font-family: "Lexend Deca";
       font-weight: 300;
       color: $primary-color;
