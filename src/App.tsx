@@ -89,32 +89,6 @@ function App() {
       >
         <Services />
       </Layout>
-      <Layout projectSection backgroundImage={bgImage1}>
-        <ProjectSection
-          name="Casa Vicente Pires"
-          Area="Aprox. 240m²"
-          Localizacao="Vicente Pires"
-          Detalhes="contempla 3 suítes, piscina, gourmet integrado, sala de estar e jantar com pé direito duplo, escritório para home office, 2 lavabos sendo um interno e externo, paredes em cobogo, bancadas no cinza castelo escovado, jabuticabeira na ilha da bancada."
-          Descricao=" Este projeto se desenvolve a partir de um conceito aberto, que valoriza a iluminação natural e preza pela boa ventilação de todos os ambientes. Além disso, possibilita a vista para paisagem, integrando a casa ao ambiente natural. integrando a casa ao ambiente natural"
-        />
-        <CarouselProject>
-          <div className="image-carousel-section">
-            <img src={casaPaulistaFoto1} alt="casa-terrea" />
-            <img src={casaPaulistaFoto2} alt="casa-terrea" />
-            <img src={casaPaulistaFoto3} alt="casa-terrea" />
-          </div>
-          <div className="image-carousel-section">
-            <img src={casaPaulistaFoto1} alt="casa-terrea" />
-            <img src={casaPaulistaFoto2} alt="casa-terrea" />
-            <img src={casaPaulistaFoto3} alt="casa-terrea" />
-          </div>
-          <div className="image-carousel-section">
-            <img src={casaPaulistaFoto1} alt="casa-terrea" />
-            <img src={casaPaulistaFoto2} alt="casa-terrea" />
-            <img src={casaPaulistaFoto3} alt="casa-terrea" />
-          </div>
-        </CarouselProject>
-      </Layout>
       <Carousel
         useKeyboardArrows
         showArrows={false}
@@ -302,6 +276,32 @@ function App() {
           </Section>
         </Layout>
       </Carousel>
+      <Layout projectSection backgroundImage={bgImage1}>
+        <ProjectSection
+          name="Casa Vicente Pires"
+          Area="Aprox. 240m²"
+          Localizacao="Vicente Pires"
+          Detalhes="contempla 3 suítes, piscina, gourmet integrado, sala de estar e jantar com pé direito duplo, escritório para home office, 2 lavabos sendo um interno e externo, paredes em cobogo, bancadas no cinza castelo escovado, jabuticabeira na ilha da bancada."
+          Descricao=" Este projeto se desenvolve a partir de um conceito aberto, que valoriza a iluminação natural e preza pela boa ventilação de todos os ambientes. Além disso, possibilita a vista para paisagem, integrando a casa ao ambiente natural. integrando a casa ao ambiente natural"
+        />
+        <CarouselProject>
+          <div>
+            <img src={casaPaulistaFoto1} alt="casa-terrea" />
+            <img src={casaPaulistaFoto2} alt="casa-terrea" />
+            <img src={casaPaulistaFoto3} alt="casa-terrea" />
+          </div>
+          <div>
+            <img src={casaPaulistaFoto1} alt="casa-terrea" />
+            <img src={casaPaulistaFoto2} alt="casa-terrea" />
+            <img src={casaPaulistaFoto3} alt="casa-terrea" />
+          </div>
+          <div>
+            <img src={casaPaulistaFoto1} alt="casa-terrea" />
+            <img src={casaPaulistaFoto2} alt="casa-terrea" />
+            <img src={casaPaulistaFoto3} alt="casa-terrea" />
+          </div>
+        </CarouselProject>
+      </Layout>
       <Carousel
         showArrows={false}
         renderIndicator={(clickHandler, selectedItem) => {
