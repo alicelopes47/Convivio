@@ -27,7 +27,7 @@ body {
     font-size: 3.5vw;
     color: $primary-color;
     font-weight: 300;
-    margin-bottom: 3vh;
+    margin-bottom: 6vh;
   }
 
   .layout-padding {
@@ -40,6 +40,17 @@ body {
     }
     .slide {
       text-align: start;
+    }
+    .control-dots {
+      bottom: 2%;
+      width: 50%;
+      left: 6%;
+      .dot {
+        display: none;
+        &.selected {
+          display: none;
+        }
+      }
     }
   }
 }

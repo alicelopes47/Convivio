@@ -1,9 +1,14 @@
 import "./Banner.scss";
 
-export const Banner = () => {
+interface Props {
+  id: string;
+}
+
+
+export const Banner = ({id}: Props) => {
   return (
     <>
-    <div className="banner-container" id="inicio">
+    <div className="banner-container" id={id}>
       <div className="banner-content">
         <h1>
           Seja bem vindo,{" "}

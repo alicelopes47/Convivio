@@ -5,7 +5,6 @@ import bgImage3 from "./assets/image-15.png";
 import { Banner } from "./components/Banner/Banner";
 import { Carousel } from "react-responsive-carousel";
 import { Navbar } from "./components/Navbar/Navbar";
-import { Section } from "./components/Section/Section";
 import {
   casaPaulistaFoto1,
   casaPaulistaFoto2,
@@ -22,11 +21,9 @@ import { Services } from "./components/Services/Services";
 import { Layout } from "./components/Layout/Layout";
 import { BannerFooter } from "./components/BannerFooter/BannerFooter";
 import ServicesBackground from "./assets/bg-services.png";
-import ChangeHistoryIcon from "@mui/icons-material/ChangeHistory";
 import CircleIcon from "@mui/icons-material/Circle";
 import PanoramaFishEyeIcon from "@mui/icons-material/PanoramaFishEye";
-import { useEffect, useRef, useState } from "react";
-//@ts-ignore
+import { useEffect, useState } from "react";
 import { AboutUs } from "./components/AboutUs/AboutUs";
 import { WhoWeAre } from "./components/WhoWeAre/WhoWeAre";
 import { FormSection } from "./FormSection/FormSection";
@@ -46,7 +43,7 @@ function App() {
       }
     }, 8000);
   });
-
+  
   let isScrolling = false;
   window.onwheel = (e) => {
     // Previne o evento de rolagem padrão
@@ -76,9 +73,9 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar onClickProjetos={() => setSection(0)} />
-      <Banner />
-      <Layout isBannerFooter backgroundColor="#EDE8E1">
+      <Navbar />
+      <Banner id="inicio" />
+      <Layout id="banner-footer" isBannerFooter backgroundColor="#EDE8E1">
         <BannerFooter />
       </Layout>
       <Layout
@@ -119,7 +116,7 @@ function App() {
           );
         }}
       >
-        <Layout projectSection backgroundImage={bgImage1}>
+        <Layout id="projetos" projectSection backgroundImage={bgImage1}>
           <ProjectSection
             hasTitle
             name="Casa Paulista"
