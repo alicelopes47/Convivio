@@ -39,6 +39,26 @@
       display: block;
     }
   }
+
+  &.projects-section {
+    height: 100vh;
+    .children {
+      padding-left: 11vw;
+      height: 100vh;
+      width: 100%;
+      position: initial;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      .layout-title {
+        font-family: "Lexend Deca", sans-serif !important;
+        font-size: 3.5vw; 
+          //definir o padding top daqui e o padding left aqui
+        position: initial;
+        color: $primary-color;
+      }
+    }
+  }
 }
 
 @media (max-width: 680px) { 

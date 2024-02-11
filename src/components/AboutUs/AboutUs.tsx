@@ -1,3 +1,4 @@
+import { Carousel } from "react-responsive-carousel";
 import "./AboutUs.scss";
 
 
@@ -7,9 +8,10 @@ interface Props {
     subtitle: string;
     paragraph: string;
     children: React.ReactNode;
+    isCarouselInner?: boolean;
 }
 
-export const AboutUs = ({hasTitle, StageTitle, subtitle, paragraph, children}: Props) => {
+export const AboutUs = ({hasTitle, StageTitle, subtitle, paragraph, children, isCarouselInner}: Props) => {
   return (
     <div className="about-container" id="about-us">
       <div className="about-content">
@@ -22,7 +24,7 @@ export const AboutUs = ({hasTitle, StageTitle, subtitle, paragraph, children}: P
           </p>
         </div>
         <div className="about-assets">
-          {children}
+          {isCarouselInner ? children : <Carousel>{children as React.ReactChild[]}</Carousel>}
         </div>
       </div>
     </div>

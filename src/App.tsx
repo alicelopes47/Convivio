@@ -6,8 +6,6 @@ import { Banner } from "./components/Banner/Banner";
 import { Carousel } from "react-responsive-carousel";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Section } from "./components/Section/Section";
-//@ts-ignore
-import ComoFazemosVideo from "./assets/comofazemos/comofazemosvideo.mp4";
 import {
   casaPaulistaFoto1,
   casaPaulistaFoto2,
@@ -15,11 +13,11 @@ import {
   casaPaulistaFoto4,
   casaPaulistaFoto5,
   casaPaulistaFoto6,
+  VideoProjetos,
 } from "./assets/index";
-//@ts-ignore
-
-import ComoFazemos2 from "./assets/comofazemos/comofazemos2.jpg";
-import ComoFazemos3 from "./assets/comofazemos/comofazemos3.jpg";
+import ComoFazemos2 from "./assets/projetos/comofazemos2.jpg";
+import ComoFazemos3 from "./assets/projetos/comofazemos3.jpg";
+import { CarouselProject } from "./ProjectSection/CarouselProject";
 import { Services } from "./components/Services/Services";
 import { Layout } from "./components/Layout/Layout";
 import { BannerFooter } from "./components/BannerFooter/BannerFooter";
@@ -27,11 +25,12 @@ import ServicesBackground from "./assets/bg-services.png";
 import ChangeHistoryIcon from "@mui/icons-material/ChangeHistory";
 import CircleIcon from "@mui/icons-material/Circle";
 import PanoramaFishEyeIcon from "@mui/icons-material/PanoramaFishEye";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 //@ts-ignore
 import { AboutUs } from "./components/AboutUs/AboutUs";
 import { WhoWeAre } from "./components/WhoWeAre/WhoWeAre";
 import { FormSection } from "./FormSection/FormSection";
+import { ProjectSection } from "./ProjectSection/ProjectSection";
 export const ComeToFront = {
   visible: { opacity: 1, scale: 1 },
   hidden: { opacity: 0, scale: 0 },
@@ -90,14 +89,38 @@ function App() {
       >
         <Services />
       </Layout>
+      <Layout projectSection backgroundImage={bgImage1}>
+        <ProjectSection
+          name="Casa Vicente Pires"
+          Area="Aprox. 240m²"
+          Localizacao="Vicente Pires"
+          Detalhes="contempla 3 suítes, piscina, gourmet integrado, sala de estar e jantar com pé direito duplo, escritório para home office, 2 lavabos sendo um interno e externo, paredes em cobogo, bancadas no cinza castelo escovado, jabuticabeira na ilha da bancada."
+          Descricao=" Este projeto se desenvolve a partir de um conceito aberto, que valoriza a iluminação natural e preza pela boa ventilação de todos os ambientes. Além disso, possibilita a vista para paisagem, integrando a casa ao ambiente natural. integrando a casa ao ambiente natural"
+        />
+        <CarouselProject>
+          <div className="image-carousel-section">
+            <img src={casaPaulistaFoto1} alt="casa-terrea" />
+            <img src={casaPaulistaFoto2} alt="casa-terrea" />
+            <img src={casaPaulistaFoto3} alt="casa-terrea" />
+          </div>
+          <div className="image-carousel-section">
+            <img src={casaPaulistaFoto1} alt="casa-terrea" />
+            <img src={casaPaulistaFoto2} alt="casa-terrea" />
+            <img src={casaPaulistaFoto3} alt="casa-terrea" />
+          </div>
+          <div className="image-carousel-section">
+            <img src={casaPaulistaFoto1} alt="casa-terrea" />
+            <img src={casaPaulistaFoto2} alt="casa-terrea" />
+            <img src={casaPaulistaFoto3} alt="casa-terrea" />
+          </div>
+        </CarouselProject>
+      </Layout>
       <Carousel
         useKeyboardArrows
         showArrows={false}
-        infiniteLoop
         swipeable
         stopOnHover
         transitionTime={1000}
-        autoPlay
         selectedItem={section}
         interval={8000}
         showThumbs={false}
@@ -122,7 +145,12 @@ function App() {
           );
         }}
       >
-        <Layout backgroundImage={bgImage1} title="Projetos" id="projetos">
+        <Layout
+          backgroundImage={bgImage1}
+          noSpacement
+          title="Projetos"
+          id="projetos"
+        >
           {" "}
           <Section
             title="Casa Paulista"
@@ -138,34 +166,6 @@ function App() {
               infiniteLoop
               showIndicators={false}
               showStatus={false}
-              renderArrowNext={(clickHandler, selectedItem) => {
-                return (
-                  <>
-                    <div
-                      className="grid-section-buttons-container"
-                      onClick={clickHandler}
-                    >
-                      <div className="grid-section-buttons-inner">
-                        <ChangeHistoryIcon className="icon-grid-section-next" />
-                      </div>
-                    </div>
-                  </>
-                );
-              }}
-              renderArrowPrev={(clickHandler) => {
-                return (
-                  <>
-                    <div
-                      className="grid-section-buttons-container"
-                      onClick={clickHandler}
-                    >
-                      <div className="grid-section-buttons-inner">
-                        <ChangeHistoryIcon className="icon-grid-section-prev" />
-                      </div>
-                    </div>
-                  </>
-                );
-              }}
               className="image-section-carousel-container"
             >
               <div className="image-carousel-section">
@@ -194,8 +194,7 @@ function App() {
               transitionTime={1000}
               showThumbs={false}
               infiniteLoop
-              showIndicators={false}
-              showStatus={false}
+              showArrows
               renderArrowNext={(clickHandler, selectedItem) => {
                 return (
                   <>
@@ -332,10 +331,10 @@ function App() {
             subtitle="Levantamento de Dados e Informações"
             paragraph="Aqui, após o preenchimento do questionário, que nós enviaremos ao cliente, elaboramos o plano de necessidades, desenvolvendo fluxos e croquis a fim de capturar as ideias iniciais do projeto. Alem disso, serão feitas medições no local, documentadas através de fotografias. Ao londo desta fase, apresentamos imagens e projetos de referência para contribuir na tomada de decisões e na melhor compreensão dos gostos e necessidades do cliente."
           >
-            <video controls>
+            <video controls loop autoPlay>
               <source
                 className="source-video"
-                src={ComoFazemosVideo}
+                src={VideoProjetos}
                 type="video/mp4"
               />
             </video>

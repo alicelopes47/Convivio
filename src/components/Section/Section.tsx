@@ -1,4 +1,7 @@
 import "./Section.scss";
+import videojs from 'video.js';
+import { useEffect, useRef } from 'react';
+import  Video from 'video.js';
 
 interface Props {
   title: string;
@@ -17,7 +20,6 @@ export const Section = ({
   Detalhes,
   children
 }: Props) => {
-
   return (
     <div
       className="section-container"

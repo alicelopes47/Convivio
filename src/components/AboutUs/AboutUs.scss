@@ -64,6 +64,7 @@
       video {
         height:100vh;
         width: 40vw;
+        pointer-events: all;
         object-fit: cover;
         padding-left: 50px;
       }

@@ -1,35 +1,36 @@
-@use 'scss/colors' as *; 
-
+@use "scss/colors" as *;
 
 body {
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: "Lexend Deca", sans-serif;
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
+  video::-webkit-media-controls-fullscreen-button {
+    display: none;
+  }
   a {
     text-decoration: none;
     color: $light;
-  
   }
-   h1 {
+  h1 {
     margin: 0;
     color: $primary-color;
-   }
-   p {
+  }
+  p {
     margin: 0;
     font-weight: 400;
-   }
-   img {
+  }
+  img {
     transition: transform 0.1s ease-in-out;
     cursor: pointer;
     &:hover {
-        transform: scale(1.1);
+      transform: scale(1.1);
     }
-}
+  }
 
-   .carousel {
+  .carousel {
     .thumbs-wrapper {
       display: none;
     }
-   }
+  }
 }

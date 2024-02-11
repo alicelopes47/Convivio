@@ -6,6 +6,7 @@ interface Props {
   title?: string;
   whiteTitle?: boolean;
   id?: string;
+  projectSection?:boolean;
   noSpacement?: boolean;
   backgroundColor?: string;
   isBannerFooter?: boolean;
@@ -15,6 +16,7 @@ export const Layout = ({
   children,
   backgroundImage,
   title,
+  projectSection,
   backgroundColor,
   whiteTitle,
   id,
@@ -23,7 +25,7 @@ export const Layout = ({
 }: Props) => {
   return (
     <div
-      className={`layout-container ${noSpacement ? "no-spacement" : ""} ${whiteTitle ? "services-section" : ""} ${isBannerFooter ? "banner-footer-responsive" : ""}`}
+      className={`layout-container ${noSpacement ? "no-spacement" : ""} ${ projectSection ? "projects-section" : ""} ${whiteTitle ? "services-section" : ""} ${isBannerFooter ? "banner-footer-responsive" : ""}`}
       id={id}
       style={{
         backgroundImage: `url(${backgroundImage})`,
@@ -36,7 +38,7 @@ export const Layout = ({
       {/* Colocar children dentro dessa div */}
       <div className={`children`}>
         {title && (
-          <h1 className={`layout-title ${whiteTitle ? "white" : ""}`}>
+          <h1 className={`layout-title ${whiteTitle ? "white" : ""}  ${!title ? "no-title-section" : ""}`}>
             {title}
           </h1>
         )}

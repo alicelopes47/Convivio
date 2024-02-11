@@ -1,0 +1,37 @@
+@use "../scss/colors" as *;
+
+.project-data {
+  width: 40vw;
+  .project-title {
+    font-family: "Lexend Deca", sans-serif !important;
+      font-size: 3.5vw;
+      color: $primary-color;
+      font-weight: 300;
+      margin-bottom: 2vh;
+  }
+  .data-container {
+    height: 100vh;
+    display: flex;
+    padding-top: 15vh;
+    gap: 20px;
+    flex-direction: column;
+    .project-name {
+      margin-bottom: 2vh;
+      font-family: "Lexend Deca";
+      font-weight: 300;
+      color: $primary-color;
+      font-size: 2.5vw;
+      text-align: start;
+    }
+    h1 {
+      font-family: "Lexend Deca";
+      text-align: start;
+      font-size: 1.3vw;
+      width: 70%;
+      font-weight: 500;
+      span {
+        font-weight: 200;
+      }
+    }
+  }
+}
