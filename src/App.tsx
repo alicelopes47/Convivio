@@ -27,6 +27,7 @@ import { useEffect, useState } from "react";
 import { AboutUs } from "./components/AboutUs/AboutUs";
 import { WhoWeAre } from "./components/WhoWeAre/WhoWeAre";
 import { FormSection } from "./FormSection/FormSection";
+import { ExternalCarousel } from "./components/ExternalCarousel/ExternalCarousel";
 import { ProjectSection } from "./ProjectSection/ProjectSection";
 export const ComeToFront = {
   visible: { opacity: 1, scale: 1 },
@@ -43,7 +44,7 @@ function App() {
       }
     }, 8000);
   });
-  
+
   let isScrolling = false;
   window.onwheel = (e) => {
     // Previne o evento de rolagem padrão
@@ -86,36 +87,7 @@ function App() {
       >
         <Services />
       </Layout>
-      <Carousel
-        useKeyboardArrows
-        showArrows={false}
-        swipeable
-        stopOnHover
-        transitionTime={1000}
-        selectedItem={section}
-        interval={8000}
-        showThumbs={false}
-        showIndicators
-        renderIndicator={(clickHandler, selectedItem) => {
-          return (
-            <>
-              {selectedItem ? (
-                <CircleIcon
-                  fontSize="medium"
-                  className="carousel-icon"
-                  onClick={clickHandler}
-                />
-              ) : (
-                <PanoramaFishEyeIcon
-                  fontSize="medium"
-                  className="carousel-icon"
-                  onClick={clickHandler}
-                />
-              )}
-            </>
-          );
-        }}
-      >
+      <ExternalCarousel>
         <Layout id="projetos" projectSection backgroundImage={bgImage1}>
           <ProjectSection
             hasTitle
@@ -171,11 +143,11 @@ function App() {
         </Layout>
         <Layout projectSection backgroundImage={bgImage1}>
           <ProjectSection
-           name="Casa Vicente Pires"
-           Area="Aprox. 240m²"
-           Localizacao="Vicente Pires"
-           Detalhes="contempla 3 suítes, piscina, gourmet integrado, sala de estar e jantar com pé direito duplo, escritório para home office, 2 lavabos sendo um interno e externo, paredes em cobogo, bancadas no cinza castelo escovado, jabuticabeira na ilha da bancada."
-           Descricao=" Este projeto se desenvolve a partir de um conceito aberto, que valoriza a iluminação natural e preza pela boa ventilação de todos os ambientes. Além disso, possibilita a vista para paisagem, integrando a casa ao ambiente natural. integrando a casa ao ambiente natural"
+            name="Casa Vicente Pires"
+            Area="Aprox. 240m²"
+            Localizacao="Vicente Pires"
+            Detalhes="contempla 3 suítes, piscina, gourmet integrado, sala de estar e jantar com pé direito duplo, escritório para home office, 2 lavabos sendo um interno e externo, paredes em cobogo, bancadas no cinza castelo escovado, jabuticabeira na ilha da bancada."
+            Descricao=" Este projeto se desenvolve a partir de um conceito aberto, que valoriza a iluminação natural e preza pela boa ventilação de todos os ambientes. Além disso, possibilita a vista para paisagem, integrando a casa ao ambiente natural. integrando a casa ao ambiente natural"
           />
           <CarouselProject>
             <div>
@@ -195,29 +167,8 @@ function App() {
             </div>
           </CarouselProject>
         </Layout>
-      </Carousel>
-      <Carousel
-        showArrows={false}
-        renderIndicator={(clickHandler, selectedItem) => {
-          return (
-            <>
-              {selectedItem ? (
-                <CircleIcon
-                  fontSize="medium"
-                  className="carousel-icon"
-                  onClick={clickHandler}
-                />
-              ) : (
-                <PanoramaFishEyeIcon
-                  fontSize="medium"
-                  className="carousel-icon"
-                  onClick={clickHandler}
-                />
-              )}
-            </>
-          );
-        }}
-      >
+      </ExternalCarousel>
+      <ExternalCarousel>
         <Layout noSpacement id="about-us">
           <AboutUs
             hasTitle
@@ -234,7 +185,6 @@ function App() {
             </video>
           </AboutUs>
         </Layout>
-
         <Layout noSpacement id="a">
           <AboutUs
             StageTitle="2ª Etapa"
@@ -253,7 +203,7 @@ function App() {
             <img src={ComoFazemos3} alt="about-us" />
           </AboutUs>
         </Layout>
-      </Carousel>
+      </ExternalCarousel>
       <Layout noSpacement id="who-we-are" backgroundColor="#86AB85">
         <WhoWeAre type={1} />
       </Layout>
