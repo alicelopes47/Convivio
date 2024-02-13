@@ -18,6 +18,26 @@
   }
 }
 
+@media (max-width: 768px) {
+  @keyframes slidein {
+    0% {
+      background-image: url("../../assets/casa-terrea/small/22.jpg"); // versões menores das imagens
+    }
+    25% {
+      background-image: url("../../assets/casa-terrea/small/image2.jpg");
+    }
+    50% {
+      background-image: url("../../assets/casa-terrea/small/image1.jpg");
+    }
+    75% {
+      background-image: url("../../assets/casa-terrea/small/21.jpg");
+    }
+    100% {
+      background-image: url("../../assets/casa-terrea/small/22.jpg");
+    }
+  }
+}
+
 .banner-container {
   height: 100vh;
   display: flex;
