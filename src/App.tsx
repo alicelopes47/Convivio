@@ -82,8 +82,6 @@ function App() {
       <Layout
         id="servicos"
         backgroundImage={ServicesBackground}
-        title="Nossos serviços"
-        whiteTitle
       >
         <Services />
       </Layout>

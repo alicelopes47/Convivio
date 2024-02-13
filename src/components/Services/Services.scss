@@ -1,6 +1,5 @@
 @use "./../../scss/colors" as *;
 .services-container {
-  padding-top: 80px;
   .services-content {
     width: 40vw;
     display: flex;
@@ -8,13 +7,6 @@
     flex-direction: column;
     align-items: start;
     height: 100vh;
-    .title-services {
-      font-family: "Lexend Deca", sans-serif !important;
-      font-size: 3vw;
-      color: $light;
-      padding-bottom: 25px;
-      font-weight: 300;
-    }
     .wraper {
       display: flex;
       flex-direction: column;
@@ -45,45 +37,6 @@
           font-family: "Lexend Deca";
           font-weight: 100;
           margin-bottom: 10px;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 680px) {
-  .services-container {
-    padding-top: 0px;
-    .services-content {
-      width: 80vw;
-      justify-content: start;
-      height: 70vh;
-      .wraper {
-        .title-container {
-          display: flex;
-          width:100%;
-          justify-content: center;
-          align-items: center;
-          h1 {
-            color: $light;
-            font-size: 2.9vh;
-            padding-left: 19px;
-            width: 100%;
-            font-family: "Lexend Deca";
-            font-weight: 300;
-          }
-        }
-        .data-container {
-          display: flex;
-          justify-content: start;
-          p {
-            color: $light;
-            padding-left: 39px;
-            font-size: 2.3vh;
-            font-family: "Lexend Deca";
-            margin-bottom: 5vh;
-            font-weight: 100;
-          }
         }
       }
     }
