@@ -20,9 +20,6 @@ import { CarouselProject } from "./ProjectSection/CarouselProject";
 import { Services } from "./components/Services/Services";
 import { Layout } from "./components/Layout/Layout";
 import { BannerFooter } from "./components/BannerFooter/BannerFooter";
-import ServicesBackground from "./assets/bg-services.png";
-import CircleIcon from "@mui/icons-material/Circle";
-import PanoramaFishEyeIcon from "@mui/icons-material/PanoramaFishEye";
 import { useEffect, useState } from "react";
 import { AboutUs } from "./components/AboutUs/AboutUs";
 import { WhoWeAre } from "./components/WhoWeAre/WhoWeAre";
@@ -76,12 +73,12 @@ function App() {
     <div className="App">
       <Navbar />
       <Banner id="inicio" />
-      <Layout id="banner-footer" isBannerFooter backgroundColor="#EDE8E1">
+      <Layout isBannerFooter id="banner-footer" noSpacement backgroundColor="#EDE8E1">
         <BannerFooter />
       </Layout>
       <Layout
         id="servicos"
-        backgroundImage={ServicesBackground}
+        noSpacement
       >
         <Services />
       </Layout>

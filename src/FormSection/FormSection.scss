@@ -46,6 +46,31 @@
           font-family: "Lexend Deca";
           font-weight: 500;
         }
+        option {
+          border: solid 3px $primary-color;
+          height: 5vh;
+          border-radius: 5px;
+          color: $primary-color;
+          font-size: 2vh;
+          font-family: "Lexend Deca";
+          font-weight: 400;
+          padding-left: 1vw;
+        }
+      }
+      .text-area-container {
+        border: solid 3px $primary-color;
+        border-radius: 5px;
+        color: $primary-color;
+        font-size: 2vh;
+        font-family: "Lexend Deca";
+        font-weight: 400;
+        padding-left: 1vw;
+        &::placeholder {
+          color: $primary-color;
+          font-size: 2.5vh;
+          font-family: "Lexend Deca";
+          font-weight: 500;
+        }
       }
       .form-button {
         background-color: $primary-color;
@@ -112,17 +137,21 @@
   .form-container {
     flex-direction: column;
     padding-left: 0vw;
-    padding-top: 80vh;
+    padding-top: 55vh;
     .form-content {
+      padding-left: 35px;
+      padding-right: 35px;
       width: 100vw;
       .form-fields-container {
-        width: 100vw;
+        width: 85vw;
       }
     }
     .vr {
       display: none;
     }
     .socials-content {
+      padding-left: 35px;
+      padding-top: 5vh;
       .socials-icons {
         display: flex;
         flex-direction: column;

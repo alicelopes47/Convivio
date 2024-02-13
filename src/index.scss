@@ -59,3 +59,27 @@ body {
     }
   }
 }
+
+@media (max-width: 680px){
+  body {
+    .layout-padding {
+      padding-top: 10vh;
+    }
+    .title {
+      font-size: 30px;
+      text-align: start;
+      margin-bottom: 20px;
+      &.white-title {
+        color: $light;
+        font-weight: 300;
+        font-family: "Lexend Deca", sans-serif !important;
+      }
+    }
+    .carousel {
+      .control-dots {
+        bottom: 5%;
+      }
+    }
+  }
+
+}

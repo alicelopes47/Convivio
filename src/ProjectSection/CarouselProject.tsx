@@ -14,6 +14,8 @@ export const CarouselProject = ({ children }: Props) => {
       axis="vertical"
       showThumbs={false}
       dynamicHeight={true}
+      infiniteLoop
+      autoPlay={false}
       className="carrousel-project-container"
       showIndicators={false}
       renderArrowNext={(clickHandler, selectedItem) => {

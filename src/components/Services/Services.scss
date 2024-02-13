@@ -1,12 +1,18 @@
 @use "./../../scss/colors" as *;
 .services-container {
+  background-image: url('../../assets/bg-services.png'); 
+  background-size: cover;
+  background-position: 60%;
+  width: 100%;
+  padding-left: 11vw;
   .services-content {
     width: 40vw;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     flex-direction: column;
     align-items: start;
     height: 100vh;
+    padding-bottom: 10vh;
     .wraper {
       display: flex;
       flex-direction: column;
@@ -37,6 +43,46 @@
           font-family: "Lexend Deca";
           font-weight: 100;
           margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .services-container {
+    background-image: url('../../assets/bg-services-mobile.png');
+    padding-left: 34px;
+    .services-content {
+      width: 100%;
+      padding-left: 0;
+      padding-bottom: 0;
+      .inner-padding {
+        padding-bottom: 3vh;
+      }
+      .wraper {
+        .title-container {
+          width: 100%;
+          .icon-fa-penruler { 
+            font-size: 13px;
+          }
+          h1 {
+            font-size: 20px;
+            padding-left: 7.29px;
+            width: 100%;
+            font-family: "Lexend Deca";
+            font-weight: 300;
+          }
+        }
+        .data-container {
+          p {
+            padding-left: 21px;
+            font-size: 16px;
+            width: 95%;
+            font-family: "Lexend Deca";
+            font-weight: 100;
+            margin-bottom: 5\vh;
+          }
         }
       }
     }

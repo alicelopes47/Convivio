@@ -1,33 +1,6 @@
 @use "./../../scss/colors" as *;
 
 .layout-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100%;
-  .children {
-    width: 80%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    .layout-title {
-      font-family: "Lexend Deca", sans-serif !important;
-      font-size: 3.5vw;
-      color: $primary-color;
-      position: absolute;
-      left: 0%;
-      top: 7%;
-      font-weight: 300;
-      &.white {
-        color: $light;
-        left: 0%;
-        top: 10%;
-      }
-    }
-
-  }
-
   &.no-spacement {
     display: flex;
     align-items: center;
@@ -62,6 +35,7 @@
 
 @media (max-width: 680px) { 
   .layout-container {
+    display: block;
     .children {
       .layout-title {
         font-size: 3.5vh;

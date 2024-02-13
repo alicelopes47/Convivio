@@ -6,13 +6,14 @@ export const Services = () => {
   return (
     <div className="services-container">
       <div className="services-content layout-padding">
-        <h1 className="title white-title">Nossos Serviços</h1>
+        <h1 className="title white-title inner-padding">Nossos Serviços</h1>
         <div className="wraper">
           <div className="title-container">
             <FontAwesomeIcon
               icon={faPenRuler}
               color="white"
               fontSize={"19px"}
+              className="icon-fa-penruler"
             />
             <h1>Projetos de arquitetura</h1>
           </div>
@@ -45,6 +46,7 @@ export const Services = () => {
               icon={faPenRuler}
               color="white"
               fontSize={"19px"}
+              className="icon-fa-penruler"
             />
             <h1>Design de interiores</h1>
           </div>
@@ -60,6 +62,7 @@ export const Services = () => {
             <FontAwesomeIcon
               icon={faPenRuler}
               color="white"
+              className="icon-fa-penruler"
               fontSize={"19px"}
             />
             <h1>Consultoria</h1>

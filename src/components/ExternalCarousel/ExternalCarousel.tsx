@@ -13,10 +13,8 @@ export const ExternalCarousel = ({children}: Props) => {
         <Carousel
         useKeyboardArrows
         showArrows={false}
-        swipeable
         stopOnHover
-        transitionTime={1000}
-        interval={8000}
+        autoPlay={false}
         className="external-carousel-container"
         showThumbs={false}
         showIndicators

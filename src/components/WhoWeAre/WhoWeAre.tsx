@@ -1,6 +1,7 @@
 import "./WhoWeAre.scss";
 import WhoWeAreImage from "../../assets/whoweare/whoweare.png";
 import ConvivioImage from "../../assets/whoweare/a-convivio.png";
+import ConvivioImageMobile from '../../assets/whoweare/whoweare-mobile.png'
 
 interface Props {
   type: number;
@@ -53,8 +54,11 @@ export const WhoWeAre = ({type}: Props) => {
               </p>
             </div>
           </div>
-          <div className="who-assets">
+          <div className="who-assets type-2-desktop">
             <img alt="imagem convivio" src={ConvivioImage} />
+          </div>
+          <div className="who-assets type-2-mobile">
+            <img alt="imagem convivio" src={ConvivioImageMobile} />
           </div>
         </div>
       </div>

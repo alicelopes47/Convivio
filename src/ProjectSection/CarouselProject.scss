@@ -44,3 +44,16 @@
         }
     }
 }
+
+
+@media (max-width: 680px) {
+    .carrousel-project-container {
+        width: 75vw;
+        padding-left: 0px;
+        div {
+            img {
+                height: 35vh;
+            }
+        }
+    }
+  }
