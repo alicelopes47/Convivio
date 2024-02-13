@@ -11,8 +11,8 @@ export const WhoWeAre = ({type}: Props) => {
     type === 1 ? (
       <div className="who-container" id="who-us">
       <div className="who-content">
-        <div className="who-informations">
-        <div className="who-us-title">Quem somos?</div>
+        <div className="who-informations layout-padding">
+        <div className="title white-title">Quem somos?</div>
           <div className="information">
             <h1>Luana Morais</h1>
             <p>
@@ -40,8 +40,8 @@ export const WhoWeAre = ({type}: Props) => {
       : (
         <div className="who-container" id="who-us">
         <div className="who-content">
-          <div className="who-informations">
-          <div className="who-us-title">A Convívio</div>
+          <div className="who-informations layout-padding">
+          <div className="title white-title">A Convívio</div>
             <div className="information">
               <p>
               A Convívio é fruto do nosso conviver. Somos um casal de arquitetos apaixonados pelo nosso ofício, e um pelo outro. Então decidimos agregar isso tudo para proporcionar o que temos de melhor a oferecer aos nossos clientes, juntos!

@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  padding-left: 12vw;
+  padding-left: 11vw;
   .about-content {
     display: flex;
     width: 100vw;
@@ -18,19 +18,11 @@
       height: 100vh;
       width: 39vw;
       text-align: start !important;
-      .about-us-title {
-        font-family: "Lexend Deca", sans-serif !important;
-        font-size: 3.5vw;
-        padding-top: 8vh;
-        color: $primary-color;
-        font-weight: 300;
-      }
       .stage-title {
         font-family: "Lexend Deca";
         color: $primary-color;
         font-weight: 300;
         font-size: 2.8vw;
-        margin-top: 20px;
         &.with-spacement {
             padding-top: 12vh;
         }

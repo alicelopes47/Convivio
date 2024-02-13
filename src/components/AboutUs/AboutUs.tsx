@@ -15,8 +15,8 @@ export const AboutUs = ({hasTitle, StageTitle, subtitle, paragraph, children, is
   return (
     <div className="about-container" id="about-us">
       <div className="about-content">
-        <div className="about-informations">
-          {hasTitle && <h1 className="about-us-title">Como fazemos?</h1>}
+        <div className="about-informations layout-padding">
+          {hasTitle && <h1 className="title">Como fazemos?</h1>}
           <h1 className={`stage-title ${!hasTitle ? 'with-spacement': ''}`}>{StageTitle}</h1>
           <h2>{subtitle}</h2>
           <p>

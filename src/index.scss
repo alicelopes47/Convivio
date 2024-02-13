@@ -27,7 +27,12 @@ body {
     font-size: 3.5vw;
     color: $primary-color;
     font-weight: 300;
-    margin-bottom: 6vh;
+    margin-bottom: 20px;
+    &.white-title {
+      color: $light;
+      font-weight: 300;
+      font-family: "Lexend Deca", sans-serif !important;
+    }
   }
 
   .layout-padding {
