@@ -41,23 +41,23 @@ export const FormSection = () => {
       <div className="socials-content">
         <h1 className="title-socials">Fale Conosco!</h1>
         <div className="socials-icons">
-          <div className="buceta">
+          <div className="social-wrapper">
             <MailOutlineIcon className="social-icon" />
             <p>convivioarquitetura@gmail.com</p>
           </div>
-          <div className="buceta">
+          <div className="social-wrapper">
             <InstagramIcon className="social-icon" />
             <p>@convivioarquitetura</p>
           </div>
-          <div className="buceta">
+          <div className="social-wrapper">
             <WhatsAppIcon className="social-icon" />
             <p>Thiago - 6199913244</p>
           </div>
-          <div className="buceta">
+          <div className="social-wrapper">
             <WhatsAppIcon className="social-icon" />
             <p>Luana - 6199913244</p>
           </div>
-          <div className="buceta">
+          <div className="social-wrapper">
             <PlaceOutlinedIcon className="social-icon" />
             <p>
               Qi 27, Bloco A, Ed. Guara Shopping, sala 212, Guara II - DF Cep:

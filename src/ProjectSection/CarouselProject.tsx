@@ -12,6 +12,7 @@ export const CarouselProject = ({ children }: Props) => {
   return (
     <Carousel
       axis="vertical"
+      showThumbs={false}
       dynamicHeight={true}
       className="carrousel-project-container"
       showIndicators={false}

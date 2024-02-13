@@ -86,7 +86,7 @@
       display: flex;
       flex-direction: column;
       gap: 4vh;
-      .buceta {
+      .social-wrapper {
         display: flex;
         justify-content: start;
         align-items: center;
@@ -102,6 +102,48 @@
           font-family: "Lexend Deca";
           font-weight: 300;
           color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .form-container {
+    flex-direction: column;
+    padding-left: 0vw;
+    padding-top: 80vh;
+    .form-content {
+      width: 100vw;
+      .form-fields-container {
+        width: 100vw;
+      }
+    }
+    .vr {
+      display: none;
+    }
+    .socials-content {
+      .socials-icons {
+        display: flex;
+        flex-direction: column;
+        gap: 4vh;
+        .social-wrapper {
+          display: flex;
+          justify-content: start;
+          align-items: center;
+          gap: 1vw;
+          width: 30vw;
+          .social-icon {
+            font-size: 6vh;
+            color: $primary-color;
+            cursor: pointer;
+          }
+          p {
+            font-size: 2vh;
+            font-family: "Lexend Deca";
+            font-weight: 300;
+            color: $primary-color;
+          }
         }
       }
     }
