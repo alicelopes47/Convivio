@@ -21,14 +21,18 @@ import { Services } from "./components/Services/Services";
 import { Layout } from "./components/Layout/Layout";
 import { BannerFooter } from "./components/BannerFooter/BannerFooter";
 import ServicesBackground from "./assets/bg-services.png";
-import CircleIcon from "@mui/icons-material/Circle";
-import PanoramaFishEyeIcon from "@mui/icons-material/PanoramaFishEye";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Mousewheel, EffectCreative } from "swiper/modules";
 import { useEffect, useState } from "react";
 import { AboutUs } from "./components/AboutUs/AboutUs";
 import { WhoWeAre } from "./components/WhoWeAre/WhoWeAre";
 import { FormSection } from "./FormSection/FormSection";
 import { ExternalCarousel } from "./components/ExternalCarousel/ExternalCarousel";
 import { ProjectSection } from "./ProjectSection/ProjectSection";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 export const ComeToFront = {
   visible: { opacity: 1, scale: 1 },
   hidden: { opacity: 0, scale: 0 },
@@ -36,6 +40,8 @@ export const ComeToFront = {
 
 function App() {
   const [section, setSection] = useState(0);
+  const [swiper, setSwiper] = useState<any | null>(null);
+  const [activeIndex, setActiveIndex] = useState(0);	
 
   useEffect(() => {
     setTimeout(() => {
@@ -45,48 +51,51 @@ function App() {
     }, 8000);
   });
 
-  let isScrolling = false;
-  window.onwheel = (e) => {
-    // Previne o evento de rolagem padrão
-    e.preventDefault();
-
-    // Se uma rolagem já está em andamento, ignora este evento
-    if (isScrolling) return;
-
-    // Define a flag para indicar que uma rolagem está em andamento
-    isScrolling = true;
-
-    const scrollAmount = window.innerHeight;
-    const currentScrollPosition = window.pageYOffset;
-    const nextSectionPosition =
-      e.deltaY >= 0
-        ? Math.ceil((currentScrollPosition + 1) / scrollAmount) * scrollAmount
-        : Math.floor((currentScrollPosition - 1) / scrollAmount) * scrollAmount;
-
-    // Rola para a próxima seção ou para a seção anterior
-    window.scrollTo({ top: nextSectionPosition, behavior: "smooth" });
-
-    // Redefine a flag quando a rolagem termina
-    setTimeout(() => {
-      isScrolling = false;
-    }, 1000); // Ajuste este tempo para corresponder ao tempo que leva para rolar
-  };
-
   return (
     <div className="App">
       <Navbar />
-      <Banner id="inicio" />
-      <Layout id="banner-footer" isBannerFooter backgroundColor="#EDE8E1">
-        <BannerFooter />
-      </Layout>
-      <Layout
-        id="servicos"
-        backgroundImage={ServicesBackground}
-        title="Nossos serviços"
-        whiteTitle
+      <Swiper
+        className="swiper-container"
+        onSwiper={setSwiper}
+        direction={"vertical"}
+        slidesPerView={1}
+        mousewheel={true}
+        effect="creative"
+        onSlideChange={(swiper: any) => setActiveIndex(swiper.activeIndex)}
+        creativeEffect={{
+          prev: {
+            shadow: true,
+            translate: [0, "-20%", -1],
+          },
+          next: {
+            translate: [0, "100%", 0],
+          },
+        }}
+        modules={[Mousewheel, EffectCreative]}
       >
-        <Services />
-      </Layout>
+        <SwiperSlide key={'banner'}>
+          <Layout id="banner" backgroundColor="#EDE8E1">
+            <Banner id="inicio" />
+          </Layout>
+        </SwiperSlide>
+        <SwiperSlide key={'banner-footer'}>
+          <Layout id="banner-footer" isBannerFooter backgroundColor="#EDE8E1">
+            <BannerFooter />
+          </Layout>
+        </SwiperSlide>
+        <SwiperSlide key={'services'}>
+        <Layout
+          id="servicos"
+          backgroundImage={ServicesBackground}
+          title="Nossos serviços"
+          whiteTitle
+        >
+          <Services />
+        </Layout>
+
+        </SwiperSlide>
+      </Swiper>
+        
       <ExternalCarousel>
         <Layout id="projetos" projectSection backgroundImage={bgImage1}>
           <ProjectSection
