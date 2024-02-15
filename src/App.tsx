@@ -180,7 +180,7 @@ function App() {
             </video>
           </AboutUs>
         </Layout>
-        <Layout noSpacement id="a">
+        <Layout noSpacement>
           <AboutUs
             StageTitle="2ª Etapa"
             subtitle="Estudo Preliminar"
@@ -189,7 +189,7 @@ function App() {
             <img src={ComoFazemos2} alt="about-us" />
           </AboutUs>
         </Layout>
-        <Layout noSpacement id="a">
+        <Layout noSpacement>
           <AboutUs
             StageTitle="3ª Etapa"
             subtitle="Projeto Executivo"

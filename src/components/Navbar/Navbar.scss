@@ -9,16 +9,16 @@
   .navbar-content {
     width: 100%;
     height: 100%;
-    background-image: url("../../assets/rectangle_large.png");
+    background-image: url("../../assets/navbar_desktop.png");
     background-size: 100% auto;
     background-repeat: no-repeat;
     position: relative;
     .navbar-logo {
-        width: 6.9%;
+        width: 5.6%;
+        height: 12%;
         position: absolute;
-        left: 1.4%;
-        pointer-events: all;
-        top: 1.2%;
+        left: 1%;
+        top: 1.3%;
       }
     .navbar-links {
       .bars-icon {
@@ -27,17 +27,17 @@
       ul {
         color: $light;
         position: absolute;
-        right: 2%;
-        top: 2%;
+        right: 1.8%;
+        top: 0.5%;
         align-items: center;
         justify-content: start;
         display: flex;
-        gap: 30px;
+        gap: 40px;
         li {
           pointer-events: all;
           cursor: pointer;
           font-weight: 300;
-          font-size: 1.3vw;
+          font-size: 1.35vw;
           list-style: none;
         }
       }
@@ -53,16 +53,9 @@
     height: 100vh;
     .navbar-content {
       height: 100vh;
-      .navbar-logo {
-        width: 6.9%;
-        height: auto;
-        left: 1.6%;
-        top: 1%;
-      }
       .navbar-links {
         ul {
-          top: 2%;
-          gap: 18px;
+          gap: 27px;
         }
       }
     }
@@ -92,19 +85,20 @@
 @media (max-width: 900px) {
   .navbar-container {
     .navbar-content {
-      background-image: url("../../assets/mobile_nav.png");
+      background-image: url("../../assets/navbar_mobile.png");
       background-repeat: no-repeat;
       .navbar-logo {
-        width: 41px;
         position: absolute;
-        left: 3%;
-        top: 1.3%;
+        left: 2%;
+        height: auto;
+        width: 9%;
+        top: 1.2%;
       }
       .dropdown-navbar {
-        display: none;
+        display: block;
         right: 0%;
         position: absolute;
-        top: 0%;
+        bottom: 0.5%;
         pointer-events: all;
       }
       .navbar-links {

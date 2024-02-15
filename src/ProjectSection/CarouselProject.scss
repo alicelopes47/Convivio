@@ -1,59 +1,91 @@
 .carrousel-project-container {
-    z-index: 20;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    width: 40vw;
-    padding-left: 50px;
+  z-index: 20;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 40vw;
+  padding-left: 50px;
+  .button-prev {
+    z-index: 21;
+    width: 100%;
+    left: 0%;
+    height: 12%;
+    top: 0%;
+    background-color: transparent;
+    transition: background-color 0.2s;
+    border: none;
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    position: absolute;
+    &:active {
+        background-color: rgba(228, 230, 237, 0.33);
+    }
     .arrow-prev {
-        font-size: 9vh;
-        z-index: 21;
-        left: 45%;
-        color: rgba(255, 255, 255, 0.5);
-        position: absolute;
-        transition: color 0.2s;
-        :hover {
-            color: white;
-            cursor: pointer;
-        }
-        :active {
-            border: solid red 1px;
-        }
+      font-size: 9vh;
+      color: rgba(255, 255, 255, 0.5);
+      position: absolute;
+      top: 40%;
+      left: 43.5%;
+      transition: color 0.2s;
     }
-    .arrow-next {
-        font-size: 9vh;
-        left: 45%;
-        bottom: 0%;
-        z-index: 21;
-        color: rgba(255, 255, 255, 0.5);
-        position: absolute;
-        transition: color 0.2s;
-        :hover {
-            color: white;
-            cursor: pointer;
-        }
-    }
-    div {
-        display: flex;
-        flex-direction: column;
-        img {
-            height: 31vh;
-            object-fit: cover;
-        }
-    }
-}
-
-
-@media (max-width: 680px) {
-    .carrousel-project-container {
-        width: 75vw;
-        padding-left: 0px;
-        div {
-            img {
-                height: 35vh;
-            }
-        }
+    &:hover {
+        background-color: rgba(228, 230, 237, 0.33);
+      .arrow-prev {
+        color: white;
+        cursor: pointer;
+      }
     }
   }
+  .button-next {
+    left: 0%;
+    width: 95.5%;
+    height: 10%;
+    bottom: -3%;
+    z-index: 21;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    position: absolute;
+    background-color: transparent;
+    transition: background-color 0.2s;
+    border: none;
+    .arrow-next {
+      font-size: 9vh;
+      color: rgba(255, 255, 255, 0.5);
+      transition: color 0.2s;
+      position: absolute;
+      bottom: -0.1%;
+      left: 43.5%;
+      transition: color 0.2s;
+    }
+    &:active {
+        background-color: rgba(228, 230, 237, 0.33);
+    }
+    &:hover {
+        background-color: rgba(228, 230, 237, 0.33);
+      .arrow-next {
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    img {
+      height: 35vh;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .carrousel-project-container {
+    width: 75vw;
+    padding-left: 0px;
+    div {
+      img {
+        height: 35vh;
+      }
+    }
+  }
+}

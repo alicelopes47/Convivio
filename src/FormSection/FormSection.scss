@@ -5,7 +5,6 @@
   gap: 2vw;
   justify-content: center;
   align-items: start;
-  height: 100vh;
   padding-top: 9vh;
   padding-left: 10vw;
   .form-content {
@@ -18,14 +17,12 @@
       font-size: 3vw;
       font-family: "Lexend Deca";
       font-weight: 300;
-      padding-bottom: 3vh;
     }
     .form-fields-container {
       display: flex;
       padding-top: 25px;
       padding-left: 25px;
       padding-right: 25px;
-      padding-bottom: 25px;
       flex-direction: column;
       border: solid 3px $primary-color;
       border-radius: 10px;
@@ -137,7 +134,6 @@
   .form-container {
     flex-direction: column;
     padding-left: 0vw;
-    padding-top: 55vh;
     .form-content {
       padding-left: 35px;
       padding-right: 35px;

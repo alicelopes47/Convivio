@@ -15,21 +15,24 @@ export const CarouselProject = ({ children }: Props) => {
       showThumbs={false}
       dynamicHeight={true}
       infiniteLoop
-      autoPlay={false}
+      transitionTime={1000}
+      autoPlay
+      stopOnHover
+      interval={4000}
       className="carrousel-project-container"
       showIndicators={false}
       renderArrowNext={(clickHandler, selectedItem) => {
         return (
-          <>
-            <ExpandMoreIcon onClick={clickHandler} className="arrow-next" />
-          </>
+          <button onClick={clickHandler} className="button-next">
+            <ExpandMoreIcon  className="arrow-next" />
+          </button>
         );
       }}
       renderArrowPrev={(clickHandler) => {
         return (
-          <>
-              <KeyboardArrowUpIcon onClick={clickHandler} className="arrow-prev" />
-          </>
+          <button onClick={clickHandler} className="button-prev">
+              <KeyboardArrowUpIcon  className="arrow-prev" />
+          </button>
         );
       }}
     >
