@@ -3,31 +3,19 @@
 .form-container {
   display: flex;
   gap: 2vw;
-  justify-content: center;
   align-items: start;
-  padding-top: 9vh;
-  padding-left: 10vw;
+  padding-left: 11vw;
+  height: 100vh;
   .form-content {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
     width: 50vw;
-    text-align: start !important;
-    .title-content {
-      font-size: 3vw;
-      font-family: "Lexend Deca";
-      font-weight: 300;
-    }
     .form-fields-container {
+      width: 30vw;
       display: flex;
-      padding-top: 25px;
-      padding-left: 25px;
-      padding-right: 25px;
       flex-direction: column;
+      padding: 25px;
+      gap: 2vh;
       border: solid 3px $primary-color;
       border-radius: 10px;
-      width: 30vw;
-      gap: 2vh;
       .form-field {
         border: solid 3px $primary-color;
         height: 5vh;
@@ -135,11 +123,22 @@
     flex-direction: column;
     padding-left: 0vw;
     .form-content {
+      height: 100vh;
       padding-left: 35px;
       padding-right: 35px;
       width: 100vw;
       .form-fields-container {
-        width: 85vw;
+        width: 100%;
+        .form-field {
+          width: 100%;
+        }
+        .text-area-container {
+          width: 100%;
+        }
+        .form-button {
+          width: 100%;
+        }
+      
       }
     }
     .vr {
@@ -147,7 +146,8 @@
     }
     .socials-content {
       padding-left: 35px;
-      padding-top: 5vh;
+      height: 100vh;
+      padding-top: 8vh;
       .socials-icons {
         display: flex;
         flex-direction: column;

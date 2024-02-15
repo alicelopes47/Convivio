@@ -6,7 +6,7 @@ import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 
 export const FormSection = () => {
   return (
-    <div className="form-container">
+    <div className="form-container layout-padding">
       <div className="form-content">
         <h1 className="title">Faça um orçamento!</h1>
         <form

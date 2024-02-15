@@ -25,8 +25,8 @@
       font-size: 9vh;
       color: rgba(255, 255, 255, 0.5);
       position: absolute;
-      top: 40%;
-      left: 43.5%;
+      top: 30%;
+      left: 43%;
       transition: color 0.2s;
     }
     &:hover {
@@ -39,22 +39,24 @@
   }
   .button-next {
     left: 0%;
-    width: 95.5%;
-    height: 10%;
-    bottom: -3%;
+    width: 100%;
+    height: 12%;
+    bottom: -4%;
     z-index: 21;
     border-radius: 50% 50% 0 0 / 100% 100% 0 0;
     position: absolute;
     background-color: transparent;
     transition: background-color 0.2s;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: start;
     .arrow-next {
       font-size: 9vh;
       color: rgba(255, 255, 255, 0.5);
       transition: color 0.2s;
       position: absolute;
-      bottom: -0.1%;
-      left: 43.5%;
+      left: 43%;
       transition: color 0.2s;
     }
     &:active {
