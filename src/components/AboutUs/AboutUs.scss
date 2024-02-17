@@ -66,10 +66,10 @@
 
 @media (max-width: 680px) {
   .about-container {
-    padding-left: 34px;
+    padding-left: 15px; 
     .about-content {
       .about-informations {
-        width: 100%;
+        width: 49vw;
         .stage-title {
           font-size: 22px;
           &.with-spacement {
@@ -87,11 +87,11 @@
       }
       .about-assets {
         img {
-          width: 40.5vw;
+          width: 46vw;
           padding-left: 10px;
         }
         video {
-          width: 40.5vw;
+          width: 46vw;
           object-fit: cover;
           padding-left: 10px;
         }

@@ -36,9 +36,10 @@
     }
     .who-assets {
       height: 90vh;
+      width: 40vw;
       img {
         height: 100vh;
-        width: 40vw;
+        width: 100%;
         padding-left: 50px;
         cursor: default;
         object-fit: cover;
@@ -56,9 +57,10 @@
 
 @media (max-width: 680px) {
   .who-container {
+    padding-left: 15px;
     .who-content {
       .who-informations {
-        width: 39vw;
+        width: 49vw;
         .information {
           h1 {
             font-size: 22px;
@@ -70,11 +72,11 @@
         }
       }
       .who-assets {
+        width: 46vw;
         img {
-          width: 40.5vw;
-          padding-left: 0px;
-          object-position: 12%;
-          &:hover {
+          padding-left: 10px;
+          object-position: 11%;
+         &:hover {
             transform: none;
           }
         }

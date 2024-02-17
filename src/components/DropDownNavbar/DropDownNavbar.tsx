@@ -29,19 +29,19 @@ export const DropDownNavbar = () => {
         {openDropDown && (
           <div className={`dropdown-container`}>
             <ul>
-              <Link onClick={() => handleClick()} to="inicio">
+              <Link onClick={handleClick} to="inicio">
                 <li>Início</li>
               </Link>
-              <Link onClick={() => handleClick()} to="projetos">
+              <Link onClick={handleClick} to="projetos">
                 <li>Projetos</li>
               </Link>
-              <Link to="">
+              <Link onClick={handleClick} to="about-us">
                 <li>Como funciona?</li>
               </Link>
-              <Link to="">
+              <Link onClick={handleClick} to="who-we-are">
                 <li>Sobre nós</li>
               </Link>
-              <Link to="">
+              <Link onClick={handleClick} to="orcamento">
                 <li>Orçamento</li>
               </Link>
             </ul>
