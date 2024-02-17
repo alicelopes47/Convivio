@@ -10,6 +10,7 @@ export const Navbar = () => {
   return (
     <div className="navbar-container">
       <div className="navbar-content">
+      <DropDownNavbar extraClass="dropdown-navbar" />
       <Link to={'inicio'}><img src={Logo} className="navbar-logo" alt="logo" /></Link>
         <div className="navbar-links">
             <ul>
@@ -21,7 +22,6 @@ export const Navbar = () => {
               <Link to={'orcamento'}><li>Orçamento</li></Link>
             </ul>
         </div>
-        <DropDownNavbar extraClass="dropdown-navbar" />
       </div>
     </div>
   );

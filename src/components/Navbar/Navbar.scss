@@ -28,7 +28,7 @@
         color: $light;
         position: absolute;
         right: 1.8%;
-        top: 0.5%;
+        top: 0.2%;
         align-items: center;
         justify-content: start;
         display: flex;
@@ -84,22 +84,26 @@
 //mobile breakpoint
 @media (max-width: 900px) {
   .navbar-container {
+    height: 50px; 
+    background: rgba(75, 70, 64, 0.6);
+    display: flex;
+    justify-content: center;
     .navbar-content {
-      background-image: url("../../assets/navbar_mobile.png");
-      background-repeat: no-repeat;
+      background-image: none;
+      display: flex;
+      width: 95%;
+      height: 100%;
+      align-items: center;
+      position: static;
+      justify-content: space-between;
       .navbar-logo {
-        position: absolute;
-        left: 2%;
+        position: static;
+        width: 35px;
         height: auto;
-        width: 9%;
-        top: 1.2%;
       }
       .dropdown-navbar {
         display: block;
-        right: 0%;
-        position: absolute;
-        bottom: 0.5%;
-        pointer-events: all;
+        position: static;
       }
       .navbar-links {
         ul {

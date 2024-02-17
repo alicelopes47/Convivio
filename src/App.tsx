@@ -3,7 +3,6 @@ import bgImage1 from "./assets/image-14.png";
 import bgImage2 from "./assets/image-16.png";
 import bgImage3 from "./assets/image-15.png";
 import { Banner } from "./components/Banner/Banner";
-import { Carousel } from "react-responsive-carousel";
 import { Navbar } from "./components/Navbar/Navbar";
 import {
   casaPaulistaFoto1,
@@ -14,6 +13,7 @@ import {
   casaPaulistaFoto6,
   VideoProjetos,
 } from "./assets/index";
+import teste from "./assets/gif-teste.mp4";
 import ComoFazemos2 from "./assets/projetos/comofazemos2.jpg";
 import ComoFazemos3 from "./assets/projetos/comofazemos3.jpg";
 import { CarouselProject } from "./ProjectSection/CarouselProject";
@@ -73,13 +73,15 @@ function App() {
     <div className="App">
       <Navbar />
       <Banner id="inicio" />
-      <Layout isBannerFooter id="banner-footer" noSpacement backgroundColor="#EDE8E1">
+      <Layout
+        isBannerFooter
+        id="banner-footer"
+        noSpacement
+        backgroundColor="#EDE8E1"
+      >
         <BannerFooter />
       </Layout>
-      <Layout
-        id="servicos"
-        noSpacement
-      >
+      <Layout id="servicos" noSpacement>
         <Services />
       </Layout>
       <ExternalCarousel>
@@ -94,9 +96,7 @@ function App() {
           />
           <CarouselProject>
             <div>
-              <img src={casaPaulistaFoto1} alt="casa-terrea" />
-              <img src={casaPaulistaFoto2} alt="casa-terrea" />
-              <img src={casaPaulistaFoto3} alt="casa-terrea" />
+              <video src={teste} autoPlay loop />
             </div>
             <div>
               <img src={casaPaulistaFoto1} alt="casa-terrea" />
@@ -110,7 +110,7 @@ function App() {
             </div>
           </CarouselProject>
         </Layout>
-        <Layout projectSection backgroundImage={bgImage1}>
+        <Layout projectSection backgroundImage={bgImage2}>
           <ProjectSection
             Area="Reforma de aprox. 100m²"
             Localizacao="Guará II"
@@ -136,7 +136,7 @@ function App() {
             </div>
           </CarouselProject>
         </Layout>
-        <Layout projectSection backgroundImage={bgImage1}>
+        <Layout projectSection backgroundImage={bgImage3}>
           <ProjectSection
             name="Casa Vicente Pires"
             Area="Aprox. 240m²"

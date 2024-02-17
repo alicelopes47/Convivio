@@ -12,8 +12,8 @@
     flex-direction: column;
     align-items: start;
     height: 100vh;
-    padding-bottom: 10vh;
     .wraper {
+      margin-top: 2vh;
       display: flex;
       flex-direction: column;
       .title-container {
@@ -42,7 +42,6 @@
           font-size: 1.5vw;
           font-family: "Lexend Deca";
           font-weight: 100;
-          margin-bottom: 10px;
         }
       }
     }
