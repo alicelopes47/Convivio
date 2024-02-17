@@ -51,14 +51,13 @@
 @media (max-width: 680px) {
   .services-container {
     background-image: url('../../assets/bg-services-mobile.png');
-    padding-left: 34px;
+    padding-left: 30px;
     .services-content {
       width: 100%;
       padding-left: 0;
       padding-bottom: 0;
-      .inner-padding {
-        padding-bottom: 3vh;
-      }
+      display: flex;
+      flex-direction: column;
       .wraper {
         .title-container {
           width: 100%;
@@ -80,7 +79,7 @@
             width: 95%;
             font-family: "Lexend Deca";
             font-weight: 100;
-            margin-bottom: 5\vh;
+            margin-bottom: 20px;
           }
         }
       }

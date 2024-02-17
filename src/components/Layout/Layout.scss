@@ -23,12 +23,6 @@
       display: flex;
       justify-content: space-between;
       align-items: start;
-      .layout-title {
-        font-family: "Lexend Deca", sans-serif !important;
-        font-size: 3.5vw; 
-        position: initial;
-        color: $primary-color;
-      }
     }
   }
 }
@@ -44,23 +38,9 @@
     &.banner-footer-responsive {
       height: 50vh;
     }
-    &.services-section {
-      background-image: url('../../assets/bg-services-mobile.png') !important;
+    &.projects-section {
       .children {
-        flex-direction: column;
-        padding-top: 4vh;
-        .layout-title {
-          font-size: 4.9vh;
-          padding-bottom: 5vh;
-          text-align: center;
-          left: 2%;
-          &.white {
-            position:unset;
-            color: $light;
-            left: 0%;
-            top: 0%;
-          }
-        }
+        padding-left: 15px; 
       }
     }
   }

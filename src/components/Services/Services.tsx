@@ -6,7 +6,7 @@ export const Services = () => {
   return (
     <div className="services-container">
       <div className="services-content layout-padding">
-        <h1 className="title white-title inner-padding">Nossos Serviços</h1>
+        <h1 className="title white-title">Nossos Serviços</h1>
         <div className="wraper">
           <div className="title-container">
             <FontAwesomeIcon

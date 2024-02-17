@@ -87,11 +87,14 @@
 
 @media (max-width: 680px) {
   .carrousel-project-container {
-    width: 75vw;
-    padding-left: 0px;
+    width: 47vw;
+    padding-left: 10px;
     div {
       img {
         height: 35vh;
+      }
+      video {
+        width: 100%;
       }
     }
   }

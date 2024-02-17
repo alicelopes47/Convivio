@@ -13,11 +13,8 @@ export const ExternalCarousel = ({children}: Props) => {
         <Carousel
         useKeyboardArrows
         showArrows={false}
-        stopOnHover
-        autoPlay={false}
         className="external-carousel-container"
         showThumbs={false}
-        showIndicators
         renderIndicator={(clickHandler, selectedItem) => {
           return (
             <>
