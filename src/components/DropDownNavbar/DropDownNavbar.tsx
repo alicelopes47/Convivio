@@ -1,36 +1,53 @@
-import { faBars } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-import Logo from '../../assets/convivio_logo.png';
-import './DropDownNavbar.scss';
+import "./DropDownNavbar.scss";
 import { Link } from "react-scroll";
+import Logo from "../../assets/convivio_logo.png";
 
-interface Props {
-    extraClass?: string;
-}
+export const DropDownNavbar = () => {
+  const [openDropDown, setOpenDropDown] = useState(false);
+  const handleClick = () => {
+    setOpenDropDown(!openDropDown);
+  };
 
-export const DropDownNavbar = ({extraClass}: Props) => {
-    const [openDropDown, setOpenDropDown] = useState(false);
-    const handleClick = () => {
-        setOpenDropDown(!openDropDown);
-    }
-
-    return (
-        <div className={`dropdown ${extraClass}`}>
-            <FontAwesomeIcon icon={faBars} onClick={() => setOpenDropDown(!openDropDown)} className={`bars-icon ${openDropDown ? 'bars-icon-open': ''}`} style={{color: "#ffffff",}} />
-            {openDropDown && (
-                <div className={`dropdown-content ${openDropDown ? 'open-dropdown': ''}`}>
-                <img src={Logo} className="dropdown-logo" alt="logo" />
-                <ul>
-                <Link onClick={() => handleClick()} to="inicio"><li>Início</li></Link>
-                <Link onClick={() => handleClick()} to="projetos"><li>Projetos</li></Link>
-                <Link to=""><li>Como funciona?</li></Link>
-                <Link to=""><li>Sobre nós</li></Link>
-                <Link to=""><li>Orçamento</li></Link>
-                </ul>
-              </div>
-            )}
-
+  return (
+    <>
+      <div className="navbar-container-mobile">
+        <div className="navbar-header">
+          <FontAwesomeIcon
+            icon={faBars}
+            onClick={() => setOpenDropDown(!openDropDown)}
+            className={`bars-icon ${openDropDown ? "bars-icon-open" : ""}`}
+            style={{ color: "#ffffff" }}
+          />
+          <Link to={"inicio"}>
+            <img src={Logo} className="navbar-logo" alt="logo" />
+          </Link>
         </div>
-    )
- }
+
+        {openDropDown && (
+          <div className={`dropdown-container`}>
+            <ul>
+              <Link onClick={() => handleClick()} to="inicio">
+                <li>Início</li>
+              </Link>
+              <Link onClick={() => handleClick()} to="projetos">
+                <li>Projetos</li>
+              </Link>
+              <Link to="">
+                <li>Como funciona?</li>
+              </Link>
+              <Link to="">
+                <li>Sobre nós</li>
+              </Link>
+              <Link to="">
+                <li>Orçamento</li>
+              </Link>
+            </ul>
+          </div>
+        )}
+      </div>
+    </>
+  );
+};

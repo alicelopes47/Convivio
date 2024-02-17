@@ -84,26 +84,22 @@
 //mobile breakpoint
 @media (max-width: 900px) {
   .navbar-container {
-    height: 50px; 
-    background: rgba(75, 70, 64, 0.6);
-    display: flex;
-    justify-content: center;
     .navbar-content {
-      background-image: none;
-      display: flex;
-      width: 95%;
-      height: 100%;
-      align-items: center;
-      position: static;
-      justify-content: space-between;
+      background-image: url("../../assets/navbar_mobile.png");
+      background-repeat: no-repeat;
       .navbar-logo {
-        position: static;
-        width: 35px;
+        position: absolute;
+        left: 2%;
         height: auto;
+        width: 9%;
+        top: 1%;
       }
       .dropdown-navbar {
         display: block;
-        position: static;
+        right: 0%;
+        position: absolute;
+        bottom: 0.5%;
+        pointer-events: all;
       }
       .navbar-links {
         ul {

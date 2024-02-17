@@ -21,7 +21,6 @@ body {
     font-weight: 400;
   }
 
-  
   .title {
     font-family: "Lexend Deca", sans-serif !important;
     font-size: 3.5vw;
@@ -60,7 +59,7 @@ body {
   }
 }
 
-@media (max-width: 680px){
+@media (max-width: 680px) {
   body {
     .layout-padding {
       padding-top: 10vh;
@@ -81,5 +80,4 @@ body {
       }
     }
   }
-
 }

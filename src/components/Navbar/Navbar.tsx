@@ -1,16 +1,13 @@
 import "./Navbar.scss";
 import Logo from '../../assets/convivio_logo.png';
 import "bootstrap/dist/css/bootstrap.css"; 
-import { DropDownNavbar } from "../DropDownNavbar/DropDownNavbar";
 import { Link } from "react-scroll";
-
 
 export const Navbar = () => {
 
   return (
     <div className="navbar-container">
       <div className="navbar-content">
-      <DropDownNavbar extraClass="dropdown-navbar" />
       <Link to={'inicio'}><img src={Logo} className="navbar-logo" alt="logo" /></Link>
         <div className="navbar-links">
             <ul>

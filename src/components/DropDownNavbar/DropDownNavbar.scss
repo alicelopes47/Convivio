@@ -1,41 +1,56 @@
 @use "../../scss/_colors" as *;
 
-.dropdown {
-    .bars-icon {
-        position: static;
-        display: block;
-        transition: transform 0.1s ease-in-out;
-        &.bars-icon-open {
-          transform: rotate(90deg);
-        }
-      }
-    .dropdown-content {
-        right: 2%;
-        padding: 20px;
-        z-index: 0;
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        gap: 20px;
-        border-radius: 20px;
-        top: 0%;
-        background-color: $primary-color;
-        color: $light;
-        width: 100vw;
-        pointer-events: none;
-        height: 100vh;
-        .dropdown-logo {
-            width: 52px;
-        }
-        ul {
-            li {
-                cursor: pointer;
-                pointer-events: all;
-                list-style: none;
-                font-size: 18px;
-                font-weight: 200;
-                margin-bottom: 10px;
-            }
-        }
+.navbar-container-mobile {
+  display: flex;
+  position: fixed;
+  background: rgba(75, 70, 64, 0.4);
+  width: 100%;
+  z-index: 100;
+  height: 50px;
+  .navbar-header {
+    display: flex;
+    pointer-events: all;
+    align-items: center;
+    height: 100%;
+    z-index: 106;
+    position: absolute;
+    width: 55%;
+    justify-content: space-between;
+    padding-left: 10px;
+    .navbar-logo {
+      width: 35px;
+      height: auto;
     }
+    .bars-icon {
+      display: block;
+      transition: transform 0.1s ease-in-out;
+      &.bars-icon-open {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  .dropdown-container {
+    position: fixed;
+    width: 60%;
+    height: 100%;
+    z-index: 101;
+    background: rgba(75, 70, 64, 0.9);
+    color: $light;
+    display: flex;
+    align-items: center;
+    ul {
+      display: flex;
+      flex-direction: column;
+      height: 60%;
+      justify-content: space-around;
+      li {
+        cursor: pointer;
+        pointer-events: all;
+        list-style: none;
+        font-family: 'Lexend Deca';
+        font-size: 25px;
+        font-weight: 100;
+      }
+    }
+  }
 }

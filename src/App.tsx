@@ -26,6 +26,7 @@ import { WhoWeAre } from "./components/WhoWeAre/WhoWeAre";
 import { FormSection } from "./FormSection/FormSection";
 import { ExternalCarousel } from "./components/ExternalCarousel/ExternalCarousel";
 import { ProjectSection } from "./ProjectSection/ProjectSection";
+import { DropDownNavbar } from "./components/DropDownNavbar/DropDownNavbar";
 export const ComeToFront = {
   visible: { opacity: 1, scale: 1 },
   hidden: { opacity: 0, scale: 0 },
@@ -72,6 +73,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <DropDownNavbar />
       <Banner id="inicio" />
       <Layout
         isBannerFooter
