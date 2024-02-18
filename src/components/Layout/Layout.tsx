@@ -5,6 +5,7 @@ interface Props {
   backgroundImage?: string;
   id?: string;
   projectSection?:boolean;
+  ref?:any;
   backgroundColor?: string;
   isBannerFooter?: boolean;
 }
@@ -12,6 +13,7 @@ interface Props {
 export const Layout = ({
   children,
   backgroundImage,
+  ref,
   projectSection,
   backgroundColor,
   id,
@@ -19,6 +21,7 @@ export const Layout = ({
 }: Props) => {
   return (
     <div
+      ref={ref}
       className={`layout-container ${ projectSection ? "projects-section" : ""} ${isBannerFooter ? "banner-footer-responsive" : ""}`}
       id={id}
       style={{

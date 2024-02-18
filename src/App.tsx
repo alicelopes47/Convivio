@@ -1,3 +1,4 @@
+//@ts-nocheck
 import "./App.scss";
 import bgImage1 from "./assets/image-14.png";
 import bgImage2 from "./assets/image-16.png";
@@ -8,9 +9,6 @@ import {
   casaPaulistaFoto1,
   casaPaulistaFoto2,
   casaPaulistaFoto3,
-  casaPaulistaFoto4,
-  casaPaulistaFoto5,
-  casaPaulistaFoto6,
   VideoProjetos,
 } from "./assets/index";
 import teste from "./assets/gif-teste.mp4";
@@ -20,7 +18,8 @@ import { CarouselProject } from "./ProjectSection/CarouselProject";
 import { Services } from "./components/Services/Services";
 import { Layout } from "./components/Layout/Layout";
 import { BannerFooter } from "./components/BannerFooter/BannerFooter";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import VisibilitySensor from "react-visibility-sensor";
 import { ComoFunciona } from "./components/ComoFunciona/ComoFunciona";
 import { WhoWeAre } from "./components/WhoWeAre/WhoWeAre";
 import { FormSection } from "./FormSection/FormSection";
@@ -33,7 +32,19 @@ export const ComeToFront = {
 };
 
 function App() {
+  const videoRef = useRef(null);
   const [section, setSection] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    if (isVisible) {
+      videoRef.current.play();
+    } else {
+      if (videoRef.current.play) {
+        videoRef.current.pause();
+      }
+    }
+  }, [isVisible]);
 
   useEffect(() => {
     setTimeout(() => {
@@ -92,9 +103,16 @@ function App() {
             Detalhes="Sala de estar integrada com jantar; Cozinha; Espaço Gourmet; Escritório; Sala íntima no andar superior; Fireplace; Piscina; Garagem p/ 2 carros."
           />
           <CarouselProject>
-            <div>
-              <video src={teste} autoPlay loop />
-            </div>
+            <VisibilitySensor onChange={(isVisible) => setIsVisible(isVisible)}>
+              <div>
+                <video autoPlay loop ref={videoRef} muted>
+                  <source
+                    src={teste}
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+            </VisibilitySensor>
             <div>
               <img src={casaPaulistaFoto1} alt="casa-terrea" />
               <img src={casaPaulistaFoto2} alt="casa-terrea" />
@@ -161,14 +179,14 @@ function App() {
         </Layout>
       </ExternalCarousel>
       <ExternalCarousel>
-        <Layout id="about-us" backgroundColor="#E4DED5">
+        <Layout id="about-us" backgroundColor="#F4F2EE">
           <ComoFunciona
             hasTitle
             StageTitle="1ª Etapa"
             subtitle="Levantamento de Dados e Informações"
             paragraph="Aqui, após o preenchimento do questionário, que nós enviaremos ao cliente, elaboramos o plano de necessidades, desenvolvendo fluxos e croquis a fim de capturar as ideias iniciais do projeto. Alem disso, serão feitas medições no local, documentadas através de fotografias. Ao londo desta fase, apresentamos imagens e projetos de referência para contribuir na tomada de decisões e na melhor compreensão dos gostos e necessidades do cliente."
           >
-            <video controls loop autoPlay>
+            <video controls muted autoPlay>
               <source
                 className="source-video"
                 src={VideoProjetos}
@@ -177,7 +195,7 @@ function App() {
             </video>
           </ComoFunciona>
         </Layout>
-        <Layout backgroundColor="#E4DED5">
+        <Layout backgroundColor="#F4F2EE">
           <ComoFunciona
             StageTitle="2ª Etapa"
             subtitle="Estudo Preliminar"
@@ -186,7 +204,7 @@ function App() {
             <img src={ComoFazemos2} alt="about-us" />
           </ComoFunciona>
         </Layout>
-        <Layout backgroundColor="#E4DED5">
+        <Layout backgroundColor="#F4F2EE">
           <ComoFunciona
             StageTitle="3ª Etapa"
             subtitle="Projeto Executivo"
@@ -202,7 +220,7 @@ function App() {
       <Layout id="who-we-are" backgroundColor="#597C59">
         <WhoWeAre type={2} />
       </Layout>
-      <Layout id="orcamento">
+      <Layout id="orcamento" backgroundColor="#E5D3AD">
         <FormSection />
       </Layout>
     </div>

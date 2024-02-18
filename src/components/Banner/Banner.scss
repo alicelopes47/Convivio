@@ -23,7 +23,7 @@
   display: flex;
   background-image: url("../../assets/casa-terrea/22.jpg");
   animation: slidein 30s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
-  align-items: center;
+  align-items: start;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -42,44 +42,48 @@
   }
 
   .banner-content {
-    display: flex;
     position: relative;
     z-index: 30;
-    flex-direction: column;
-    width: 100%;
+    width: 90%;
     height: 60%;
     padding-left: 10%;
-    justify-content: space-between;
-    h1 {
-      font-family: "Lexend Deca";
-      font-size: 3.7vw;
+    padding-top: 10%;
+    .banner-title-container {
       background-color: rgba(75, 70, 64, 0.6);
-      width: 34.2%;
-      color: $light;
-      font-weight: 200;
+      width: 37%;
       border-radius: 10px;
-      text-align: start;
       padding: 12px;
-      .diferent-color-title {
-        color: $green;
-        font-weight: 200;
+      display: flex;
+      justify-content: center;
+      h1 {
         font-family: "Lexend Deca";
         font-size: 3.7vw;
+        color: $light;
+        font-weight: 200;
+        text-align: start;
+        .diferent-color-title {
+          color: $green;
+          font-weight: 200;
+          font-family: "Lexend Deca";
+          font-size: 3.7vw;
+        }
       }
     }
     .subtitle-container {
       font-size: 2.3vw;
-      width: 100%;
+      width: 90%;
+      height: 100%;
       display: flex;
       padding-right: 49px;
+      align-items: end;
       justify-content: end;
       p {
         color: $light;
+        background-color: rgba(75, 70, 64, 0.4);
         padding: 10px;
         border-radius: 10px;
         font-family: "Lexend Deca";
         font-weight: 200;
-        background-color: rgba(75, 70, 64, 0.4);
       }
     }
   }
@@ -87,48 +91,27 @@
 
 @media (max-width: 680px) {
   .banner-container {
-    height: 50vh;
-    &:before {
-      content: "";
-      height: 50vh;
-    }
+    height: 100vh;
+    align-items: center;
     .banner-content {
-      padding-left: 23%;
-      height: 50%;
-      h1 {
-        text-align: start;
-        font-size: 4vh;
-        width: 85%;
-        .diferent-color-title {
-          color: $green;
-          font-family: "Lexend Deca";
-          font-size: 4vh;
+      height: 60%;
+      padding-top: 0%;
+      .banner-title-container {
+        width: 70%;
+        h1 {
+          font-size: 3vh;
+          .diferent-color-title {
+            font-size: 2.7vh;
+          }
         }
       }
       .subtitle-container {
-        padding-right: 10px;
+        width: 100%;
+        height: 80%;
+        padding-right: 0;
         p {
-          width: 100vw;
-          font-size: 2.3vh;
-          padding: 5px;
+          font-size: 2vh;
         }
-      }
-    }
-  }
-  .banner-footer {
-    gap: 20px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    flex-direction: column;
-    .description-container {
-      p {
-        font-size: 3vw;
-      }
-    }
-    .image-container {
-      .banner-footer-image {
-        width: 60vw;
-        height: auto;
       }
     }
   }

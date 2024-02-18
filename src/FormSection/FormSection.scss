@@ -21,25 +21,19 @@
         height: 5vh;
         border-radius: 5px;
         color: $primary-color;
-        font-size: 2vh;
+        font-size: 2.5vh;
         font-family: "Lexend Deca";
-        font-weight: 400;
+        font-weight: 500;
+        background: #F4EBD6;
         padding-left: 1vw;
+        &:focus-visible {
+          outline: none;
+        }
         &::placeholder {
           color: $primary-color;
           font-size: 2.5vh;
           font-family: "Lexend Deca";
           font-weight: 500;
-        }
-        option {
-          border: solid 3px $primary-color;
-          height: 5vh;
-          border-radius: 5px;
-          color: $primary-color;
-          font-size: 2vh;
-          font-family: "Lexend Deca";
-          font-weight: 400;
-          padding-left: 1vw;
         }
       }
       .text-area-container {
@@ -47,6 +41,7 @@
         border-radius: 5px;
         color: $primary-color;
         font-size: 2vh;
+        background: #F4EBD6;
         font-family: "Lexend Deca";
         font-weight: 400;
         padding-left: 1vw;
@@ -58,7 +53,7 @@
         }
       }
       .form-button {
-        background-color: $primary-color;
+        background-color: #98BB97;
         color: $light;
         font-size: 2.5vh;
         font-family: "Lexend Deca";
@@ -76,12 +71,11 @@
   .vr {
     border: 1.5px solid #4B4640;
     opacity: 1;
-    height: 80vh;
+    height: 90vh;
   }
   .socials-content {
     display: flex;
     flex-direction: column;
-    height: 100vh;
     width: 70vw;
     text-align: start !important;
     padding-left: 3vw;
@@ -93,6 +87,7 @@
       color: $primary-color;
     }
     .socials-icons {
+      padding-top: 50px;
       display: flex;
       flex-direction: column;
       gap: 4vh;

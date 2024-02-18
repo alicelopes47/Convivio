@@ -15,6 +15,8 @@ export const ExternalCarousel = ({children}: Props) => {
         showArrows={false}
         className="external-carousel-container"
         showThumbs={false}
+        swipeable={false}
+        transitionTime={700}
         showStatus={false}
         renderIndicator={(clickHandler, selectedItem) => {
           return (

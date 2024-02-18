@@ -16,6 +16,7 @@ export const CarouselProject = ({ children }: Props) => {
       dynamicHeight={true}
       infiniteLoop
       interval={4000}
+      transitionTime={700}
       showStatus={false}
       className="carrousel-project-container"
       showIndicators={false}
