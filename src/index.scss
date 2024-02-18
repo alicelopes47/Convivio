@@ -62,12 +62,12 @@ body {
 @media (max-width: 680px) {
   body {
     .layout-padding {
-      padding-top: 7.5vh;
+      padding-top: 5vh;
     }
     .title {
       font-size: 30px;
       text-align: start;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       &.white-title {
         color: $light;
         font-weight: 300;
@@ -76,7 +76,7 @@ body {
     }
     .carousel {
       .control-dots {
-        bottom: 5%;
+        bottom: 0%;
       }
     }
   }

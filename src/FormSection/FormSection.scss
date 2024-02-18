@@ -115,6 +115,7 @@
 
 @media (max-width: 680px) {
   .form-container {
+    background-color:#E5D3AD;
     flex-direction: column;
     padding-left: 0vw;
     .form-content {
@@ -138,7 +139,9 @@
       display: none;
     }
     .socials-content {
+      background-color:#E5D3AD;
       padding-top: 8vh;
+      width: 100vw;
       .socials-icons {
         display: flex;
         flex-direction: column;
