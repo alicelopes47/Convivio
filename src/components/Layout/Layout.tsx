@@ -5,7 +5,6 @@ interface Props {
   backgroundImage?: string;
   id?: string;
   projectSection?:boolean;
-  noSpacement?: boolean;
   backgroundColor?: string;
   isBannerFooter?: boolean;
 }
@@ -16,12 +15,11 @@ export const Layout = ({
   projectSection,
   backgroundColor,
   id,
-  noSpacement,
   isBannerFooter
 }: Props) => {
   return (
     <div
-      className={`layout-container ${noSpacement ? "no-spacement" : ""} ${ projectSection ? "projects-section" : ""} ${isBannerFooter ? "banner-footer-responsive" : ""}`}
+      className={`layout-container ${ projectSection ? "projects-section" : ""} ${isBannerFooter ? "banner-footer-responsive" : ""}`}
       id={id}
       style={{
         backgroundImage: `url(${backgroundImage})`,

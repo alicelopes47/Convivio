@@ -1,7 +1,6 @@
 @use "./../../scss/colors" as *;
 
 .layout-container {
-  &.no-spacement {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,12 +10,10 @@
       position: initial;
       display: block;
     }
-  }
 
   &.projects-section {
     height: 100vh;
     .children {
-      padding-left: 11vw;
       height: 100vh;
       width: 100%;
       position: initial;
@@ -30,18 +27,10 @@
 @media (max-width: 680px) { 
   .layout-container {
     display: block;
-    .children {
-      .layout-title {
-        font-size: 3.5vh;
-      }
-    }
     &.banner-footer-responsive {
       height: 50vh;
     }
     &.projects-section {
-      .children {
-        padding-left: 15px; 
-      }
     }
   }
 }

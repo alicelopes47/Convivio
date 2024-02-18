@@ -2,6 +2,7 @@
 
 .project-data {
   width: 40vw;
+  padding-left: 11vw; 
   .data-container {
     height: 100vh;
     display: flex;
@@ -35,6 +36,7 @@
 @media (max-width: 680px) {
   .project-data {
     width: 50vw;
+    padding-left: 15px; 
     .data-container {
       padding-top: 0px;
       gap: 10px;

@@ -21,7 +21,7 @@ import { Services } from "./components/Services/Services";
 import { Layout } from "./components/Layout/Layout";
 import { BannerFooter } from "./components/BannerFooter/BannerFooter";
 import { useEffect, useState } from "react";
-import { AboutUs } from "./components/AboutUs/AboutUs";
+import { ComoFunciona } from "./components/ComoFunciona/ComoFunciona";
 import { WhoWeAre } from "./components/WhoWeAre/WhoWeAre";
 import { FormSection } from "./FormSection/FormSection";
 import { ExternalCarousel } from "./components/ExternalCarousel/ExternalCarousel";
@@ -75,15 +75,10 @@ function App() {
       <Navbar />
       <DropDownNavbar />
       <Banner id="inicio" />
-      <Layout
-        isBannerFooter
-        id="banner-footer"
-        noSpacement
-        backgroundColor="#EDE8E1"
-      >
+      <Layout isBannerFooter backgroundColor="#EDE8E1">
         <BannerFooter />
       </Layout>
-      <Layout id="servicos" noSpacement>
+      <Layout id="servicos">
         <Services />
       </Layout>
       <ExternalCarousel>
@@ -166,8 +161,8 @@ function App() {
         </Layout>
       </ExternalCarousel>
       <ExternalCarousel>
-        <Layout noSpacement id="about-us">
-          <AboutUs
+        <Layout id="about-us" backgroundColor="#E4DED5">
+          <ComoFunciona
             hasTitle
             StageTitle="1ª Etapa"
             subtitle="Levantamento de Dados e Informações"
@@ -180,34 +175,34 @@ function App() {
                 type="video/mp4"
               />
             </video>
-          </AboutUs>
+          </ComoFunciona>
         </Layout>
-        <Layout noSpacement>
-          <AboutUs
+        <Layout backgroundColor="#E4DED5">
+          <ComoFunciona
             StageTitle="2ª Etapa"
             subtitle="Estudo Preliminar"
             paragraph="Nesta fase, após o briefing inicial e a análise das referências, elaboramos uma proposta que inclui uma planta de layout, na qual detalhamos as locações das paredes e mobiliários, exibindo a disposição dos móveis, medidas e imagens de referência. Além disso, apresentamos imagens e vídeos 3D que simulam digitalmente o projeto finalizado de acordo com as ideias e informações apresentadas até aqui. Realizamos também, reuniões para ajustar a proposta de acordo com suas preferências. "
           >
             <img src={ComoFazemos2} alt="about-us" />
-          </AboutUs>
+          </ComoFunciona>
         </Layout>
-        <Layout noSpacement>
-          <AboutUs
+        <Layout backgroundColor="#E4DED5">
+          <ComoFunciona
             StageTitle="3ª Etapa"
             subtitle="Projeto Executivo"
             paragraph="Depois da aprovação do projeto em 3D e alinhamento de todos os pontos, avançamos para os detalhamentos e o caderno executivo. Nesta etapa, elaboramos um documento abrangente com todos os detalhes essenciais para a execução bem-sucedida do projeto. A flexibilidade continua, permitindo ajustes para garantir a plena satisfação dos clientes. Iniciamos a seleção de orçamentos e opções para revestimentos, mobiliários, texturas e adornos, proporcionando escolhas alinhadas às preferências individuais."
           >
             <img src={ComoFazemos3} alt="about-us" />
-          </AboutUs>
+          </ComoFunciona>
         </Layout>
       </ExternalCarousel>
-      <Layout noSpacement id="who-we-are" backgroundColor="#86AB85">
+      <Layout id="who-we-are" backgroundColor="#86AB85">
         <WhoWeAre type={1} />
       </Layout>
-      <Layout noSpacement id="who-we-are" backgroundColor="#597C59">
+      <Layout id="who-we-are" backgroundColor="#597C59">
         <WhoWeAre type={2} />
       </Layout>
-      <Layout noSpacement id="orcamento">
+      <Layout id="orcamento">
         <FormSection />
       </Layout>
     </div>

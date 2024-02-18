@@ -123,10 +123,8 @@
     flex-direction: column;
     padding-left: 0vw;
     .form-content {
-      height: 100vh;
-      padding-left: 35px;
-      padding-right: 35px;
-      width: 100vw;
+      height: auto;
+      width: 100%;
       .form-fields-container {
         width: 100%;
         .form-field {
@@ -145,19 +143,17 @@
       display: none;
     }
     .socials-content {
-      padding-left: 35px;
-      height: 100vh;
       padding-top: 8vh;
       .socials-icons {
         display: flex;
         flex-direction: column;
         gap: 4vh;
+        width: 100%;
         .social-wrapper {
           display: flex;
           justify-content: start;
           align-items: center;
           gap: 1vw;
-          width: 30vw;
           .social-icon {
             font-size: 6vh;
             color: $primary-color;

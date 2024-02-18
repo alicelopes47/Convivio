@@ -1,5 +1,5 @@
 import { Carousel } from "react-responsive-carousel";
-import "./AboutUs.scss";
+import "./ComoFunciona.scss";
 
 interface Props {
   hasTitle?: boolean;
@@ -10,7 +10,7 @@ interface Props {
   isCarouselInner?: boolean;
 }
 
-export const AboutUs = ({
+export const ComoFunciona = ({
   hasTitle,
   StageTitle,
   subtitle,
