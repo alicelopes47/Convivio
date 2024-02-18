@@ -27,6 +27,9 @@
 @media (max-width: 680px) { 
   .layout-container {
     display: block;
+    &.banner-footer-responsive {
+      height: 50vh;
+    }
     &.projects-section {
     }
   }

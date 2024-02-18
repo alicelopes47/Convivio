@@ -34,10 +34,13 @@
 @media (max-width: 680px) { 
     .banner-footer {
         flex-direction: column;
-        padding-top: 10vh;
-        padding-left: 5vw;
+        padding-top: 7.5vh;
+        padding-bottom: 7.5vh;
+        padding-left: 15px;
+        padding-right: 0vw;
+        justify-content: center;
         .description-container {
-            width: 100%;
+            width: 90%;
             .quote {
                 text-align: start;
                 padding-right: 20px;
@@ -52,10 +55,9 @@
             }
         }
         .image-container {
-            width: 40%;
-            padding-bottom: -10vw;
+            width: 70%;
             .banner-footer-image { 
-                width: 32vh;
+                width: 100%;
             }
         }
     }

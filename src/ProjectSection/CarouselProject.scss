@@ -19,7 +19,7 @@
     border-radius: 0 0 50% 50% / 0 0 100% 100%;
     position: absolute;
     &:active {
-        background-color: rgba(228, 230, 237, 0.33);
+      background-color: rgba(228, 230, 237, 0.33);
     }
     .arrow-prev {
       font-size: 9vh;
@@ -30,7 +30,7 @@
       transition: color 0.2s;
     }
     &:hover {
-        background-color: rgba(228, 230, 237, 0.33);
+      background-color: rgba(228, 230, 237, 0.33);
       .arrow-prev {
         color: white;
         cursor: pointer;
@@ -60,10 +60,10 @@
       transition: color 0.2s;
     }
     &:active {
-        background-color: rgba(228, 230, 237, 0.33);
+      background-color: rgba(228, 230, 237, 0.33);
     }
     &:hover {
-        background-color: rgba(228, 230, 237, 0.33);
+      background-color: rgba(228, 230, 237, 0.33);
       .arrow-next {
         color: white;
         cursor: pointer;
@@ -89,6 +89,41 @@
   .carrousel-project-container {
     width: 46vw;
     padding-left: 10px;
+    .button-prev {
+      width: 100%;
+      left: 0%;
+      height: 0%;
+      &:active {
+        background-color: rgba(228, 230, 237, 0.33);
+      }
+      .arrow-prev {
+        font-size: 9vh;
+        color: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        top: 30%;
+        left: 30%;
+        transition: color 0.2s;
+      }
+      &:hover {
+        background-color: rgba(228, 230, 237, 0.33);
+        .arrow-prev {
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+    .button-next {
+      .arrow-next {
+        left: 30%;
+        bottom:30%;
+      }
+      &:active {
+        background-color: rgba(228, 230, 237, 0);
+      }
+      &:hover {
+        background-color: rgba(228, 230, 237, 0);
+      }
+    }
     div {
       img {
         height: 35vh;
