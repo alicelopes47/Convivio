@@ -78,8 +78,8 @@
       height: 35vh;
       object-fit: cover;
     }
-    video {
-      height: 100%;
+    .is-gif {
+      height: 100vh;
       object-fit: cover;
     }
   }
@@ -88,6 +88,7 @@
 @media (max-width: 680px) {
   .carrousel-project-container {
     width: 46vw;
+    background-color: black;
     padding-left: 0px;
     .button-prev {
       width: 100%;
@@ -129,7 +130,6 @@
         height: 34vh;
       }
       .is-gif {
-        width: 100%;
         height: 100vh;
       }
     }
