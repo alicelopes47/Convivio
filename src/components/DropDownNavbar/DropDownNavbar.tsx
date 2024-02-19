@@ -4,6 +4,7 @@ import { useState } from "react";
 import "./DropDownNavbar.scss";
 import { Link } from "react-scroll";
 import Logo from "../../assets/convivio_logo.png";
+import { motion } from "framer-motion";
 
 export const DropDownNavbar = () => {
   const [openDropDown, setOpenDropDown] = useState(false);
@@ -27,7 +28,12 @@ export const DropDownNavbar = () => {
         </div>
 
         {openDropDown && (
-          <div className={`dropdown-container`}>
+          <motion.div
+            initial={{ x: "-100%" }}
+            transition={{ duration: 0.4}}
+            animate={{ x: "0%" }}
+            className={`dropdown-container`}
+          >
             <ul>
               <Link onClick={handleClick} to="inicio">
                 <li>Início</li>
@@ -45,7 +51,7 @@ export const DropDownNavbar = () => {
                 <li>Orçamento</li>
               </Link>
             </ul>
-          </div>
+          </motion.div>
         )}
       </div>
     </>
