@@ -32,19 +32,7 @@ export const ComeToFront = {
 };
 
 function App() {
-  const videoRef = useRef(null);
   const [section, setSection] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    if (isVisible) {
-      videoRef.current.play();
-    } else {
-      if (videoRef.current.play) {
-        videoRef.current.pause();
-      }
-    }
-  }, [isVisible]);
 
   useEffect(() => {
     setTimeout(() => {
@@ -105,7 +93,7 @@ function App() {
           <CarouselProject>
             <VisibilitySensor onChange={(isVisible) => setIsVisible(isVisible)}>
               <div>
-                <video loop ref={videoRef} >
+                <video controls>
                   <source
                     src={teste}
                     type="video/mp4"
