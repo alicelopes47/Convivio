@@ -92,7 +92,7 @@ function App() {
           />
           <CarouselProject>
               <div>
-                <video controls>
+                <video autoPlay loop>
                   <source
                     src={teste}
                     type="video/mp4"
