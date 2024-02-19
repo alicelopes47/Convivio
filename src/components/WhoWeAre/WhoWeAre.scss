@@ -18,19 +18,24 @@
       height: 100vh;
       width: 32vw;
       text-align: start !important;
-      .information {
-        h1 {
-          font-family: "Lexend Deca";
-          color: $light;
-          font-size: 2.5vw;
-          font-weight: 300;
-        }
-        p {
-          font-family: "Lexend Deca";
-          color: $light;
-          font-weight: 200;
-          font-size: 1.5vw;
-          margin-bottom: 8vh;
+      .informations-container {
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .information {
+          h1 {
+            font-family: "Lexend Deca";
+            color: $light;
+            font-size: 2.5vw;
+            font-weight: 300;
+          }
+          p {
+            font-family: "Lexend Deca";
+            color: $light;
+            font-weight: 200;
+            font-size: 1.5vw;
+          }
         }
       }
     }
@@ -61,13 +66,16 @@
     .who-content {
       .who-informations {
         width: 49vw;
-        .information {
-          h1 {
-            font-size: 22px;
-          }
-          p {
-            font-size: 16px;
-            margin-bottom: 2vh;
+        .informations-container {
+          height: 67vh;
+          .information {
+            h1 {
+              font-size: 20px;
+            }
+            p {
+              font-size: 14px;
+              margin-bottom: 2vh;
+            }
           }
         }
       }
