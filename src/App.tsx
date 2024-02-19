@@ -91,7 +91,6 @@ function App() {
             Detalhes="Sala de estar integrada com jantar; Cozinha; Espaço Gourmet; Escritório; Sala íntima no andar superior; Fireplace; Piscina; Garagem p/ 2 carros."
           />
           <CarouselProject>
-            <VisibilitySensor onChange={(isVisible) => setIsVisible(isVisible)}>
               <div>
                 <video controls>
                   <source
@@ -100,7 +99,6 @@ function App() {
                   />
                 </video>
               </div>
-            </VisibilitySensor>
             <div>
               <img src={casaPaulistaFoto1} alt="casa-terrea" />
               <img src={casaPaulistaFoto2} alt="casa-terrea" />
