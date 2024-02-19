@@ -105,7 +105,7 @@ function App() {
           <CarouselProject>
             <VisibilitySensor onChange={(isVisible) => setIsVisible(isVisible)}>
               <div>
-                <video autoPlay loop ref={videoRef} muted>
+                <video loop ref={videoRef} >
                   <source
                     src={teste}
                     type="video/mp4"
@@ -186,7 +186,7 @@ function App() {
             subtitle="Levantamento de Dados e Informações"
             paragraph="Aqui, após o preenchimento do questionário, que nós enviaremos ao cliente, elaboramos o plano de necessidades, desenvolvendo fluxos e croquis a fim de capturar as ideias iniciais do projeto. Alem disso, serão feitas medições no local, documentadas através de fotografias. Ao londo desta fase, apresentamos imagens e projetos de referência para contribuir na tomada de decisões e na melhor compreensão dos gostos e necessidades do cliente."
           >
-            <video controls muted autoPlay>
+            <video controls >
               <source
                 className="source-video"
                 src={VideoProjetos}
