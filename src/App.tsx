@@ -11,7 +11,7 @@ import {
   casaPaulistaFoto3,
   VideoProjetos,
 } from "./assets/index";
-import teste from "./assets/gif-teste.mp4";
+import teste from "./assets/gif-teste.gif";
 import ComoFazemos2 from "./assets/projetos/comofazemos2.jpg";
 import ComoFazemos3 from "./assets/projetos/comofazemos3.jpg";
 import { CarouselProject } from "./ProjectSection/CarouselProject";
@@ -92,12 +92,7 @@ function App() {
           />
           <CarouselProject>
               <div>
-                <video autoPlay loop>
-                  <source
-                    src={teste}
-                    type="video/mp4"
-                  />
-                </video>
+                <img className="is-gif" src={teste} alt="casa-terrea" />
               </div>
             <div>
               <img src={casaPaulistaFoto1} alt="casa-terrea" />
