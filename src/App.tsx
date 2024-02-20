@@ -10,6 +10,11 @@ import {
   casaPaulistaFoto2,
   casaPaulistaFoto3,
   VideoProjetos,
+  casaVicentePires2Foto1,
+  casaVicentePires2Foto2,
+  casaVicentePires2Foto3,
+  casaVicentePires2Foto4,
+  casaVicentePires2Gif1,
 } from "./assets/index";
 import teste from "./assets/gif-teste.gif";
 import ComoFazemos2 from "./assets/projetos/comofazemos2.jpg";
@@ -91,19 +96,32 @@ function App() {
             Detalhes="Sala de estar integrada com jantar; Cozinha; Espaço Gourmet; Escritório; Sala íntima no andar superior; Fireplace; Piscina; Garagem p/ 2 carros."
           />
           <CarouselProject>
-              <div>
-                <img className="is-gif" src={teste} alt="casa-terrea" />
-              </div>
-            <div>
-              <img src={casaPaulistaFoto1} alt="casa-terrea" />
-              <img src={casaPaulistaFoto2} alt="casa-terrea" />
-              <img src={casaPaulistaFoto3} alt="casa-terrea" />
-            </div>
-            <div>
-              <img src={casaPaulistaFoto1} alt="casa-terrea" />
-              <img src={casaPaulistaFoto2} alt="casa-terrea" />
-              <img src={casaPaulistaFoto3} alt="casa-terrea" />
-            </div>
+            <img
+              src={casaVicentePires2Foto1}
+              className="vertical"
+              alt="casa-vicentepires-2"
+            />
+            <img
+              className="vertical"
+              src={casaVicentePires2Gif1}
+              alt="casa-terrea"
+            />
+            <img
+              src={casaVicentePires2Foto2}
+              className="horizontal"
+              alt="casa-vicentepires-2"
+            />
+            <img
+              src={casaVicentePires2Foto4}
+              className="vertical"
+              alt="casa-vicentepires-2"
+            />
+            <img
+              className="vertical"
+              src={casaVicentePires2Foto3}
+              alt="casa-vicentepires-2"
+            />
+            <img className="vertical" src={teste} alt="casa-terrea" />
           </CarouselProject>
         </Layout>
         <Layout projectSection backgroundImage={bgImage2}>
@@ -115,47 +133,69 @@ function App() {
             name="Casa Vivência"
           />
           <CarouselProject>
-            <div>
-              <img src={casaPaulistaFoto1} alt="casa-terrea" />
-              <img src={casaPaulistaFoto2} alt="casa-terrea" />
-              <img src={casaPaulistaFoto3} alt="casa-terrea" />
-            </div>
-            <div>
-              <img src={casaPaulistaFoto1} alt="casa-terrea" />
-              <img src={casaPaulistaFoto2} alt="casa-terrea" />
-              <img src={casaPaulistaFoto3} alt="casa-terrea" />
-            </div>
-            <div>
-              <img src={casaPaulistaFoto1} alt="casa-terrea" />
-              <img src={casaPaulistaFoto2} alt="casa-terrea" />
-              <img src={casaPaulistaFoto3} alt="casa-terrea" />
-            </div>
+            <img
+              src={casaVicentePires2Foto2}
+              className="horizontal"
+              alt="casa-vicentepires-2"
+            />
+            <img
+              src={casaVicentePires2Foto1}
+              className="vertical"
+              alt="casa-vicentepires-2"
+            />
+            <img
+              className="vertical"
+              src={casaVicentePires2Gif1}
+              alt="casa-terrea"
+            />
+            <img
+              src={casaVicentePires2Foto4}
+              className="vertical"
+              alt="casa-vicentepires-2"
+            />
+            <img
+              className="vertical"
+              src={casaVicentePires2Foto3}
+              alt="casa-vicentepires-2"
+            />
+            <img className="vertical" src={teste} alt="casa-terrea" />
           </CarouselProject>
         </Layout>
         <Layout projectSection backgroundImage={bgImage3}>
           <ProjectSection
-            name="Casa Vicente Pires"
+            name="Casa Vicente Pires - 02"
             Area="Aprox. 240m²"
             Localizacao="Vicente Pires"
             Detalhes="contempla 3 suítes, piscina, gourmet integrado, sala de estar e jantar com pé direito duplo, escritório para home office, 2 lavabos sendo um interno e externo, paredes em cobogo, bancadas no cinza castelo escovado, jabuticabeira na ilha da bancada."
             Descricao=" Este projeto se desenvolve a partir de um conceito aberto, que valoriza a iluminação natural e preza pela boa ventilação de todos os ambientes. Além disso, possibilita a vista para paisagem, integrando a casa ao ambiente natural. integrando a casa ao ambiente natural"
           />
           <CarouselProject>
-            <div>
-              <img src={casaPaulistaFoto1} alt="casa-terrea" />
-              <img src={casaPaulistaFoto2} alt="casa-terrea" />
-              <img src={casaPaulistaFoto3} alt="casa-terrea" />
-            </div>
-            <div>
-              <img src={casaPaulistaFoto1} alt="casa-terrea" />
-              <img src={casaPaulistaFoto2} alt="casa-terrea" />
-              <img src={casaPaulistaFoto3} alt="casa-terrea" />
-            </div>
-            <div>
-              <img src={casaPaulistaFoto1} alt="casa-terrea" />
-              <img src={casaPaulistaFoto2} alt="casa-terrea" />
-              <img src={casaPaulistaFoto3} alt="casa-terrea" />
-            </div>
+            <img
+              src={casaVicentePires2Foto2}
+              className="horizontal"
+              alt="casa-vicentepires-2"
+            />
+            <img
+              src={casaVicentePires2Foto1}
+              className="vertical"
+              alt="casa-vicentepires-2"
+            />
+            <img
+              className="vertical"
+              src={casaVicentePires2Gif1}
+              alt="casa-terrea"
+            />
+            <img
+              src={casaVicentePires2Foto4}
+              className="vertical"
+              alt="casa-vicentepires-2"
+            />
+            <img
+              className="vertical"
+              src={casaVicentePires2Foto3}
+              alt="casa-vicentepires-2"
+            />
+            <img className="vertical" src={teste} alt="casa-terrea" />
           </CarouselProject>
         </Layout>
       </ExternalCarousel>
@@ -167,7 +207,7 @@ function App() {
             subtitle="Levantamento de Dados e Informações"
             paragraph="Aqui, após o preenchimento do questionário, que nós enviaremos ao cliente, elaboramos o plano de necessidades, desenvolvendo fluxos e croquis a fim de capturar as ideias iniciais do projeto. Alem disso, serão feitas medições no local, documentadas através de fotografias. Ao londo desta fase, apresentamos imagens e projetos de referência para contribuir na tomada de decisões e na melhor compreensão dos gostos e necessidades do cliente."
           >
-            <video controls >
+            <video controls>
               <source
                 className="source-video"
                 src={VideoProjetos}

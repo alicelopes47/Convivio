@@ -1,6 +1,6 @@
 .carrousel-project-container {
   z-index: 20;
-  height: 100vh;
+  height: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -72,15 +72,18 @@
   }
   div {
     display: flex;
-    height: 100vh;
+    height: 100%;
     flex-direction: column;
+    background-color: #4B4640;
     img {
-      height: 35vh;
       object-fit: cover;
-    }
-    .is-gif {
-      height: 100vh;
-      object-fit: cover;
+      &.vertical {
+        height: 100vh;
+      }
+      &.horizontal {
+        height: 100vh;
+        object-fit: contain;
+      }
     }
   }
 }
@@ -116,7 +119,7 @@
     .button-next {
       .arrow-next {
         left: 30%;
-        bottom:30%;
+        bottom: 30%;
       }
       &:active {
         background-color: rgba(228, 230, 237, 0);
