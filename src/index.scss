@@ -21,6 +21,24 @@ body {
     font-weight: 400;
   }
 
+  li {
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul {
+    padding-left: 1rem;
+  }
+
+  .yarl__slide {
+    padding: 0 0 !important;
+  }
+
+  .yarl__icon {
+    position: absolute;
+    right: 0px;
+    top: 20px;
+  }
   .title {
     font-family: "Lexend Deca", sans-serif !important;
     font-size: 3.5vw;

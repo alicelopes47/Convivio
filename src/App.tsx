@@ -6,9 +6,6 @@ import bgImage3 from "./assets/image-15.png";
 import { Banner } from "./components/Banner/Banner";
 import { Navbar } from "./components/Navbar/Navbar";
 import {
-  casaPaulistaFoto1,
-  casaPaulistaFoto2,
-  casaPaulistaFoto3,
   VideoProjetos,
   casaVicentePires2Foto1,
   casaVicentePires2Foto2,
@@ -25,6 +22,7 @@ import { Layout } from "./components/Layout/Layout";
 import { BannerFooter } from "./components/BannerFooter/BannerFooter";
 import { useEffect, useRef, useState } from "react";
 import VisibilitySensor from "react-visibility-sensor";
+import Lightbox from "yet-another-react-lightbox";
 import { ComoFunciona } from "./components/ComoFunciona/ComoFunciona";
 import { WhoWeAre } from "./components/WhoWeAre/WhoWeAre";
 import { FormSection } from "./FormSection/FormSection";
@@ -38,6 +36,15 @@ export const ComeToFront = {
 
 function App() {
   const [section, setSection] = useState(0);
+  const [open, setOpen] = useState(false);
+  const [indexImage, setIndexImage] = useState(0);
+
+  const CasaVicentePires2Array = [casaVicentePires2Foto1, casaVicentePires2Foto2, casaVicentePires2Foto3, casaVicentePires2Foto4, casaVicentePires2Gif1]
+
+  const handleClickImage = (index: number) => { 
+    setIndexImage(index);
+    setOpen(true);
+  }
 
   useEffect(() => {
     setTimeout(() => {
@@ -77,6 +84,15 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      {open && (
+        <Lightbox
+          open
+          close={() => setOpen(false)}
+          slides={[
+            { src: CasaVicentePires2Array[indexImage] },
+          ]}
+        />
+      )}
       <DropDownNavbar />
       <Banner id="inicio" />
       <Layout isBannerFooter backgroundColor="#EDE8E1">
@@ -99,27 +115,32 @@ function App() {
             <img
               src={casaVicentePires2Foto1}
               className="vertical"
+              onClick={() => handleClickImage(0)}
               alt="casa-vicentepires-2"
             />
             <img
               className="vertical"
               src={casaVicentePires2Gif1}
               alt="casa-terrea"
+              onClick={() => handleClickImage(4)}
             />
             <img
               src={casaVicentePires2Foto2}
               className="horizontal"
               alt="casa-vicentepires-2"
+              onClick={() => handleClickImage(1)}
             />
             <img
               src={casaVicentePires2Foto4}
               className="vertical"
               alt="casa-vicentepires-2"
+              onClick={() => handleClickImage(3)}
             />
             <img
               className="vertical"
               src={casaVicentePires2Foto3}
               alt="casa-vicentepires-2"
+              onClick={() => handleClickImage(2)}
             />
             <img className="vertical" src={teste} alt="casa-terrea" />
           </CarouselProject>

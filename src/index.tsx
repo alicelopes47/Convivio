@@ -5,6 +5,7 @@ import './index.scss';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import "yet-another-react-lightbox/styles.css";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

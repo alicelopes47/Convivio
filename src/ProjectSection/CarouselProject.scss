@@ -74,9 +74,10 @@
     display: flex;
     height: 100%;
     flex-direction: column;
-    background-color: #4B4640;
+    background-color: #4b4640;
     img {
       object-fit: cover;
+      pointer-events: all;
       &.vertical {
         height: 100vh;
       }
@@ -129,8 +130,12 @@
       }
     }
     div {
+        background-color: white;
       img {
         height: 34vh;
+        &.horizontal {
+          object-fit: cover;
+        }
       }
       .is-gif {
         height: 100vh;
