@@ -1,11 +1,11 @@
 .carrousel-project-container {
   z-index: 20;
-  height: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: end;
   width: 40vw;
+  height: 100vh;
   padding-left: 50px;
   .button-prev {
     z-index: 21;
@@ -74,7 +74,6 @@
     display: flex;
     height: 100%;
     flex-direction: column;
-    background-color: #4b4640;
     img {
       object-fit: cover;
       pointer-events: all;
@@ -86,6 +85,9 @@
       height:100vh;
       width: 40vw;
       object-fit: cover;
+      padding-bottom: -10%;
+      display: block;
+      margin-bottom: 0;
     }
   }
 }
@@ -136,16 +138,9 @@
         height: 100vh;
         object-fit: cover;
       }
-      .is-gif {
-        height: 100vh;
-      }
       video {
+        height: 100vh;
         width: 46vw;
-        display: flex;
-        height: 50vh;
-        align-self: center;
-        object-fit: cover;
-        padding-left: 0px;
       }
     }
   }

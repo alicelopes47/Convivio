@@ -1,18 +1,18 @@
 @use "./scss/colors" as *;
 
 .App {
-    .navbar-container-mobile {
-        display: none;
-    }
+  .navbar-container-mobile {
+    display: none;
+  }
 }
 
 @media (max-width: 900px) {
-    .App {
-        .navbar-container-mobile {
-            display: block;
-        }
-        .navbar-container {
-            display: none;
-        }
+  .App {
+    .navbar-container-mobile {
+      display: block;
     }
+    .navbar-container {
+      display: none;
+    }
+  }
 }

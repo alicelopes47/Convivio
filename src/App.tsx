@@ -331,11 +331,11 @@ function App() {
           />
           <CarouselProject>
             <video controls>
-              <source src={casaParaVenda2Video} type="video/mp4" />
+              <source className="source-video" src={casaParaVenda2Video} type="video/mp4" />
             </video>
             <img
               src={casaParaVenda2img1}
-              onClick={() => handleClickImage(CasaParaVenda2Array, 0)}
+              onClick={() => handleClickImage(CasaParaVenda2Array, 6)}
               alt="casa-vicentepires-2"
             />
             <img
