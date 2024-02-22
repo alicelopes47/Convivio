@@ -4,8 +4,39 @@
     .carousel-icon {
         color: $primary-color;
         cursor: pointer;
-        &.is-projects {
+    }
+    &.is-projects {
+        .carousel-icon {
             display: none;
+        }
+        .carousel-arrow {
+            display: block;
+            position: absolute;
+            left: 30%;
+            bottom: 2%;
+            cursor: pointer;
+            &.prev {
+                left: 26%;
+                pointer-events: all;
+                z-index: 1000;
+            }
+        }
+    }
+    &.is-not-projects {
+        .carousel-arrow {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .external-carousel-container {
+        &.is-projects {
+            .carousel-arrow {
+                &.prev {
+                    left: 16%;
+                }
+            }
         }
     }
 }
