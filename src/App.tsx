@@ -1,19 +1,20 @@
-//@ts-nocheck
 import "./App.scss";
 import bgImage1 from "./assets/image-14.png";
 import bgImage2 from "./assets/image-16.png";
 import bgImage3 from "./assets/image-15.png";
 import { Banner } from "./components/Banner/Banner";
 import { Navbar } from "./components/Navbar/Navbar";
+import CasaVivenciaArray from "./assets/index";
 import {
   VideoProjetos,
-  casaVicentePires2Foto1,
-  casaVicentePires2Foto2,
-  casaVicentePires2Foto3,
-  casaVicentePires2Foto4,
-  casaVicentePires2Gif1,
+  casaParaVenda2img1,
+  casaParaVenda2img2,
+  casaParaVenda2img3,
+  casaParaVenda2img4,
+  casaParaVenda2Gif,
+  casaParaVendaGif,
+  casaParaVenda2Video,
 } from "./assets/index";
-import teste from "./assets/gif-teste.gif";
 import ComoFazemos2 from "./assets/projetos/comofazemos2.jpg";
 import ComoFazemos3 from "./assets/projetos/comofazemos3.jpg";
 import { CarouselProject } from "./ProjectSection/CarouselProject";
@@ -21,7 +22,6 @@ import { Services } from "./components/Services/Services";
 import { Layout } from "./components/Layout/Layout";
 import { BannerFooter } from "./components/BannerFooter/BannerFooter";
 import { useEffect, useRef, useState } from "react";
-import VisibilitySensor from "react-visibility-sensor";
 import Lightbox from "yet-another-react-lightbox";
 import { ComoFunciona } from "./components/ComoFunciona/ComoFunciona";
 import { WhoWeAre } from "./components/WhoWeAre/WhoWeAre";
@@ -29,6 +29,7 @@ import { FormSection } from "./FormSection/FormSection";
 import { ExternalCarousel } from "./components/ExternalCarousel/ExternalCarousel";
 import { ProjectSection } from "./ProjectSection/ProjectSection";
 import { DropDownNavbar } from "./components/DropDownNavbar/DropDownNavbar";
+import { set } from "video.js/dist/types/tech/middleware";
 export const ComeToFront = {
   visible: { opacity: 1, scale: 1 },
   hidden: { opacity: 0, scale: 0 },
@@ -36,15 +37,24 @@ export const ComeToFront = {
 
 function App() {
   const [section, setSection] = useState(0);
+  const [arrayToUse, setArrayToUse] = useState([] as any);
   const [open, setOpen] = useState(false);
   const [indexImage, setIndexImage] = useState(0);
 
-  const CasaVicentePires2Array = [casaVicentePires2Foto1, casaVicentePires2Foto2, casaVicentePires2Foto3, casaVicentePires2Foto4, casaVicentePires2Gif1]
+  const CasaParaVenda2Array = [
+    casaParaVenda2img1,
+    casaParaVenda2img2,
+    casaParaVenda2img3,
+    casaParaVenda2img4,
+    casaParaVenda2Gif,
+    casaParaVendaGif,
+  ];
 
-  const handleClickImage = (index: number) => { 
+  const handleClickImage = (imageArray: any, index: number) => {
     setIndexImage(index);
+    setArrayToUse(imageArray);
     setOpen(true);
-  }
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -84,15 +94,12 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      {open && (
-        <Lightbox
-          open
-          close={() => setOpen(false)}
-          slides={[
-            { src: CasaVicentePires2Array[indexImage] },
-          ]}
-        />
-      )}
+      <Lightbox
+        open={open}
+        index={indexImage}
+        close={() => setOpen(false)}
+        slides={arrayToUse.map((src: any) => ({ src } as any))}
+      />
       <DropDownNavbar />
       <Banner id="inicio" />
       <Layout isBannerFooter backgroundColor="#EDE8E1">
@@ -101,7 +108,7 @@ function App() {
       <Layout id="servicos">
         <Services />
       </Layout>
-      <ExternalCarousel>
+      <ExternalCarousel isProject>
         <Layout id="projetos" projectSection backgroundImage={bgImage1}>
           <ProjectSection
             hasTitle
@@ -113,36 +120,36 @@ function App() {
           />
           <CarouselProject>
             <img
-              src={casaVicentePires2Foto1}
-              className="vertical"
-              onClick={() => handleClickImage(0)}
+              src={casaParaVenda2img1}
+              onClick={() => handleClickImage(CasaParaVenda2Array, 0)}
               alt="casa-vicentepires-2"
             />
             <img
-              className="vertical"
-              src={casaVicentePires2Gif1}
+              src={casaParaVenda2Gif}
               alt="casa-terrea"
-              onClick={() => handleClickImage(4)}
+              onClick={() => handleClickImage(CasaParaVenda2Array, 4)}
             />
             <img
-              src={casaVicentePires2Foto2}
+              src={casaParaVenda2img2}
               className="horizontal"
               alt="casa-vicentepires-2"
-              onClick={() => handleClickImage(1)}
+              onClick={() => handleClickImage(CasaParaVenda2Array, 1)}
             />
             <img
-              src={casaVicentePires2Foto4}
-              className="vertical"
+              src={casaParaVenda2img4}
               alt="casa-vicentepires-2"
-              onClick={() => handleClickImage(3)}
+              onClick={() => handleClickImage(CasaParaVenda2Array, 3)}
             />
             <img
-              className="vertical"
-              src={casaVicentePires2Foto3}
+              src={casaParaVenda2img3}
               alt="casa-vicentepires-2"
-              onClick={() => handleClickImage(2)}
+              onClick={() => handleClickImage(CasaParaVenda2Array, 2)}
             />
-            <img className="vertical" src={teste} alt="casa-terrea" />
+            <img
+              src={casaParaVendaGif}
+              alt="casa-terrea"
+              onClick={() => handleClickImage(CasaParaVenda2Array, 5)}
+            />
           </CarouselProject>
         </Layout>
         <Layout projectSection backgroundImage={bgImage2}>
@@ -155,68 +162,208 @@ function App() {
           />
           <CarouselProject>
             <img
-              src={casaVicentePires2Foto2}
+              src={CasaVivenciaArray[0]}
+              onClick={() => handleClickImage(CasaVivenciaArray, 0)}
+              alt="casa-vicentepires-2"
+            />
+            <img
+              src={CasaVivenciaArray[1]}
+              onClick={() => handleClickImage(CasaVivenciaArray, 1)}
+              alt="casa-vicentepires-2"
+            />
+            <img
               className="horizontal"
-              alt="casa-vicentepires-2"
-            />
-            <img
-              src={casaVicentePires2Foto1}
-              className="vertical"
-              alt="casa-vicentepires-2"
-            />
-            <img
-              className="vertical"
-              src={casaVicentePires2Gif1}
+              onClick={() => handleClickImage(CasaVivenciaArray, 2)}
+              src={CasaVivenciaArray[2]}
               alt="casa-terrea"
             />
             <img
-              src={casaVicentePires2Foto4}
-              className="vertical"
+              src={CasaVivenciaArray[3]}
+              onClick={() => handleClickImage(CasaVivenciaArray, 3)}
               alt="casa-vicentepires-2"
             />
             <img
-              className="vertical"
-              src={casaVicentePires2Foto3}
+              src={CasaVivenciaArray[4]}
+              onClick={() => handleClickImage(CasaVivenciaArray, 4)}
               alt="casa-vicentepires-2"
             />
-            <img className="vertical" src={teste} alt="casa-terrea" />
+            <img
+              onClick={() => handleClickImage(CasaVivenciaArray, 5)}
+              src={CasaVivenciaArray[5]}
+              alt="casa-terrea"
+            />
+            <img
+              onClick={() => handleClickImage(CasaVivenciaArray, 6)}
+              src={CasaVivenciaArray[6]}
+              alt="casa-terrea"
+            />
+            <img
+              onClick={() => handleClickImage(CasaVivenciaArray, 7)}
+              src={CasaVivenciaArray[7]}
+              alt="casa-terrea"
+            />
+            <img
+              onClick={() => handleClickImage(CasaVivenciaArray, 8)}
+              src={CasaVivenciaArray[8]}
+              alt="casa-terrea"
+            />
+            <img
+              src={CasaVivenciaArray[9]}
+              onClick={() => handleClickImage(CasaVivenciaArray, 9)}
+              alt="casa-terrea"
+            />
+
+            <img
+              onClick={() => handleClickImage(CasaVivenciaArray, 10)}
+              src={CasaVivenciaArray[10]}
+              alt="casa-terrea"
+            />
+
+            <img
+              src={CasaVivenciaArray[11]}
+              onClick={() => handleClickImage(CasaVivenciaArray, 11)}
+              alt="casa-terrea"
+            />
+            <img
+              onClick={() => handleClickImage(CasaVivenciaArray, 12)}
+              src={CasaVivenciaArray[12]}
+              alt="casa-terrea"
+            />
           </CarouselProject>
         </Layout>
         <Layout projectSection backgroundImage={bgImage3}>
+          {" "}
+          {/* Feito, falta as imagens */}
           <ProjectSection
-            name="Casa Vicente Pires - 02"
-            Area="Aprox. 240m²"
+            name="Casa Vicente Pires"
+            Area="Aprox. 240m²(const.) / 400m²(lote)  "
             Localizacao="Vicente Pires"
-            Detalhes="contempla 3 suítes, piscina, gourmet integrado, sala de estar e jantar com pé direito duplo, escritório para home office, 2 lavabos sendo um interno e externo, paredes em cobogo, bancadas no cinza castelo escovado, jabuticabeira na ilha da bancada."
-            Descricao=" Este projeto se desenvolve a partir de um conceito aberto, que valoriza a iluminação natural e preza pela boa ventilação de todos os ambientes. Além disso, possibilita a vista para paisagem, integrando a casa ao ambiente natural. integrando a casa ao ambiente natural"
+            Detalhes="Sala de estar e jantar; 3 suítes; Cozinha; 2 lavabos; escritório; despensa; área de serviço c/ área de secagem; piscina e garagem p/ 2 carros."
+            Descricao=" Casa feita do zero. Aqui integramos o paisagismo à arquitetura. Possui sala de estar e jantar com pé direito duplo e uma janela piso teto. No gourmet temos uma integração com a cozinha através de uma porta de correr e ilha com bancada. Além disso, colocamos uma bela jabuticabeira para proporcionar uma maior sensação de aconchego."
           />
           <CarouselProject>
             <img
-              src={casaVicentePires2Foto2}
+              src={casaParaVenda2img1}
+              onClick={() => handleClickImage(CasaParaVenda2Array, 0)}
+              alt="casa-vicentepires-2"
+            />
+            <img
+              src={casaParaVenda2Gif}
+              alt="casa-terrea"
+              onClick={() => handleClickImage(CasaParaVenda2Array, 4)}
+            />
+            <img
+              src={casaParaVenda2img2}
               className="horizontal"
               alt="casa-vicentepires-2"
+              onClick={() => handleClickImage(CasaParaVenda2Array, 1)}
             />
             <img
-              src={casaVicentePires2Foto1}
-              className="vertical"
+              src={casaParaVenda2img4}
               alt="casa-vicentepires-2"
+              onClick={() => handleClickImage(CasaParaVenda2Array, 3)}
             />
             <img
-              className="vertical"
-              src={casaVicentePires2Gif1}
+              src={casaParaVenda2img3}
+              alt="casa-vicentepires-2"
+              onClick={() => handleClickImage(CasaParaVenda2Array, 2)}
+            />
+            <img
+              src={casaParaVendaGif}
               alt="casa-terrea"
+              onClick={() => handleClickImage(CasaParaVenda2Array, 5)}
             />
+          </CarouselProject>
+        </Layout>
+        <Layout projectSection backgroundImage={bgImage1}>
+          {" "}
+          {/* Feito, falta imagens */}
+          <ProjectSection
+            name="Casa para venda - 01"
+            Area="Aprox. 240m²(const.) / 400m²(lote)"
+            Localizacao="Vicente Pires"
+            Detalhes="Sala de estar e jantar; 3 suítes; Cozinha; Espaço Gourmet; 2 lavabos (interno e externo); escritório; despensa; área de serviço c/ área de secagem; piscina e garagem p/ 2 carros."
+            Descricao=" Casa feita do zero. Possui sala de estar e jantar com pé direito duplo e uma janela piso teto. No gourmet temos uma integração com a cozinha através de uma porta de correr, feita em esquadria de alumínio, extremamente funcional."
+          />
+          <CarouselProject>
             <img
-              src={casaVicentePires2Foto4}
-              className="vertical"
+              src={casaParaVenda2img1}
+              onClick={() => handleClickImage(CasaParaVenda2Array, 0)}
               alt="casa-vicentepires-2"
             />
             <img
-              className="vertical"
-              src={casaVicentePires2Foto3}
+              src={casaParaVenda2Gif}
+              alt="casa-terrea"
+              onClick={() => handleClickImage(CasaParaVenda2Array, 4)}
+            />
+            <img
+              src={casaParaVenda2img2}
+              className="horizontal"
+              alt="casa-vicentepires-2"
+              onClick={() => handleClickImage(CasaParaVenda2Array, 1)}
+            />
+            <img
+              src={casaParaVenda2img4}
+              alt="casa-vicentepires-2"
+              onClick={() => handleClickImage(CasaParaVenda2Array, 3)}
+            />
+            <img
+              src={casaParaVenda2img3}
+              alt="casa-vicentepires-2"
+              onClick={() => handleClickImage(CasaParaVenda2Array, 2)}
+            />
+            <img
+              src={casaParaVendaGif}
+              alt="casa-terrea"
+              onClick={() => handleClickImage(CasaParaVenda2Array, 5)}
+            />
+          </CarouselProject>
+        </Layout>
+        <Layout projectSection backgroundImage={bgImage1}>
+          {" "}
+          {/* Pronto */}
+          <ProjectSection
+            name="Casa para venda - 02"
+            Area="Aprox. 240m²(const.) / 400m²(lote)"
+            Localizacao="Vicente Pires"
+            Detalhes="Sala de estar e jantar; 3 suítes; Cozinha; Espaço Gourmet; 2 lavabos (interno e externo); escritório; despensa; área de serviço c/ área de secagem; piscina e garagem p/ 2 carros."
+            Descricao=" Casa feita do zero. Possui sala de estar e jantar com pé direito duplo e uma janela piso teto. No gourmet temos uma integração com a cozinha através de uma porta de correr, feita em esquadria de alumínio, extremamente funcional."
+          />
+          <CarouselProject>
+            <video controls>
+              <source src={casaParaVenda2Video} type="video/mp4" />
+            </video>
+            <img
+              src={casaParaVenda2img1}
+              onClick={() => handleClickImage(CasaParaVenda2Array, 0)}
               alt="casa-vicentepires-2"
             />
-            <img className="vertical" src={teste} alt="casa-terrea" />
+            <img
+              src={casaParaVenda2Gif}
+              alt="casa-terrea"
+              onClick={() => handleClickImage(CasaParaVenda2Array, 4)}
+            />
+            <img
+              src={casaParaVenda2img2}
+              className="horizontal"
+              alt="casa-vicentepires-2"
+              onClick={() => handleClickImage(CasaParaVenda2Array, 1)}
+            />
+            <img
+              src={casaParaVenda2img4}
+              alt="casa-vicentepires-2"
+              onClick={() => handleClickImage(CasaParaVenda2Array, 3)}
+            />
+            <img
+              src={casaParaVenda2img3}
+              alt="casa-vicentepires-2"
+              onClick={() => handleClickImage(CasaParaVenda2Array, 2)}
+            />
+            <img
+              src={casaParaVendaGif}
+              alt="casa-terrea"
+              onClick={() => handleClickImage(CasaParaVenda2Array, 5)}
+            />
           </CarouselProject>
         </Layout>
       </ExternalCarousel>

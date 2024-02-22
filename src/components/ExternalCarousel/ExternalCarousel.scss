@@ -4,5 +4,8 @@
     .carousel-icon {
         color: $primary-color;
         cursor: pointer;
+        &.is-projects {
+            display: none;
+        }
     }
 }

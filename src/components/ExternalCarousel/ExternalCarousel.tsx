@@ -6,9 +6,10 @@ import PanoramaFishEyeIcon from "@mui/icons-material/PanoramaFishEye";
 
 interface Props {
     children?: ReactChild[] | undefined;
+    isProject?: boolean;
 }
 
-export const ExternalCarousel = ({children}: Props) => { 
+export const ExternalCarousel = ({children, isProject}: Props) => { 
     return (
         <Carousel
         useKeyboardArrows
@@ -24,13 +25,13 @@ export const ExternalCarousel = ({children}: Props) => {
               {selectedItem ? (
                 <CircleIcon
                   fontSize="medium"
-                  className="carousel-icon"
+                  className={`carousel-icon ${isProject ? "is-projects" : ""}`}
                   onClick={clickHandler}
                 />
               ) : (
                 <PanoramaFishEyeIcon
                   fontSize="medium"
-                  className="carousel-icon"
+                  className={`carousel-icon ${isProject ? "is-projects" : ""}`}
                   onClick={clickHandler}
                 />
               )}

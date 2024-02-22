@@ -78,13 +78,14 @@
     img {
       object-fit: cover;
       pointer-events: all;
-      &.vertical {
-        height: 100vh;
-      }
-      &.horizontal {
-        height: 100vh;
-        object-fit: contain;
-      }
+      cursor: pointer;
+      object-fit: cover;
+      height: 100vh;
+    }
+    video {
+      height:100vh;
+      width: 40vw;
+      object-fit: cover;
     }
   }
 }
@@ -132,13 +133,19 @@
     div {
         background-color: white;
       img {
-        height: 34vh;
-        &.horizontal {
-          object-fit: cover;
-        }
+        height: 100vh;
+        object-fit: cover;
       }
       .is-gif {
         height: 100vh;
+      }
+      video {
+        width: 46vw;
+        display: flex;
+        height: 50vh;
+        align-self: center;
+        object-fit: cover;
+        padding-left: 0px;
       }
     }
   }
