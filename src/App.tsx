@@ -157,32 +157,32 @@ function App() {
             Detalhes="Sala de estar integrada com jantar; Cozinha; Espaço Gourmet; Escritório; Sala íntima no andar superior; Fireplace; Piscina; Garagem p/ 2 carros."
           />
           <CarouselProject>
-            <img
+            <img loading="lazy"
               src={CasaPaulistaArray[0]}
               onClick={() => handleClickImage(CasaPaulistaArray, 0)}
               alt="Foto casa paulista"
             />
-            <img
+            <img loading="lazy"
               src={CasaPaulistaArray[1]}
               alt="Foto casa paulista"
               onClick={() => handleClickImage(CasaPaulistaArray, 1)}
             />
-            <img
+            <img loading="lazy"
               src={CasaPaulistaArray[2]}
               alt="Foto casa paulista"
               onClick={() => handleClickImage(CasaPaulistaArray, 2)}
             />
-            <img
+            <img loading="lazy"
               src={CasaPaulistaArray[3]}
               alt="Foto casa paulista"
               onClick={() => handleClickImage(CasaPaulistaArray, 3)}
             />
-            <img
+            <img loading="lazy"
               src={CasaPaulistaArray[4]}
               alt="Foto casa paulista"
               onClick={() => handleClickImage(CasaPaulistaArray, 4)}
             />
-            <img
+            <img loading="lazy"
               src={CasaPaulistaArray[5]}
               alt="Foto casa paulista"
               onClick={() => handleClickImage(CasaPaulistaArray, 5)}
@@ -198,75 +198,75 @@ function App() {
             name="Casa Vivência"
           />
           <CarouselProject>
-          <img
+          <img loading="lazy"
               src={CasaVivenciaArray[13]}
               onClick={() => handleClickImage(CasaVivenciaArray, 13)}
               alt="Foto casa vivência"
             />
-            <img
+            <img loading="lazy"
               src={CasaVivenciaArray[0]}
               onClick={() => handleClickImage(CasaVivenciaArray, 0)}
               alt="Foto casa vivência"
             />
-            <img
+            <img loading="lazy"
               src={CasaVivenciaArray[1]}
               onClick={() => handleClickImage(CasaVivenciaArray, 1)}
               alt="Foto casa vivência"
             />
-            <img
+            <img loading="lazy"
               className="horizontal"
               onClick={() => handleClickImage(CasaVivenciaArray, 2)}
               src={CasaVivenciaArray[2]}
               alt="Foto casa vivência"
             />
-            <img
+            <img loading="lazy"
               src={CasaVivenciaArray[3]}
               onClick={() => handleClickImage(CasaVivenciaArray, 3)}
               alt="Foto casa vivência"
             />
-            <img
+            <img loading="lazy"
               src={CasaVivenciaArray[4]}
               onClick={() => handleClickImage(CasaVivenciaArray, 4)}
               alt="Foto casa vivência"
             />
-            <img
+            <img loading="lazy"
               onClick={() => handleClickImage(CasaVivenciaArray, 5)}
               src={CasaVivenciaArray[5]}
               alt="Foto casa vivência"
             />
-            <img
+            <img loading="lazy"
               onClick={() => handleClickImage(CasaVivenciaArray, 6)}
               src={CasaVivenciaArray[6]}
               alt="Foto casa vivência"
             />
-            <img
+            <img loading="lazy"
               onClick={() => handleClickImage(CasaVivenciaArray, 7)}
               src={CasaVivenciaArray[7]}
               alt="Foto casa vivência"
             />
-            <img
+            <img loading="lazy"
               onClick={() => handleClickImage(CasaVivenciaArray, 8)}
               src={CasaVivenciaArray[8]}
               alt="Foto casa vivência"
             />
-            <img
+            <img loading="lazy"
               src={CasaVivenciaArray[9]}
               onClick={() => handleClickImage(CasaVivenciaArray, 9)}
               alt="Foto casa vivência"
             />
 
-            <img
+            <img loading="lazy"
               onClick={() => handleClickImage(CasaVivenciaArray, 10)}
               src={CasaVivenciaArray[10]}
               alt="Foto casa vivência"
             />
 
-            <img
+            <img loading="lazy"
               src={CasaVivenciaArray[11]}
               onClick={() => handleClickImage(CasaVivenciaArray, 11)}
               alt="Foto casa vivência"
             />
-            <img
+            <img loading="lazy"
               onClick={() => handleClickImage(CasaVivenciaArray, 12)}
               src={CasaVivenciaArray[12]}
               alt="Foto casa vivência"
@@ -284,12 +284,12 @@ function App() {
             Descricao=" Casa feita do zero. Aqui integramos o paisagismo à arquitetura. Possui sala de estar e jantar com pé direito duplo e uma janela piso teto. No gourmet temos uma integração com a cozinha através de uma porta de correr e ilha com bancada. Além disso, colocamos uma bela jabuticabeira para proporcionar uma maior sensação de aconchego."
           />
           <CarouselProject>
-            <img
+            <img loading="lazy"
               src={CasaVicentePiresArray[0]}
               onClick={() => handleClickImage(CasaVicentePiresArray, 0)}
               alt="Foto casa Vicente Pires"
             />
-            <img
+            <img loading="lazy"
               src={CasaParaVenda2Array[5]}
               alt="Foto casa Vicente Pires"
               onClick={() => handleClickImage(CasaParaVenda2Array, 5)}
@@ -307,12 +307,12 @@ function App() {
             Descricao=" Casa feita do zero. Possui sala de estar e jantar com pé direito duplo e uma janela piso teto. No gourmet temos uma integração com a cozinha através de uma porta de correr, feita em esquadria de alumínio, extremamente funcional."
           />
           <CarouselProject>
-            <img
+            <img loading="lazy"
               src={CasaParaVenda1Array[0]}
               onClick={() => handleClickImage(CasaParaVenda1Array, 0)}
               alt="Casa para venda 1"
             />
-            <img
+            <img loading="lazy"
               src={CasaParaVenda1Array[1]}
               alt="Casa para venda 1"
               onClick={() => handleClickImage(CasaParaVenda1Array, 1)}
@@ -336,32 +336,32 @@ function App() {
             <video controls>
               <source className="source-video" src={casaParaVenda2Assets.video1} type="video/mp4" />
             </video>
-            <img
+            <img loading="lazy"
               src={CasaParaVenda2Array[1]}
               onClick={() => handleClickImage(CasaParaVenda2Array, 1)}
               alt="Casa para venda 2"
             />
-            <img
+            <img loading="lazy"
               src={CasaParaVenda2Array[4]}
               alt="Casa para venda 2"
               onClick={() => handleClickImage(CasaParaVenda2Array, 4)}
             />
-            <img
+            <img loading="lazy"
               src={CasaParaVenda2Array[1]}
               alt="Casa para venda 2"
               onClick={() => handleClickImage(CasaParaVenda2Array, 1)}
             />
-            <img
+            <img loading="lazy"
               src={CasaParaVenda2Array[3]}
               alt="Casa para venda 2"
               onClick={() => handleClickImage(CasaParaVenda2Array, 3)}
             />
-            <img
+            <img loading="lazy"
               src={CasaParaVenda2Array[2]}
               alt="Casa para venda 2"
               onClick={() => handleClickImage(CasaParaVenda2Array, 2)}
             />
-            <img
+            <img loading="lazy"
               src={CasaParaVenda2Array[5]}
               alt="Casa para venda 2"
               onClick={() => handleClickImage(CasaParaVenda2Array, 5)}
@@ -392,7 +392,7 @@ function App() {
             subtitle="Estudo Preliminar"
             paragraph="Nesta fase, após o briefing inicial e a análise das referências, elaboramos uma proposta que inclui uma planta de layout, na qual detalhamos as locações das paredes e mobiliários, exibindo a disposição dos móveis, medidas e imagens de referência. Além disso, apresentamos imagens e vídeos 3D que simulam digitalmente o projeto finalizado de acordo com as ideias e informações apresentadas até aqui. Realizamos também, reuniões para ajustar a proposta de acordo com suas preferências. "
           >
-            <img src={ComoFazemos2} alt="about-us" />
+            <img loading="lazy" src={ComoFazemos2} alt="about-us" />
           </ComoFunciona>
         </Layout>
         <Layout backgroundColor="#F4F2EE">
@@ -401,7 +401,7 @@ function App() {
             subtitle="Projeto Executivo"
             paragraph="Depois da aprovação do projeto em 3D e alinhamento de todos os pontos, avançamos para os detalhamentos e o caderno executivo. Nesta etapa, elaboramos um documento abrangente com todos os detalhes essenciais para a execução bem-sucedida do projeto. A flexibilidade continua, permitindo ajustes para garantir a plena satisfação dos clientes. Iniciamos a seleção de orçamentos e opções para revestimentos, mobiliários, texturas e adornos, proporcionando escolhas alinhadas às preferências individuais."
           >
-            <img src={ComoFazemos3} alt="about-us" />
+            <img loading="lazy" src={ComoFazemos3} alt="about-us" />
           </ComoFunciona>
         </Layout>
       </ExternalCarousel>
