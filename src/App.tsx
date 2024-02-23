@@ -6,37 +6,15 @@ import { Banner } from "./components/Banner/Banner";
 import { Navbar } from "./components/Navbar/Navbar";
 import {
   VideoProjetos,
-  casaParaVenda2img1,
-  casaParaVenda2img2,
-  casaParaVenda2img3,
-  casaParaVenda2img4,
-  casaParaVenda2Gif,
   casaParaVendaGif,
   casaParaVenda2Video,
-  casaVivenciaImg1,
-  casaVivenciaImg2,
-  casaVivenciaImg3,
-  casaVivenciaImg4,
-  casaVivenciaImg5,
-  casaVivenciaImg6,
-  casaVivenciaImg7,
-  casaVivenciaImg8,
-  casaVivenciaImg9,
-  casaVivenciaImg10,
-  casaVivenciaImg11,
-  casaVivenciaImg12,
-  casaVivenciaImg13,
-  casaVivenciaGif1,
   casaParaVenda1img1,
   casaParaVenda1Video1,
   casaParaVenda1img2,
-  casaPaulistaFoto1,
-  casaPaulistaFoto2,
-  casaPaulistaFoto3,
-  casaPaulistaFoto4,
-  casaPaulistaFoto5,
-  casaPaulistaFoto6,
-  casaVicentePires
+  casaVicentePires,
+  casaVivenciaAssets,
+  casaPaulistaAssets,
+  casaParaVenda2Assets,
 } from "./assets/index";
 import ComoFazemos2 from "./assets/projetos/comofazemos2.jpg";
 import ComoFazemos3 from "./assets/projetos/comofazemos3.jpg";
@@ -65,29 +43,29 @@ function App() {
   const [indexImage, setIndexImage] = useState(0);
 
   const CasaParaVenda2Array = [
-    casaParaVenda2img1,
-    casaParaVenda2img2,
-    casaParaVenda2img3,
-    casaParaVenda2img4,
-    casaParaVenda2Gif,
-    casaParaVendaGif,
+    casaParaVenda2Assets.img1,
+    casaParaVenda2Assets.img2,
+    casaParaVenda2Assets.img3,
+    casaParaVenda2Assets.img4,
+    casaParaVenda2Assets.gif1,
+    casaParaVendaGif
   ];
 
   const CasaVivenciaArray = [
-    casaVivenciaImg1,
-    casaVivenciaImg2,
-    casaVivenciaImg3,
-    casaVivenciaImg4,
-    casaVivenciaImg5,
-    casaVivenciaImg6,
-    casaVivenciaImg7,
-    casaVivenciaImg8,
-    casaVivenciaImg9,
-    casaVivenciaImg10,
-    casaVivenciaImg11,
-    casaVivenciaImg12,
-    casaVivenciaImg13,
-    casaVivenciaGif1,
+    casaVivenciaAssets.img1,
+    casaVivenciaAssets.img2,
+    casaVivenciaAssets.img3,
+    casaVivenciaAssets.img4,
+    casaVivenciaAssets.img5,
+    casaVivenciaAssets.img6,
+    casaVivenciaAssets.img7,
+    casaVivenciaAssets.img8,
+    casaVivenciaAssets.img9,
+    casaVivenciaAssets.img10,
+    casaVivenciaAssets.img11,
+    casaVivenciaAssets.img12,
+    casaVivenciaAssets.img13,
+    casaVivenciaAssets.gif1,
   ];
 
   const CasaParaVenda1Array = [
@@ -97,12 +75,12 @@ function App() {
   ]
 
   const CasaPaulistaArray = [
-    casaPaulistaFoto1,
-    casaPaulistaFoto2,
-    casaPaulistaFoto3,
-    casaPaulistaFoto4,
-    casaPaulistaFoto5,
-    casaPaulistaFoto6,
+    casaPaulistaAssets.img1,
+    casaPaulistaAssets.img2,
+    casaPaulistaAssets.img3,
+    casaPaulistaAssets.img4,
+    casaPaulistaAssets.img5,
+    casaPaulistaAssets.img6,
   ]
 
   
@@ -312,9 +290,9 @@ function App() {
               alt="Foto casa Vicente Pires"
             />
             <img
-              src={casaParaVenda2Gif}
+              src={CasaParaVenda2Array[5]}
               alt="Foto casa Vicente Pires"
-              onClick={() => handleClickImage(CasaParaVenda2Array, 4)}
+              onClick={() => handleClickImage(CasaParaVenda2Array, 5)}
             />
           </CarouselProject>
         </Layout>
@@ -356,11 +334,11 @@ function App() {
           />
           <CarouselProject>
             <video controls>
-              <source className="source-video" src={casaParaVenda2Video} type="video/mp4" />
+              <source className="source-video" src={casaParaVenda2Assets.video1} type="video/mp4" />
             </video>
             <img
-              src={casaParaVenda2img1}
-              onClick={() => handleClickImage(CasaParaVenda2Array, 6)}
+              src={CasaParaVenda2Array[1]}
+              onClick={() => handleClickImage(CasaParaVenda2Array, 1)}
               alt="Casa para venda 2"
             />
             <img
