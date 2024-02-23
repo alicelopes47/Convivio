@@ -4,7 +4,6 @@ import bgImage2 from "./assets/image-16.png";
 import bgImage3 from "./assets/image-15.png";
 import { Banner } from "./components/Banner/Banner";
 import { Navbar } from "./components/Navbar/Navbar";
-import CasaVivenciaArray from "./assets/index";
 import {
   VideoProjetos,
   casaParaVenda2img1,
@@ -14,6 +13,30 @@ import {
   casaParaVenda2Gif,
   casaParaVendaGif,
   casaParaVenda2Video,
+  casaVivenciaImg1,
+  casaVivenciaImg2,
+  casaVivenciaImg3,
+  casaVivenciaImg4,
+  casaVivenciaImg5,
+  casaVivenciaImg6,
+  casaVivenciaImg7,
+  casaVivenciaImg8,
+  casaVivenciaImg9,
+  casaVivenciaImg10,
+  casaVivenciaImg11,
+  casaVivenciaImg12,
+  casaVivenciaImg13,
+  casaVivenciaGif1,
+  casaParaVenda1img1,
+  casaParaVenda1Video1,
+  casaParaVenda1img2,
+  casaPaulistaFoto1,
+  casaPaulistaFoto2,
+  casaPaulistaFoto3,
+  casaPaulistaFoto4,
+  casaPaulistaFoto5,
+  casaPaulistaFoto6,
+  casaVicentePires
 } from "./assets/index";
 import ComoFazemos2 from "./assets/projetos/comofazemos2.jpg";
 import ComoFazemos3 from "./assets/projetos/comofazemos3.jpg";
@@ -49,6 +72,43 @@ function App() {
     casaParaVenda2Gif,
     casaParaVendaGif,
   ];
+
+  const CasaVivenciaArray = [
+    casaVivenciaImg1,
+    casaVivenciaImg2,
+    casaVivenciaImg3,
+    casaVivenciaImg4,
+    casaVivenciaImg5,
+    casaVivenciaImg6,
+    casaVivenciaImg7,
+    casaVivenciaImg8,
+    casaVivenciaImg9,
+    casaVivenciaImg10,
+    casaVivenciaImg11,
+    casaVivenciaImg12,
+    casaVivenciaImg13,
+    casaVivenciaGif1,
+  ];
+
+  const CasaParaVenda1Array = [
+    casaParaVenda1img1,
+    casaParaVenda1img2,
+    casaParaVenda1Video1,
+  ]
+
+  const CasaPaulistaArray = [
+    casaPaulistaFoto1,
+    casaPaulistaFoto2,
+    casaPaulistaFoto3,
+    casaPaulistaFoto4,
+    casaPaulistaFoto5,
+    casaPaulistaFoto6,
+  ]
+
+  
+  const CasaVicentePiresArray = [
+    casaVicentePires
+  ]
 
   const handleClickImage = (imageArray: any, index: number) => {
     setIndexImage(index);
@@ -120,35 +180,34 @@ function App() {
           />
           <CarouselProject>
             <img
-              src={casaParaVenda2img1}
-              onClick={() => handleClickImage(CasaParaVenda2Array, 0)}
-              alt="casa-vicentepires-2"
+              src={CasaPaulistaArray[0]}
+              onClick={() => handleClickImage(CasaPaulistaArray, 0)}
+              alt="Foto casa paulista"
             />
             <img
-              src={casaParaVenda2Gif}
-              alt="casa-terrea"
-              onClick={() => handleClickImage(CasaParaVenda2Array, 4)}
+              src={CasaPaulistaArray[1]}
+              alt="Foto casa paulista"
+              onClick={() => handleClickImage(CasaPaulistaArray, 1)}
             />
             <img
-              src={casaParaVenda2img2}
-              className="horizontal"
-              alt="casa-vicentepires-2"
-              onClick={() => handleClickImage(CasaParaVenda2Array, 1)}
+              src={CasaPaulistaArray[2]}
+              alt="Foto casa paulista"
+              onClick={() => handleClickImage(CasaPaulistaArray, 2)}
             />
             <img
-              src={casaParaVenda2img4}
-              alt="casa-vicentepires-2"
-              onClick={() => handleClickImage(CasaParaVenda2Array, 3)}
+              src={CasaPaulistaArray[3]}
+              alt="Foto casa paulista"
+              onClick={() => handleClickImage(CasaPaulistaArray, 3)}
             />
             <img
-              src={casaParaVenda2img3}
-              alt="casa-vicentepires-2"
-              onClick={() => handleClickImage(CasaParaVenda2Array, 2)}
+              src={CasaPaulistaArray[4]}
+              alt="Foto casa paulista"
+              onClick={() => handleClickImage(CasaPaulistaArray, 4)}
             />
             <img
-              src={casaParaVendaGif}
-              alt="casa-terrea"
-              onClick={() => handleClickImage(CasaParaVenda2Array, 5)}
+              src={CasaPaulistaArray[5]}
+              alt="Foto casa paulista"
+              onClick={() => handleClickImage(CasaPaulistaArray, 5)}
             />
           </CarouselProject>
         </Layout>
@@ -161,73 +220,78 @@ function App() {
             name="Casa Vivência"
           />
           <CarouselProject>
+          <img
+              src={CasaVivenciaArray[13]}
+              onClick={() => handleClickImage(CasaVivenciaArray, 13)}
+              alt="Foto casa vivência"
+            />
             <img
               src={CasaVivenciaArray[0]}
               onClick={() => handleClickImage(CasaVivenciaArray, 0)}
-              alt="casa-vicentepires-2"
+              alt="Foto casa vivência"
             />
             <img
               src={CasaVivenciaArray[1]}
               onClick={() => handleClickImage(CasaVivenciaArray, 1)}
-              alt="casa-vicentepires-2"
+              alt="Foto casa vivência"
             />
             <img
               className="horizontal"
               onClick={() => handleClickImage(CasaVivenciaArray, 2)}
               src={CasaVivenciaArray[2]}
-              alt="casa-terrea"
+              alt="Foto casa vivência"
             />
             <img
               src={CasaVivenciaArray[3]}
               onClick={() => handleClickImage(CasaVivenciaArray, 3)}
-              alt="casa-vicentepires-2"
+              alt="Foto casa vivência"
             />
             <img
               src={CasaVivenciaArray[4]}
               onClick={() => handleClickImage(CasaVivenciaArray, 4)}
-              alt="casa-vicentepires-2"
+              alt="Foto casa vivência"
             />
             <img
               onClick={() => handleClickImage(CasaVivenciaArray, 5)}
               src={CasaVivenciaArray[5]}
-              alt="casa-terrea"
+              alt="Foto casa vivência"
             />
             <img
               onClick={() => handleClickImage(CasaVivenciaArray, 6)}
               src={CasaVivenciaArray[6]}
-              alt="casa-terrea"
+              alt="Foto casa vivência"
             />
             <img
               onClick={() => handleClickImage(CasaVivenciaArray, 7)}
               src={CasaVivenciaArray[7]}
-              alt="casa-terrea"
+              alt="Foto casa vivência"
             />
             <img
               onClick={() => handleClickImage(CasaVivenciaArray, 8)}
               src={CasaVivenciaArray[8]}
-              alt="casa-terrea"
+              alt="Foto casa vivência"
             />
             <img
               src={CasaVivenciaArray[9]}
               onClick={() => handleClickImage(CasaVivenciaArray, 9)}
-              alt="casa-terrea"
+              alt="Foto casa vivência"
             />
 
             <img
               onClick={() => handleClickImage(CasaVivenciaArray, 10)}
               src={CasaVivenciaArray[10]}
-              alt="casa-terrea"
+              alt="Foto casa vivência"
             />
 
             <img
               src={CasaVivenciaArray[11]}
               onClick={() => handleClickImage(CasaVivenciaArray, 11)}
-              alt="casa-terrea"
+              alt="Foto casa vivência"
             />
             <img
               onClick={() => handleClickImage(CasaVivenciaArray, 12)}
               src={CasaVivenciaArray[12]}
-              alt="casa-terrea"
+              alt="Foto casa vivência"
             />
           </CarouselProject>
         </Layout>
@@ -243,35 +307,14 @@ function App() {
           />
           <CarouselProject>
             <img
-              src={casaParaVenda2img1}
-              onClick={() => handleClickImage(CasaParaVenda2Array, 0)}
-              alt="casa-vicentepires-2"
+              src={CasaVicentePiresArray[0]}
+              onClick={() => handleClickImage(CasaVicentePiresArray, 0)}
+              alt="Foto casa Vicente Pires"
             />
             <img
               src={casaParaVenda2Gif}
-              alt="casa-terrea"
+              alt="Foto casa Vicente Pires"
               onClick={() => handleClickImage(CasaParaVenda2Array, 4)}
-            />
-            <img
-              src={casaParaVenda2img2}
-              className="horizontal"
-              alt="casa-vicentepires-2"
-              onClick={() => handleClickImage(CasaParaVenda2Array, 1)}
-            />
-            <img
-              src={casaParaVenda2img4}
-              alt="casa-vicentepires-2"
-              onClick={() => handleClickImage(CasaParaVenda2Array, 3)}
-            />
-            <img
-              src={casaParaVenda2img3}
-              alt="casa-vicentepires-2"
-              onClick={() => handleClickImage(CasaParaVenda2Array, 2)}
-            />
-            <img
-              src={casaParaVendaGif}
-              alt="casa-terrea"
-              onClick={() => handleClickImage(CasaParaVenda2Array, 5)}
             />
           </CarouselProject>
         </Layout>
@@ -287,36 +330,18 @@ function App() {
           />
           <CarouselProject>
             <img
-              src={casaParaVenda2img1}
-              onClick={() => handleClickImage(CasaParaVenda2Array, 0)}
-              alt="casa-vicentepires-2"
+              src={CasaParaVenda1Array[0]}
+              onClick={() => handleClickImage(CasaParaVenda1Array, 0)}
+              alt="Casa para venda 1"
             />
             <img
-              src={casaParaVenda2Gif}
-              alt="casa-terrea"
-              onClick={() => handleClickImage(CasaParaVenda2Array, 4)}
+              src={CasaParaVenda1Array[1]}
+              alt="Casa para venda 1"
+              onClick={() => handleClickImage(CasaParaVenda1Array, 1)}
             />
-            <img
-              src={casaParaVenda2img2}
-              className="horizontal"
-              alt="casa-vicentepires-2"
-              onClick={() => handleClickImage(CasaParaVenda2Array, 1)}
-            />
-            <img
-              src={casaParaVenda2img4}
-              alt="casa-vicentepires-2"
-              onClick={() => handleClickImage(CasaParaVenda2Array, 3)}
-            />
-            <img
-              src={casaParaVenda2img3}
-              alt="casa-vicentepires-2"
-              onClick={() => handleClickImage(CasaParaVenda2Array, 2)}
-            />
-            <img
-              src={casaParaVendaGif}
-              alt="casa-terrea"
-              onClick={() => handleClickImage(CasaParaVenda2Array, 5)}
-            />
+            <video controls>
+              <source className="source-video" src={casaParaVenda1Video1} type="video/mp4" />
+            </video>
           </CarouselProject>
         </Layout>
         <Layout projectSection backgroundImage={bgImage1}>
@@ -336,32 +361,31 @@ function App() {
             <img
               src={casaParaVenda2img1}
               onClick={() => handleClickImage(CasaParaVenda2Array, 6)}
-              alt="casa-vicentepires-2"
+              alt="Casa para venda 2"
             />
             <img
-              src={casaParaVenda2Gif}
-              alt="casa-terrea"
+              src={CasaParaVenda2Array[4]}
+              alt="Casa para venda 2"
               onClick={() => handleClickImage(CasaParaVenda2Array, 4)}
             />
             <img
-              src={casaParaVenda2img2}
-              className="horizontal"
-              alt="casa-vicentepires-2"
+              src={CasaParaVenda2Array[1]}
+              alt="Casa para venda 2"
               onClick={() => handleClickImage(CasaParaVenda2Array, 1)}
             />
             <img
-              src={casaParaVenda2img4}
-              alt="casa-vicentepires-2"
+              src={CasaParaVenda2Array[3]}
+              alt="Casa para venda 2"
               onClick={() => handleClickImage(CasaParaVenda2Array, 3)}
             />
             <img
-              src={casaParaVenda2img3}
-              alt="casa-vicentepires-2"
+              src={CasaParaVenda2Array[2]}
+              alt="Casa para venda 2"
               onClick={() => handleClickImage(CasaParaVenda2Array, 2)}
             />
             <img
-              src={casaParaVendaGif}
-              alt="casa-terrea"
+              src={CasaParaVenda2Array[5]}
+              alt="Casa para venda 2"
               onClick={() => handleClickImage(CasaParaVenda2Array, 5)}
             />
           </CarouselProject>
