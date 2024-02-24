@@ -1,7 +1,20 @@
-import casaVivenciaImg1 from './casavivencia/img (2).jpg';
-import casaVivenciaImg2 from './casavivencia/img (3).jpg'; 
+import casaVivenciaImg1 from './casavivencia/img (2).webp';
+import casaVivenciaImg1Small from './casavivencia/img (2) small .jpg'
+import casaVivenciaImg2Small from './casavivencia/img (3) small.jpg';
+import casaVivenciaImg3Small from './casavivencia/img (4) small.jpg';
+import casaVivenciaImg4Small from './casavivencia/img (5) small.png';
+import casaVivenciaImg5Small from './casavivencia/img (6) small.png';
+import casaVivenciaImg6Small from './casavivencia/img (7) small.png';
+import casaVivenciaImg7Small from './casavivencia/img (8) small.png';
+import casaVivenciaImg8Small from './casavivencia/img (9) small.png';
+import casaVivenciaImg9Small from './casavivencia/img (10) small.png';
+import casaVivenciaImg10Small from './casavivencia/img (11) small.png';
+import casaVivenciaImg11Small from './casavivencia/img (12) small.png';
+import casaVivenciaImg12Small from './casavivencia/img (13) small.png';
+import casaVivenciaImg13Small from './casavivencia/img (14) small.png';
+import casaVivenciaImg2 from './casavivencia/img (3).webp'; 
 import casaVivenciaImg3 from './casavivencia/img (4).jpg';
-import casaVivenciaImg4 from './casavivencia/img (5).jpg';
+import casaVivenciaImg4 from './casavivencia/img (5).webp';
 import casaVivenciaImg5 from './casavivencia/img (6).jpg';
 import casaVivenciaImg6 from './casavivencia/img (7).jpg';
 import casaVivenciaImg7 from './casavivencia/img (8).jpg';
@@ -27,22 +40,26 @@ import CasaParaVenda2Img4 from './casapvenda02/casa2-vp4.jpg';
 import CasaParaVenda2Gif from './casapvenda02/casa2-vp-gif1.gif';
 import CasaParaVenda2Video from './casapvenda02/casa2-vp-video.mp4';
 
+import CasaParaVenda2Img1Small from './casapvenda02/casa2-vp small.jpg';
+import CasaParaVenda2Img2Small from './casapvenda02/casa2-vp2 small.jpg';
+import CasaParaVenda2Img3Small from './casapvenda02/casa2-vp3 small.jpg';
+
 
 export const casaVivenciaAssets = {
-  img1: casaVivenciaImg1,
-  img2: casaVivenciaImg2,
-  img3: casaVivenciaImg3,
-  img4: casaVivenciaImg4,
-  img5: casaVivenciaImg5,
-  img6: casaVivenciaImg6,
-  img7: casaVivenciaImg7,
-  img8: casaVivenciaImg8,
-  img9: casaVivenciaImg9,
-  img10: casaVivenciaImg10,
-  img11: casaVivenciaImg11,
-  img12: casaVivenciaImg12,
-  img13: casaVivenciaImg13,
-  gif1: casaVivenciaGif1,
+  img1: [casaVivenciaImg1, casaVivenciaImg1Small],
+  img2: [casaVivenciaImg2, casaVivenciaImg2Small],
+  img3: [casaVivenciaImg3, casaVivenciaImg3Small],
+  img4: [casaVivenciaImg4, casaVivenciaImg4Small],
+  img5: [casaVivenciaImg5, casaVivenciaImg5Small],
+  img6: [casaVivenciaImg6, casaVivenciaImg6Small],
+  img7: [casaVivenciaImg7, casaVivenciaImg7Small],
+  img8: [casaVivenciaImg8, casaVivenciaImg8Small],
+  img9: [casaVivenciaImg9, casaVivenciaImg9Small],
+  img10: [casaVivenciaImg10, casaVivenciaImg10Small],
+  img11:[casaVivenciaImg11, casaVivenciaImg11Small],
+  img12: [casaVivenciaImg12, casaVivenciaImg12Small],
+  img13: [casaVivenciaImg13, casaVivenciaImg13Small],
+  gif1: [casaVivenciaGif1, casaVivenciaGif1],
 };
 
 export const casaPaulistaAssets = {
@@ -55,10 +72,10 @@ export const casaPaulistaAssets = {
 };
 
 export const casaParaVenda2Assets = {
-  img1: CasaParaVenda2Img1,
-  img2: CasaParaVenda2Img2,
-  img3: CasaParaVenda2Img3,
-  img4: CasaParaVenda2Img4,
+  img1: [CasaParaVenda2Img1, CasaParaVenda2Img1Small],
+  img2: [CasaParaVenda2Img2, CasaParaVenda2Img2Small],
+  img3: [CasaParaVenda2Img3, CasaParaVenda2Img3Small],
+  img4: [CasaParaVenda2Img4, CasaParaVenda2Img4],
   gif1: CasaParaVenda2Gif,
   video1: CasaParaVenda2Video,
 };
@@ -66,9 +83,12 @@ export const casaParaVenda2Assets = {
 export { default as VideoProjetos} from './projetos/comofazemosvideo.mp4';
 
 export { default as casaVicentePires } from './casa-vp.jpg'
+export { default as casaVicentePiresSmall } from './casa-vp small.jpg'
 
 export { default as casaParaVenda1img1 } from  './casapvenda01/casaparavenda1.jpg';
 export { default as casaParaVenda1img2 } from  './casapvenda01/casaparavenda1-2.jpg';
+export { default as casaParaVenda1img1Small } from './casapvenda01/casaparavenda1 small.jpg';
+export { default as casaParaVenda1img2Small } from './casapvenda01/casaparavenda1-2 small.jpg';
 export { default as casaParaVenda1Video1 } from './casapvenda01/casa-vicente-pires-video2.mp4'
 
 
