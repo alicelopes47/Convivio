@@ -19,6 +19,7 @@
       height: 50px;
       border: solid 3px $primary-color;
       border-radius: 10px;
+      background-color:rgba(75, 70, 64, 0.0) ;
       &.clicked {
         transition: background-color 0.2s ease;
         background-color: rgba(75, 70, 64, 0.5);

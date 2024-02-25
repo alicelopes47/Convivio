@@ -51,7 +51,7 @@ function App() {
     casaParaVenda2Assets.img3[0],
     casaParaVenda2Assets.img4[0],
     casaParaVenda2Assets.gif1,
-    casaParaVendaGif
+    casaParaVendaGif,
   ];
 
   const CasaVivenciaArray = [
@@ -75,7 +75,7 @@ function App() {
     casaParaVenda1img1,
     casaParaVenda1img2,
     casaParaVenda1Video1,
-  ]
+  ];
 
   const CasaPaulistaArray = [
     casaPaulistaAssets.img1,
@@ -84,12 +84,9 @@ function App() {
     casaPaulistaAssets.img4,
     casaPaulistaAssets.img5,
     casaPaulistaAssets.img6,
-  ]
+  ];
 
-  
-  const CasaVicentePiresArray = [
-    casaVicentePires
-  ]
+  const CasaVicentePiresArray = [casaVicentePires];
 
   const handleClickImage = (imageArray: any, index: number) => {
     setIndexImage(index);
@@ -201,76 +198,76 @@ function App() {
             name="Casa Vivência"
           />
           <CarouselProject>
-          <img
+            <img
               src={CasaVivenciaArray[13][1]}
               onClick={() => handleClickImage(CasaVivenciaArray, 13)}
               alt="Foto casa vivência"
             />
             <img
-              src={casaVivenciaAssets['img1'][1]}
+              src={casaVivenciaAssets["img1"][1]}
               onClick={() => handleClickImage(CasaVivenciaArray, 0)}
               alt="Foto casa vivência"
             />
             <img
-              src={casaVivenciaAssets['img2'][1]}
+              src={casaVivenciaAssets["img2"][1]}
               onClick={() => handleClickImage(CasaVivenciaArray, 1)}
               alt="Foto casa vivência"
             />
             <img
               onClick={() => handleClickImage(CasaVivenciaArray, 2)}
-              src={casaVivenciaAssets['img3'][1]}
+              src={casaVivenciaAssets["img3"][1]}
               alt="Foto casa vivência"
             />
             <img
-              src={casaVivenciaAssets['img4'][1]}
+              src={casaVivenciaAssets["img4"][1]}
               onClick={() => handleClickImage(CasaVivenciaArray, 3)}
               alt="Foto casa vivência"
             />
             <img
-              src={casaVivenciaAssets['img5'][1]}
+              src={casaVivenciaAssets["img5"][1]}
               onClick={() => handleClickImage(CasaVivenciaArray, 4)}
               alt="Foto casa vivência"
             />
             <img
               onClick={() => handleClickImage(CasaVivenciaArray, 5)}
-              src={casaVivenciaAssets['img6'][1]}
+              src={casaVivenciaAssets["img6"][1]}
               alt="Foto casa vivência"
             />
             <img
               onClick={() => handleClickImage(CasaVivenciaArray, 6)}
-              src={casaVivenciaAssets['img7'][1]}
+              src={casaVivenciaAssets["img7"][1]}
               alt="Foto casa vivência"
             />
             <img
               onClick={() => handleClickImage(CasaVivenciaArray, 7)}
-              src={casaVivenciaAssets['img8'][1]}
+              src={casaVivenciaAssets["img8"][1]}
               alt="Foto casa vivência"
             />
             <img
               onClick={() => handleClickImage(CasaVivenciaArray, 8)}
-              src={casaVivenciaAssets['img9'][1]}
+              src={casaVivenciaAssets["img9"][1]}
               alt="Foto casa vivência"
             />
             <img
-              src={casaVivenciaAssets['img10'][1]}
+              src={casaVivenciaAssets["img10"][1]}
               onClick={() => handleClickImage(CasaVivenciaArray, 9)}
               alt="Foto casa vivência"
             />
 
             <img
               onClick={() => handleClickImage(CasaVivenciaArray, 10)}
-              src={casaVivenciaAssets['img11'][1]}
+              src={casaVivenciaAssets["img11"][1]}
               alt="Foto casa vivência"
             />
 
             <img
-              src={casaVivenciaAssets['img12'][1]}
+              src={casaVivenciaAssets["img12"][1]}
               onClick={() => handleClickImage(CasaVivenciaArray, 11)}
               alt="Foto casa vivência"
             />
             <img
               onClick={() => handleClickImage(CasaVivenciaArray, 12)}
-              src={casaVivenciaAssets['img13'][1]}
+              src={casaVivenciaAssets["img13"][1]}
               alt="Foto casa vivência"
             />
           </CarouselProject>
@@ -320,7 +317,11 @@ function App() {
               onClick={() => handleClickImage(CasaParaVenda1Array, 1)}
             />
             <video controls>
-              <source className="source-video" src={casaParaVenda1Video1} type="video/mp4" />
+              <source
+                className="source-video"
+                src={casaParaVenda1Video1}
+                type="video/mp4"
+              />
             </video>
           </CarouselProject>
         </Layout>
@@ -336,7 +337,11 @@ function App() {
           />
           <CarouselProject>
             <video controls>
-              <source className="source-video" src={casaParaVenda2Assets.video1} type="video/mp4" />
+              <source
+                className="source-video"
+                src={casaParaVenda2Assets.video1}
+                type="video/mp4"
+              />
             </video>
             <img
               src={casaParaVenda2Assets.img1[1]}
