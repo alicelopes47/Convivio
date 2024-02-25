@@ -1,42 +1,47 @@
 @use "../../scss/colors" as *;
 
 .external-carousel-container {
-    .carousel-icon {
-        color: $primary-color;
-        cursor: pointer;
+  .buttons-container {
+    position: absolute;
+    left: 30%;
+    bottom: 5%;
+    &.prev {
+      left: 26%;
+      pointer-events: all;
+      z-index: 10;
     }
-    &.is-projects {
-        .carousel-icon {
-            display: none;
+    button {
+      position: relative;
+      width: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      border: solid 3px $primary-color;
+      border-radius: 10px;
+      &.clicked {
+        transition: background-color 0.2s ease;
+        background-color: rgba(75, 70, 64, 0.5);
+      }
+      .carousel-arrow {
+        &.prev {
+          transform: rotate(180deg);
         }
-        .carousel-arrow {
-            display: block;
-            position: absolute;
-            left: 30%;
-            bottom: 2%;
-            cursor: pointer;
-            &.prev {
-                left: 26%;
-                pointer-events: all;
-                z-index: 1000;
-            }
-        }
+      }
     }
-    &.is-not-projects {
-        .carousel-arrow {
-            display: none;
-        }
-    }
+  }
 }
 
 @media (max-width: 768px) {
-    .external-carousel-container {
-        &.is-projects {
-            .carousel-arrow {
-                &.prev {
-                    left: 16%;
-                }
-            }
-        }
+  .external-carousel-container {
+    .buttons-container {
+      &.prev {
+        left: 16%;
+      }
+      button {
+        height: 40px;
+        width: 40px;
+      }
     }
+  }
 }

@@ -149,7 +149,7 @@ function App() {
       <Layout id="servicos">
         <Services />
       </Layout>
-      <ExternalCarousel isProject>
+      <ExternalCarousel>
         <Layout id="projetos" projectSection backgroundImage={bgImage1}>
           <ProjectSection
             hasTitle

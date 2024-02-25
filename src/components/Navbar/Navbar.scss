@@ -68,13 +68,15 @@
     .navbar-content {
       height: 100vh;
       .navbar-logo {
-        width: 6.2%;
-        left: 1.4%;
-        top: 1%;
+        width: 5.2%;
+        left: 1%;
+        height: auto;
+        top: 0.5%;
       }
       .navbar-links {
         ul {
-          top: 2%;
+          right: 0%;
+          gap: 20px;
         }
       }
     }
