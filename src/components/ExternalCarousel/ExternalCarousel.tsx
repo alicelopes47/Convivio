@@ -26,7 +26,7 @@ export const ExternalCarousel = ({ children }: Props) => {
     setTimeout(() => {
       setIsClickedNext(false);
     }, 300);
-  };
+  }; //refactor this buttons, make it a component
 
   return (
     <Carousel
