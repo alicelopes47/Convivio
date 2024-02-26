@@ -33,12 +33,19 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width:1200px) {
   .external-carousel-container {
     .buttons-container {
       &.prev {
         left: 16%;
       }
+    }
+  }
+}
+
+@media (max-width:768px) {
+  .external-carousel-container {
+    .buttons-container {
       button {
         height: 40px;
         width: 40px;

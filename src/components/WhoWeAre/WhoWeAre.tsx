@@ -7,6 +7,9 @@ interface Props {
   type: number;
 }
 
+//organizar fotos do mobile nessa sessão, estão ficando enormes pq to usando crop
+
+
 export const WhoWeAre = ({ type }: Props) => {
   return type === 1 ? (
     <div className="who-container" id="who-us">
@@ -63,7 +66,7 @@ export const WhoWeAre = ({ type }: Props) => {
           </div>
         </div>
         <div className="who-assets type-2-desktop">
-          <img alt="imagem convivio" src={ConvivioImage} />
+          <img alt="imagem convivio" src={ConvivioImage} /> 
         </div>
         <div className="who-assets type-2-mobile">
           <img alt="imagem convivio" src={ConvivioImageMobile} />
