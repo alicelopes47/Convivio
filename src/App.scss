@@ -4,10 +4,27 @@
   .navbar-container-mobile {
     display: none;
   }
+  .pic-credits {
+    font-family: "Lexend Deca";
+    z-index: 10000;
+    .pic-credits-letter {
+      color: $light;
+      font-weight: 100;
+    }
+    text-align: center;
+    position: fixed;
+    top: 2.5%;
+    width: 100%;
+  }
 }
 
 @media (max-width: 900px) {
   .App {
+    .pic-credits {
+      height: 100vh;
+      width: 100%;
+      top: 90%;
+    }
     .navbar-container-mobile {
       display: block;
     }

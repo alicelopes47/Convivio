@@ -103,31 +103,36 @@ function App() {
   });
 
   let isScrolling = false;
-  window.addEventListener('wheel', (e) => {
-    // Previne o evento de rolagem padrão
-    e.preventDefault();
-  
-    // Se uma rolagem já está em andamento, ignora este evento
-    if (isScrolling) return;
-  
-    // Define a flag para indicar que uma rolagem está em andamento
-    isScrolling = true;
-  
-    const scrollAmount = window.innerHeight;
-    const currentScrollPosition = window.pageYOffset;
-    const nextSectionPosition =
-      e.deltaY >= 0
-        ? Math.ceil((currentScrollPosition + 1) / scrollAmount) * scrollAmount
-        : Math.floor((currentScrollPosition - 1) / scrollAmount) * scrollAmount;
-  
-    // Rola para a próxima seção ou para a seção anterior
-    window.scrollTo({ top: nextSectionPosition, behavior: "smooth" });
-  
-    // Redefine a flag quando a rolagem termina
-    setTimeout(() => {
-      isScrolling = false;
-    }, 1000); // Ajuste este tempo para corresponder ao tempo que leva para rolar
-  }, { passive: false });
+  window.addEventListener(
+    "wheel",
+    (e) => {
+      // Previne o evento de rolagem padrão
+      e.preventDefault();
+
+      // Se uma rolagem já está em andamento, ignora este evento
+      if (isScrolling) return;
+
+      // Define a flag para indicar que uma rolagem está em andamento
+      isScrolling = true;
+
+      const scrollAmount = window.innerHeight;
+      const currentScrollPosition = window.pageYOffset;
+      const nextSectionPosition =
+        e.deltaY >= 0
+          ? Math.ceil((currentScrollPosition + 1) / scrollAmount) * scrollAmount
+          : Math.floor((currentScrollPosition - 1) / scrollAmount) *
+            scrollAmount;
+
+      // Rola para a próxima seção ou para a seção anterior
+      window.scrollTo({ top: nextSectionPosition, behavior: "smooth" });
+
+      // Redefine a flag quando a rolagem termina
+      setTimeout(() => {
+        isScrolling = false;
+      }, 1000); // Ajuste este tempo para corresponder ao tempo que leva para rolar
+    },
+    { passive: false }
+  );
 
   return (
     <div className="App">
@@ -138,6 +143,13 @@ function App() {
         close={() => setOpen(false)}
         slides={arrayToUse.map((src: any) => ({ src } as any))}
       />
+      {open && (
+        <div className="pic-credits">
+          <h1 style={{ fontSize: "18px" }} className="pic-credits-letter">
+            Foto por: Gabriel Lima - @glima.foto
+          </h1>
+        </div>
+      )}
       <DropDownNavbar />
       <Banner id="inicio" />
       <Layout isBannerFooter backgroundColor="#EDE8E1">
@@ -198,11 +210,6 @@ function App() {
             name="Casa Vivência"
           />
           <CarouselProject>
-            <img
-              src={casaVivenciaAssets["gif1"][1]}
-              onClick={() => handleClickImage(CasaVivenciaArray, 13)}
-              alt="Foto casa vivência"
-            />
             <img
               src={casaVivenciaAssets["img1"][1]}
               onClick={() => handleClickImage(CasaVivenciaArray, 0)}
@@ -268,6 +275,11 @@ function App() {
             <img
               onClick={() => handleClickImage(CasaVivenciaArray, 12)}
               src={casaVivenciaAssets["img13"][1]}
+              alt="Foto casa vivência"
+            />
+            <img
+              src={casaVivenciaAssets["gif1"][1]}
+              onClick={() => handleClickImage(CasaVivenciaArray, 13)}
               alt="Foto casa vivência"
             />
           </CarouselProject>
@@ -413,7 +425,7 @@ function App() {
       <Layout id="who-we-are" backgroundColor="#597C59">
         <WhoWeAre type={2} />
       </Layout>
-      <Layout id="orcamento" backgroundColor="#E5D3AD">
+      <Layout id="orcamento" haveFooter backgroundColor="#E5D3AD">
         <FormSection />
       </Layout>
     </div>

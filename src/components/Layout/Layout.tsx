@@ -8,6 +8,7 @@ interface Props {
   ref?:any;
   backgroundColor?: string;
   isBannerFooter?: boolean;
+  haveFooter?: boolean;
 }
 
 export const Layout = ({
@@ -17,12 +18,13 @@ export const Layout = ({
   projectSection,
   backgroundColor,
   id,
-  isBannerFooter
+  isBannerFooter,
+  haveFooter
 }: Props) => {
   return (
     <div
       ref={ref}
-      className={`layout-container ${ projectSection ? "projects-section" : ""} ${isBannerFooter ? "banner-footer-responsive" : ""}`}
+      className={`layout-container ${ projectSection ? "projects-section" : ""} ${isBannerFooter ? "banner-footer-responsive" : ""} ${haveFooter ? "footer-section" : ""}`}
       id={id}
       style={{
         backgroundImage: `url(${backgroundImage})`,

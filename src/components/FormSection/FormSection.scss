@@ -5,7 +5,6 @@
   gap: 2vw;
   align-items: start;
   padding-left: 11vw;
-  height: 100vh;
   .form-content {
     width: 50vw;
     .form-fields-container {
@@ -113,6 +112,18 @@
   }
 }
 
+footer {
+  background-color: $primary-color;
+  display: flex;
+  justify-content: space-between;
+  padding: 1vh 11vh;
+  p {
+    color: $light;
+    font-family: 'Lexend Deca';
+    font-weight: 300;
+  }
+}
+
 @media (max-width: 1200px) {
   .form-container {
     background-color:#E5D3AD;
@@ -160,6 +171,7 @@
           display: flex;
           justify-content: start;
           align-items: center;
+          width: 100%;
           gap: 1vw;
           .social-icon {
             font-size: 6vh;
@@ -174,6 +186,18 @@
           }
         }
       }
+    }
+  }
+  footer {
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh 15px;
+    p {
+      color: $light;
+      font-size: 1.2vh;
+      font-family: 'Lexend Deca';
+      font-weight: 300;
     }
   }
 }

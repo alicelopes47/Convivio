@@ -22,6 +22,9 @@
       align-items: start;
     }
   }
+  &.footer-section {
+    height: auto;
+  }
 }
 
 @media (max-width: 680px) { 
