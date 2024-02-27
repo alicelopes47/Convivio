@@ -128,11 +128,14 @@
       padding-top: 3vh;
       .form-fields-container {
         width: 100%;
+        border: solid 2px $primary-color;
         .form-field {
           width: 100%;
+          border: solid 2px $primary-color;
         }
         .text-area-container {
           width: 100%;
+          border: solid 2px $primary-color;
         }
         .form-button {
           width: 100%;

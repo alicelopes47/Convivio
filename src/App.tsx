@@ -68,7 +68,7 @@ function App() {
     casaVivenciaAssets.img11[0],
     casaVivenciaAssets.img12[0],
     casaVivenciaAssets.img13[0],
-    casaVivenciaAssets.gif1,
+    casaVivenciaAssets.gif1[0],
   ];
 
   const CasaParaVenda1Array = [
@@ -199,7 +199,7 @@ function App() {
           />
           <CarouselProject>
             <img
-              src={CasaVivenciaArray[13][1]}
+              src={casaVivenciaAssets["gif1"][1]}
               onClick={() => handleClickImage(CasaVivenciaArray, 13)}
               alt="Foto casa vivência"
             />
