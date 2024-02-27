@@ -25,6 +25,7 @@
         background-color: rgba(75, 70, 64, 0.5);
       }
       .carousel-arrow {
+        color: $primary-color;
         &.prev {
           transform: rotate(180deg);
         }
