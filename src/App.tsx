@@ -21,7 +21,7 @@ import {
 } from "./assets/index";
 import ComoFazemos2 from "./assets/projetos/comofazemos2.jpg";
 import ComoFazemos3 from "./assets/projetos/comofazemos3.jpg";
-import { CarouselProject } from "./ProjectSection/CarouselProject";
+import { CarouselProject } from "./components/ProjectSection/CarouselProject";
 import { Services } from "./components/Services/Services";
 import { Layout } from "./components/Layout/Layout";
 import { BannerFooter } from "./components/BannerFooter/BannerFooter";
@@ -29,9 +29,9 @@ import { useEffect, useRef, useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import { ComoFunciona } from "./components/ComoFunciona/ComoFunciona";
 import { WhoWeAre } from "./components/WhoWeAre/WhoWeAre";
-import { FormSection } from "./FormSection/FormSection";
+import { FormSection } from "./components/FormSection/FormSection";
 import { ExternalCarousel } from "./components/ExternalCarousel/ExternalCarousel";
-import { ProjectSection } from "./ProjectSection/ProjectSection";
+import { ProjectSection } from "./components/ProjectSection/ProjectSection";
 import { DropDownNavbar } from "./components/DropDownNavbar/DropDownNavbar";
 import { set } from "video.js/dist/types/tech/middleware";
 export const ComeToFront = {
