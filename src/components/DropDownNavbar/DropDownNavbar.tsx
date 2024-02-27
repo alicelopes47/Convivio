@@ -38,6 +38,9 @@ export const DropDownNavbar = () => {
               <Link onClick={handleClick} to="inicio">
                 <li>Início</li>
               </Link>
+              <Link onClick={handleClick} to="servicos">
+                <li>Serviços</li>
+              </Link>
               <Link onClick={handleClick} to="projetos">
                 <li>Projetos</li>
               </Link>
