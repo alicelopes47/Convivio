@@ -103,31 +103,31 @@ function App() {
   });
 
   let isScrolling = false;
-  window.onwheel = (e) => {
+  window.addEventListener('wheel', (e) => {
     // Previne o evento de rolagem padrão
     e.preventDefault();
-
+  
     // Se uma rolagem já está em andamento, ignora este evento
     if (isScrolling) return;
-
+  
     // Define a flag para indicar que uma rolagem está em andamento
     isScrolling = true;
-
+  
     const scrollAmount = window.innerHeight;
     const currentScrollPosition = window.pageYOffset;
     const nextSectionPosition =
       e.deltaY >= 0
         ? Math.ceil((currentScrollPosition + 1) / scrollAmount) * scrollAmount
         : Math.floor((currentScrollPosition - 1) / scrollAmount) * scrollAmount;
-
+  
     // Rola para a próxima seção ou para a seção anterior
     window.scrollTo({ top: nextSectionPosition, behavior: "smooth" });
-
+  
     // Redefine a flag quando a rolagem termina
     setTimeout(() => {
       isScrolling = false;
     }, 1000); // Ajuste este tempo para corresponder ao tempo que leva para rolar
-  };
+  }, { passive: false });
 
   return (
     <div className="App">
