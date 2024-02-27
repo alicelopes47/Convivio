@@ -191,9 +191,11 @@ footer {
   footer {
     margin-top: 10%;
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    justify-content: center;
     padding: 1vh 0px;
     p {
+      padding-left: 15px;
       color: $light;
       font-size: 1.2vh;
       font-family: 'Lexend Deca';
