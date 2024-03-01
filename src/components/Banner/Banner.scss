@@ -18,6 +18,24 @@
   }
 }
 
+@keyframes slideinMobile {
+  0% {
+    background-image: url("../../assets/casa-terrea/small/22.jpg");
+  }
+  25% {
+    background-image: url("../../assets/casa-terrea/small/image2.jpg");
+  }
+  50% {
+    background-image: url("../../assets/casa-terrea/small/image1.jpg");
+  }
+  75% {
+    background-image: url("../../assets/casa-terrea/small/21.jpg");
+  }
+  100% {
+    background-image: url("../../assets/casa-terrea/small/22.jpg");
+  }
+}
+
 .banner-container {
   height: 100vh;
   display: flex;
@@ -92,6 +110,7 @@
 @media (max-width: 680px) {
   .banner-container {
     height: 100vh;
+    animation: slideinMobile 30s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
     align-items: center;
     .banner-content {
       height: 60%;

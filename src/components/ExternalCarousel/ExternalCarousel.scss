@@ -38,7 +38,7 @@
   .external-carousel-container {
     .buttons-container {
       &.prev {
-        left: 16%;
+        left: 20%;
       }
     }
   }
@@ -48,8 +48,12 @@
   .external-carousel-container {
     .buttons-container {
       button {
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        width: 30px;
+        border: solid 1px $primary-color;
+      }
+      .carousel-arrow {
+        font-size: 24px;
       }
     }
   }

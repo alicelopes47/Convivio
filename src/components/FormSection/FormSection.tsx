@@ -5,13 +5,17 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { CircularProgress } from "@mui/material";
 
 export const FormSection = () => {
   const form = useRef();
+  const [hasSentData, setHasSentData] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const sendEmail = (e: { preventDefault: () => void }) => {
     e.preventDefault();
+    setIsLoading(true);
 
     emailjs
       .sendForm("service_2zgd0ip", "template_60fz9an", form.current, {
@@ -19,10 +23,12 @@ export const FormSection = () => {
       })
       .then(
         () => {
-          console.log("SUCCESS!");
+          setHasSentData(true);
+          setIsLoading(false);
         },
         (error) => {
           console.log("FAILED...", error.text);
+          setIsLoading(false);
         }
       );
   };
@@ -35,6 +41,7 @@ export const FormSection = () => {
           <form
             ref={form}
             onSubmit={sendEmail}
+            aria-disabled={hasSentData}
             className="form-fields-container"
           >
             <input
@@ -46,8 +53,8 @@ export const FormSection = () => {
             />
             <input
               type="text"
-              name="from_email"
-              id="from_email"
+              name="email"
+              id="email"
               placeholder="E-mail"
               className="form-field"
             />
@@ -60,10 +67,14 @@ export const FormSection = () => {
             />
             <select name="service" className="form-field">
               <option value="">Selecione um serviço</option>
-              <option value="servico1">Projeto de arquitetura</option>
-              <option value="servico2">Projeto complementar</option>
-              <option value="servico3">Projeto de interiores</option>
-              <option value="servico4">Consultoria</option>
+              <option value="Projeto de arquitetura">
+                Projeto de arquitetura
+              </option>
+              <option value="Projeto complementar">Projeto complementar</option>
+              <option value="Projeto de interiores">
+                Projeto de interiores
+              </option>
+              <option value="Consultoria">Consultoria</option>
             </select>
             <input
               placeholder="Endereço da obra"
@@ -88,6 +99,16 @@ export const FormSection = () => {
             <button type="submit" className="form-button">
               Enviar
             </button>
+            {!hasSentData && isLoading && (
+              <div>
+                <CircularProgress />
+              </div>
+            )}
+            {hasSentData && !isLoading && (
+              <p style={{ color: "green", fontFamily: "Lexend Deca" }}>
+                Informações enviadas com sucesso
+              </p>
+            )}
           </form>
         </div>
         <span className="vr"></span>
@@ -104,7 +125,7 @@ export const FormSection = () => {
             </div>
             <div className="social-wrapper">
               <WhatsAppIcon className="social-icon" />
-              <p>Thiago - 6199913244</p>
+              <p>Thiago - 61999132422</p>
             </div>
             <div className="social-wrapper">
               <WhatsAppIcon className="social-icon" />
@@ -121,7 +142,10 @@ export const FormSection = () => {
         </div>
       </div>
       <footer>
-        <p>Convívio - CPNJ: 5401634500162, Endereço: Qi 27, Bloco A, Ed. Guara Shopping - sala 212</p>
+        <p>
+          Convívio - CPNJ: 5401634500162, Endereço: Qi 27, Bloco A, Ed. Guara
+          Shopping - sala 212
+        </p>
         <p>Desenvolvimento e Design Thinking: 61992718410 ou 61984800832</p>
       </footer>
     </>
