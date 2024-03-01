@@ -1,14 +1,10 @@
 //@ts-nocheck
 import "./Banner.scss";
 
-interface Props {
-  id: string;
-}
-
 export const Banner = ({ id }: Props) => {
   return (
     <>
-      <div className="banner-container">
+      <div className="banner-container" id="inicio">
         <div className="banner-content">
           <div className="banner-title-container">
             <h1>

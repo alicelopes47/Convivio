@@ -151,7 +151,7 @@ function App() {
         </div>
       )}
       <DropDownNavbar />
-      <Banner id="inicio" />
+      <Banner />
       <Layout isBannerFooter backgroundColor="#EDE8E1">
         <BannerFooter />
       </Layout>

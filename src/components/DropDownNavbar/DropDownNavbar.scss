@@ -41,7 +41,8 @@
     ul {
       display: flex;
       flex-direction: column;
-      height: 60%;
+      height: 550px;
+      width: 100%;
       justify-content: space-around;
       align-items: start;
       li {
@@ -49,7 +50,7 @@
         pointer-events: all;
         list-style: none;
         font-family: 'Lexend Deca';
-        font-size: 25px;
+        font-size: 3vh;
         font-weight: 100;
       }
     }

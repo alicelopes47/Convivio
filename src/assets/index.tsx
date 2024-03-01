@@ -41,7 +41,6 @@ import CasaParaVenda2Gif from './casapvenda02/casa2-vp-gif1.gif';
 import CasaParaVenda2Video from './casapvenda02/casa2-vp-video.mp4';
 
 import CasaParaVenda2Img1Small from './casapvenda02/casa2-vp small.jpg';
-import CasaParaVenda2Img2Small from './casapvenda02/casa2-vp2 small.jpg';
 import CasaParaVenda2Img3Small from './casapvenda02/casa2-vp3 small.jpg';
 
 
@@ -73,7 +72,7 @@ export const casaPaulistaAssets = {
 
 export const casaParaVenda2Assets = {
   img1: [CasaParaVenda2Img1, CasaParaVenda2Img1Small],
-  img2: [CasaParaVenda2Img2, CasaParaVenda2Img2Small],
+  img2: [CasaParaVenda2Img2, CasaParaVenda2Img2],
   img3: [CasaParaVenda2Img3, CasaParaVenda2Img3Small],
   img4: [CasaParaVenda2Img4, CasaParaVenda2Img4],
   gif1: CasaParaVenda2Gif,
