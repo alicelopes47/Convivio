@@ -125,11 +125,11 @@ export const FormSection = () => {
             </div>
             <div className="social-wrapper">
               <WhatsAppIcon className="social-icon" />
-              <p>Thiago - 61999132422</p>
+              <p>Thiago - (61) 99913-2422</p>
             </div>
             <div className="social-wrapper">
               <WhatsAppIcon className="social-icon" />
-              <p>Luana - 6199913244</p>
+              <p>Luana - (61) 99873-0101</p>
             </div>
             <div className="social-wrapper">
               <PlaceOutlinedIcon className="social-icon" />
@@ -146,7 +146,11 @@ export const FormSection = () => {
           Convívio - CPNJ: 5401634500162, Endereço: Qi 27, Bloco A, Ed. Guara
           Shopping - sala 212
         </p>
-        <p>Desenvolvimento e Design Thinking: 61992718410 ou 61984800832</p>
+        <span></span>
+        <div>
+          <p>Desenvolvimento de websites e websistemas, contato:</p>
+          <p>(61) 98480-0832 (WhatsApp)</p>
+        </div>
       </footer>
     </>
   );

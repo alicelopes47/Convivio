@@ -194,6 +194,14 @@ footer {
     width: 100%;
     justify-content: center;
     padding: 1vh 0px;
+    align-items: start;
+    span {
+      display: inline-block;
+        border-left: 1px solid #ccc;
+        margin: 0 10px;
+        height: 125px;
+
+    }
     p {
       padding-left: 15px;
       color: $light;
