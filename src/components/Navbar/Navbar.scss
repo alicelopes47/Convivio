@@ -76,12 +76,9 @@
         ul {
           color: $light;
           position: absolute;
-          right: 0%;
+          right: 1\%;
           top: 0.2%;
-          gap: 15px;
-          li {
-            font-size: 4px;
-          }
+          gap: 20px;
         }
       }
     }
